@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yejin's Portfolio</title>
+
+    <!-- css -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function(){
+            $('#projects_boxs_inner').slick({
+                arrows: false,
+                centerMode: true,
+                centerPadding: '16.082%', // 105.5 / 656
+                slidesToShow: 1,
+                autoplay: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '5.806%', // 18 / 310
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $(window).scroll(function(){
+                var win_top = $(window).scrollTop()
+                var about_top = $('#about_me').offset().top
+                if(win_top >= about_top - 300){
+                    $('header').addClass('on')
+                } else {
+                    $('header').removeClass('on')
+                }
+            })
+        }); // document ready
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="mainImg">
+            <div id="title_inner">
+                <span>Hello,<br>Here is <span class="mobile">YeJin's Portfolio.</span></span>
+                <div>안녕하세요. 어제보다 더 나은 오늘을 위해 달리는<span> 신입 웹 퍼블리셔 박예진입니다.</span></div>
+                <a href="#about_me">
+                    <p>WELCOME TO MY WEBSITE</p>
+                    <span>아래 섹션으로 이동하기</span>
+                </a>
+            </div>
+        </div>
+
+        <header>
+            <div id="header_inner">
+                <h1>Park Ye Jin</h1>
+                <button class="open_menu_btn mobile">
+                    <span>메뉴열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <div>
+                        <a href="#">Park Ye Jin</a>
+                        <button class="close_menu_btn">메뉴 닫기</button>
+                    </div>
+                    <ul>
+                        <li><a href="#about_me">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#career_and_activities">Career & Activities</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="about_me">
+                <h2 id="title_for_mobile" class="mobile">About me</h2>
+                <div id="about_me_inner" class="clear">
+                    <div id="about_me_left">
+                        <span>프로필 사진</span>
+                        <div>
+                            <div><span>특기 : </span>Coding, PPT, 피아노 연주, 노래</div>
+                            <div><span>취미 : </span>기타치면서 노래 부르기, 게임</div>
+                        </div>
+                    </div> <!-- // about_me_left -->
+                    <div id="about_me_right">
+                        <h2>About me</h2>
+                        <i id="title_line"></i>
+                        <ul>
+                            <li class="clear">
+                                <span>이름</span><p>박예진</p>
+                            </li>
+                            <li>
+                                <span>생일</span><p>1998. 06. 27</p>
+                            </li>
+                            <li>
+                                <span>주소</span><p>서울시 금천구</p>
+                            </li>
+                            <li>
+                                <span>이메일</span><p>yejindin@gmail.com</p>
+                            </li>
+                            <li>
+                                <span>학력</span><p>숭실대학교 IT대학 컴퓨터학부</p>
+                            </li>
+                        </ul>
+                        <i id="dash_line"></i>
+                        <a href="https://www.notion.so/YeJin-s-FootSteps-45dc17c0a4fa41c98deaf569214951d1" id="notion_link">
+                            <div class="my_link_inner clear">
+                                <span>notion icon</span>
+                                <p>YeJin’s FootSteps</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/YeJinii" id="github_link">
+                            <div class="my_link_inner clear">
+                                <span>github icon</span>
+                                <p>GitHub.com/Yejinii</p>
+                            </div>
+                        </a> 
+                    </div> <!-- // about_me_right -->
+                </div> <!-- // about_me_inner -->
+            </section> <!-- // about_me -->
+            <section id="skills">
+                <div id="skills_inner" class="clear">
+                    <h2>Skills</h2>
+                    <div id="skills_left" class="clear">
+                        <span></span>
+                        <ul>
+                            <li class="clear">
+                                <p>HTML5 / CSS3</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>jQuery</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>JavaScript</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>Photoshop</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>Illustrator</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>Adobe XD</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>Figma</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>C / C++</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>Java / Python</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <p>Git / Gitlab</p>
+                                <span class="default_p">
+                                    <span class="this_p"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div> <!-- // skills_left -->
+                    <span class="skills_dashline mobile"></span>
+                    <div id="skills_right">
+                        <div class="grade_inner">
+                            <h3>Grade</h3>
+                            <p>컴퓨터학부 전공 ( 학점 3.76 / 4.5 )</p>
+                        </div>
+                        <div class="award_inner clear">
+                            <h3>Award</h3>
+                            <span id="award_b"></span>
+                            <div id="award_txt_inner">
+                                <p>스마트 웹 콘텐츠개발 UIUX 성적우수상 _ 1등</p>
+                                <p>숭실대학교 IT대학 소프트웨어 공모전 학장상 </p>
+                                <p>NHN 미래 인재 장학금 선발</p>
+                            </div>
+                        </div>
+                        <div class="cert_inner clear">
+                            <h3>Certification</h3>
+                            <span id="cert_b"></span>
+                            <div id="cert_txt_inner">
+                                <p>정보 처리 기사 자격증</p>
+                                <p>MOS EXCEL EXPERT 2016</p>
+                            </div>
+                        </div>
+                    </div> <!-- // skills_right -->
+                </div> <!-- // skills_inner -->
+            </section> <!-- // skills -->
+            <section id="projects">
+                <div id="projects_inner">
+                    <h2>Projects</h2>
+                    <div id="projects_boxs_inner">
+                        <div class="pbox box_0">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>YeJin’s Portfolio</h3>
+                                <p>웹 접근과 표준에 따른 개인 포트폴리오 사이트 제작(진행중)</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_1">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>‘웹 퍼블리셔’ 관련 카드 뉴스 제작</h3>
+                                <p>카드 뉴스의 이해 및 Adobe illustrator를 통해 카드 뉴스를 기획 및 디자인</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_2">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>‘파크랜드’ 웹사이트 리뉴얼</h3>
+                                <p>‘파크랜드 사이트’를 리디자인 하고, 웹 접근성, 표준에 부합하는 반응형 웹 페이지 기획 및 구축</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_3">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>‘파리바게트’ 사이트 리디자인</h3>
+                                <p>일러스트와 포토샵을 활용하여 ‘파리바게트 사이트’를 리디자인하고 XD로 UI/UX 구축</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_4">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>‘청정원’ 페이지 실습 (반응형)</h3>
+                                <p>photoshop 실습 및 반응형 웹페이지 코딩에 대한 이해</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_5">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>Adobe XD 실습 (이케아)</h3>
+                                <p>UI/UX 기획을 이해하고 XD를 통해 웹페이지의 와이어 프레임 및 최종 디자인을 설계</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_6">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>날씨 앱 스토리보드와 프로토타입</h3>
+                                <p>NCS UI 테스트 평가 (스토리보드와 프로토타입에 대한 이해)</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_7">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>기존 앱 분석 및 프로토타입 설계</h3>
+                                <p>UI/UX Concept 아이디어를 도출하고 분석하며 프로토타입 설계 및 검증</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_8">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>청각 장애인을 위한 홈케어 서비스</h3>
+                                <p>숭실대학교 IT대학 소프트웨어 공모전 (안드로이드 앱 개발) _학장상 수상</p>
+                            </div>
+                        </div>
+                        <div class="pbox box_9">
+                            <div class="pbox_h"></div>
+                            <div class="img_area">
+                                <span></span>
+                            </div>
+                            <div class="txt_area">
+                                <h3>그 밖의 작품들</h3>
+                                <p>학교 생활 중 제작했던 홍보물 (학부 학생회 홍보국장, 소모임 홍보)</p>
+                            </div>
+                        </div>
+                    </div> <!-- // projects_boxs_inner -->
+                </div> <!-- // projects_inner -->
+            </section> <!-- // projects -->
+            <section id="career_and_activities">
+                <div id="caa_inner">
+                    <h2>Career & Activities</h2>
+                    <i></i>
+                    <ul>
+                        <li id="caa_1" class="clear">
+                            <span>sbs logo</span>
+                            <i></i>
+                            <div class="caa_txt_inner">
+                                <h3>UI / UX & 웹 퍼블리셔 국비 교육</h3>
+                                <span>2023.01 - 2023.09</span>
+                                <i class="mobile"></i>
+                                <div>
+                                    <p>Photoshop, Illustrator, XD를 통한 <span>UI/UX 역량</span> 함양</p>
+                                    <p>HTML, CSS, jQuery를 통한 <span>퍼블리싱</span> 기술 슥듭</p>
+                                    <p>웹 표준과 접근성을 고려한 <span>반응형 웹 페이지</span> 제작</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="caa_2" class="clear">
+                            <span>tmax logo</span>
+                            <i></i>
+                            <div class="caa_txt_inner">
+                                <h3>(주) 티맥스 오에스</h3>
+                                <span>2022.05 - 2023.01</span>
+                                <i class="mobile"></i>
+                                <div>
+                                    <p>OS 2-2팀 (제품명 : VDS) 연구원 (정규직)</p>
+                                    <p>자사의 OS에서 제공 되는 <span>원격 데스크탑 프로그램</span> 개발 부서</p>
+                                    <p><span>Gstreamer</span> 파이프라인 최적화를 통한 캡쳐로직 고도화</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="caa_3">
+                            <span>summit logo</span>
+                            <i></i>
+                            <div class="caa_txt_inner">
+                                <h3>SUMMIT</h3>
+                                <span>2018.02 - 현재</span>
+                                <i class="mobile"></i>
+                                <div>
+                                    <p>숭실대학교 IT 대학 밴드 소모임</p>
+                                    <p>매년 정기 공연과 합주 활동</p>
+                                    <p><span>보컬 담당</span> (instagram : @rang._.man)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="caa_4">
+                            <span>complete logo</span>
+                            <i></i>
+                            <div class="caa_txt_inner">
+                                <h3>컴퓨터학부 학생회</h3>
+                                <span>2017.11 - 2018.11</span>
+                                <i class="mobile"></i>
+                                <div>
+                                    <p>숭실대학교 컴퓨터학부 <span>홍보국장</span></p>
+                                    <p>학부 내 주요 행사를 정기적인 회의를 통해 기획 및 진행</p>
+                                    <p>학부 행사 <span>홍보물 제작</span> 및 SNS를 통한 홍보</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div> <!-- // caa_inner -->
+            </section> <!-- // career_and_activities -->
+        </main>
+        <footer>
+            <div id="copy_inner">
+                <h2>Park Ye Jin</h2>
+                <p>
+                    <span>Thank you for visiting my website.</span>
+                    <span>Copyright © 2023. Park Ye Jin All rights reserved.</span>
+                </p>
+                <div id="sns_inner">
+                    <a href="#">github</a>
+                    <a href="#">notion</a>
+                    <a href="#">instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
