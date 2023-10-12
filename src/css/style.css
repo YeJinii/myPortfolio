@@ -1523,6 +1523,7 @@ footer {
         width: 89.063%; /* 912 / 1024 */
         height: 660px;
         background: url(../img/1024/about_me_bg.png) no-repeat center/cover;
+        background-size: 100% 100%;
         margin: 0 auto;
         padding-top: 60px;
         padding-left: 5.154%; /* 47 / 912 */
