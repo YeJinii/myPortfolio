@@ -1837,16 +1837,16 @@ footer {
 
     /* 1024 - projects */
     #projects {
-        padding: 153px 0 152px;
+        padding: 63px 0;
     }
     #projects_inner {
         width: 89.063%; /* 912 / 1024 */
         margin: 0 auto;
     }
     #projects_inner h2 {
-        font-size: 5rem;
-        line-height: 70px;
-        margin-bottom: 50px;
+        font-size: 6rem;
+        line-height: 85px;
+        margin-bottom: 42px;
     }
     #projects_inner #projects_boxs_inner {
         width: 100%;
@@ -1854,7 +1854,7 @@ footer {
     }
     #projects_inner #projects_boxs_inner .pbox {
         margin: 0 10px;
-        width: 61.738%; /* 405 / 656 */
+        width: 44.956%; /* 410 / 912 */
         height: 555px;
         box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.16);
     }

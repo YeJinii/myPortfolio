@@ -20,11 +20,20 @@
             $('#projects_boxs_inner').slick({
                 arrows: false,
                 centerMode: true,
-                centerPadding: '16.082%', // 105.5 / 656
+                centerPadding: '25.658%', // 234 / 912
                 slidesToShow: 1,
                 autoplay: true,
                 dots: true,
                 responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '16.082%', // 105.5 / 656
+                            slidesToShow: 1
+                        }
+                    },
                     {
                         breakpoint: 768,
                         settings: {
