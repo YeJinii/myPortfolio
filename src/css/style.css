@@ -1656,60 +1656,62 @@ footer {
         margin-top: 0;
     }
 
+    /* 1024 - skills */
     #skills {
-        padding: 255px 0 254px;
+        padding: 114px 0;
     }
     #skills_inner {
-        width: 85.416%; /* 656 / 768 */
+        width: 89.063%; /* 912 / 1024 */
         margin: 0 auto;
     }
     #skills_inner > h2 {
-        font-family: 'Giants-Bold', sans-serif;
-        font-size: 5rem;
-        margin-bottom: 70px;
+        font-size: 6rem;
+        line-height: 85px;
+        margin-bottom: 60px;
     }
     #skills_inner > #skills_left {
         display: block;
         float: left;
-        width: 52.744%; /* 346 / 656 */
+        width: 56.031%; /* 511 / 912 */
         height: 375px;
-        margin-right: 6.966%; /* 45 / 656 */
+        margin-left: 2.193%; /* 20 / 912 */
+        margin-right: 6.031%; /* 55 / 912 */
     }
     #skills_inner > #skills_left > span {
         display: block;
         float: left;
-        width: 4.335%; /* 15 / 346 */
-        height: 100%;
-        background: url(../img/768/skills_b1.png) no-repeat center/contain;
-        background-size: 100% 375px;
-        margin-right: 2.89%;
+        width: 2.935%; /* 15 / 511 */
+        height: 477px;
+        background: url(../img/1024/skills_b1.png) no-repeat center/contain;
+        background-size: 100% 477px;
+        margin-right: 5.871%; /* 30 / 511 */
     }
     #skills_inner > #skills_left > ul {
-        width: 92.775%;
-        height: 355px;
-        margin: 10px auto;
+        width: 91.194%; /* 100 - 2.935 - 5.871 */
+        height: 457px;
+        margin: 20px auto;
     }
     #skills_inner > #skills_left > ul > li {
-        height: 22px;
+        height: 30px;
         margin-bottom: 15px;
     }
     #skills_inner > #skills_left > ul > li > p {
         display: block;
         float: left;
-        font-size: 1.5rem;
-        line-height: 22px;
+        font-size: 2rem;
+        line-height: 30px;
     }
     #skills_inner > #skills_left > ul > li .default_p {
         display: block;
         float: right;
-        width: 52.96%; /* 170 / 321 */
-        height: 22px;
+        width: 56.867%; /* 265 / 466 */
+        height: 30px;
         position: relative;
     }
     #skills_inner > #skills_left > ul > li .this_p {
         position: absolute;
         width: 85%;
-        height: 22px;
+        height: 30px;
         background-color: #EA8474;
     }
     #skills_inner > #skills_left > ul > li:nth-of-type(2) .this_p {
@@ -1756,89 +1758,89 @@ footer {
     #skills_inner > #skills_right {
         display: block;
         float: left;
-        width: 40.29%;
+        width: 35.745%; /* 326 / 912 */
     }
     #skills_inner > #skills_right h3 {
-        font-size: 2.5rem;
-        line-height: 36px;
+        font-size: 2.8rem;
+        line-height: 40px;
         margin-bottom: 10px;
     }
     #skills_inner > #skills_right p {
-        font-size: 1.2rem;
-        line-height: 15px;
+        font-size: 1.6rem;
+        line-height: 19px;
     }
 
     .grade_inner {
         width: 100%;
-        height: 61px;
-        margin-bottom: 37px;
+        height: 69px;
+        margin-bottom: 60px;
+    }
+
+    .award_inner {
+        width: 100%;
+        height: 153px;
+        margin-bottom: 60px;
     }
 
     #skills_inner > #skills_right #award_b {
         display: block;
         float: left;
-        width: 3.162%; /* 8 / 253 */
-        height: 75px;
-        background: url(../img/768/skills_b2.png) no-repeat center/contain;
-        background-size: 100% 75px;
-        margin-right: 3.953%; /* 10 / 253 */
+        width: 2.454%; /* 8 / 326 */
+        height: 103px;
+        background: url(../img/1024/skills_b2.png) no-repeat center/contain;
+        background-size: 100% 103px;
+        margin-right: 3.067%; /* 10 / 326 */
     }
     #skills_inner > #skills_right #award_txt_inner {
         float: left;
-        width: 92.885%; /* 100 - 3.162 - 3.953 */
-        padding-top: 10px;
-        height: 75px;
+        width: 94.479%; /* 100 - 2.454 - 3.067 */
+        padding-top: 11px;
+        height: 80px;
     }
     #skills_inner > #skills_right #award_txt_inner > p {
-        font-size: 1.2rem;
-        line-height: 15px;
-        margin-bottom: 5px;
+        font-size: 1.5rem;
+        line-height: 18px;
+        margin-bottom: 13px;
     }
     #skills_inner > #skills_right #award_txt_inner > p:last-child {
         margin-bottom: 0;
     }
 
-    .award_inner {
-        width: 100%;
-        height: 121px;
-        margin-bottom: 37px;
-    }
-
     .cert_inner {
         width: 100%;
-        height: 118px;
+        height: 122px;
     }
 
     #skills_inner > #skills_right .cert_inner #cert_b {
         display: block;
         float: left;
-        width: 3.162%; /* 8 / 253 */
+        width: 2.454%; /* 8 / 326 */
         height: 72px;
-        background: url(../img/768/skills_b3.png) no-repeat center/contain;
+        background: url(../img/1024/skills_b3.png) no-repeat center/contain;
         background-size: 100% 72px; 
-        margin-right: 3.953%; /* 10 / 253 */
+        margin-right: 3.067%; /* 10 / 326 */
     }
     #skills_inner > #skills_right #cert_txt_inner { 
         float: left;
-        width: 92.885%; /* 100 - 3.162 - 3.953 */
-        padding-top: 18.5px;
-        height: 75px;
+        width: 94.479%; /* 100 - 2.454 - 3.067 */
+        padding-top: 11px;
+        height: 49px;
     }
     #skills_inner > #skills_right #cert_txt_inner > p {
-        font-size: 1.2rem;
-        font-family: 'SBAggroL', sans-serif;
-        line-height: 15px;
-        margin-bottom: 5px;
+        font-size: 1.5rem;
+        line-height: 18px;
+        margin-bottom: 13px;
     }
     #cert_txt_inner > p:last-child {
         margin-bottom: 0;
     } 
 
+    /* 1024 - projects */
     #projects {
         padding: 153px 0 152px;
     }
     #projects_inner {
-        width: 85.416%; /* 656 / 768 */
+        width: 89.063%; /* 912 / 1024 */
         margin: 0 auto;
     }
     #projects_inner h2 {
@@ -1943,6 +1945,7 @@ footer {
         line-height: 21px;
     }
 
+    /* 1024 - career_and_activities */
     #career_and_activities {
         padding: 200px 0;
         height: 1993px;
@@ -1950,7 +1953,7 @@ footer {
         
     }
     #caa_inner {
-        width: 85.416%; /* 656 / 768 */
+        width: 89.063%; /* 912 / 1024 */
         margin: 0 auto;
         color: #ffffff;
     }
@@ -2062,9 +2065,9 @@ footer {
     .caa_txt_inner > div > p > span {}
 
 
-    /* 768 - footer */
+    /* 1024 - footer */
     footer {
-        width: 85.416%; /* 656 / 768 */
+        width: 89.063%; /* 912 / 1024 */
         height: 200px;
         margin: 0 auto;
     }
