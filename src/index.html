@@ -21,25 +21,25 @@
                 arrows: false,
                 centerMode: true,
                 autoplay: true,
-                centerpadding: '8.145%', // 130 / 1596
+                centerPadding: '8.145%', // 130 / 1596
                 slidesToShow: 3,
                 dots: true,
                 responsive: [
                     {
                         breakpoint: 1700,
-                        setting: {
+                        settings: {
                             arrows: false,
                             centerMode: true,
-                            centerpadding: '135px', // 135 / 1140
+                            centerPadding: '135px', // 135 / 1140
                             slidesToShow: 2
                         }
                     },
                     {
                         breakpoint: 1280,
-                        setting: {
+                        settings: {
                             arrows: false,
                             centerMode: true,
-                            centerpadding: '234px', // 234 / 912
+                            centerPadding: '234px', // 234 / 912
                             slidesToShow: 1
                         }
                     },
@@ -65,6 +65,8 @@
             });
 
             $(window).scroll(function(){
+
+                // header
                 var win_top = $(window).scrollTop()
                 var about_top = $('#about_me').offset().top
                 if(win_top >= about_top - 300){
@@ -72,6 +74,17 @@
                 } else {
                     $('header').removeClass('on')
                 }
+
+                // 추가 
+                $('#skills').each(function(){
+                    var box_top = $(this).offset().top
+                    if(win_top >= box_top - 300){
+                        $(this).addClass('on')
+                    } else {
+                        $(this).removeClass('on')
+                    }
+                })
+
             })
         }); // document ready
     </script>
