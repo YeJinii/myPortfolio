@@ -724,10 +724,32 @@ header.on {
     width: 100%;
     margin-bottom: 70px;
 }
-#caa_inner > ul > li.on {
-    opacity: 1;
-    animation: fade 1s;
+
+@keyframes bslide {
+    from {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
 }
+@keyframes lslide {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+}
+@keyframes rslide {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+}
+
+#caa_inner > ul > li.bslide {
+    opacity: 1;
+    animation: bslide 1s;
+}
+
+
 
 #caa_inner > ul > li:nth-of-type(2){
     margin-bottom: 207px;
@@ -2123,6 +2145,19 @@ footer {
         height: 194px;
         margin-bottom: 140px;
     }
+
+    #caa_inner > ul > li:nth-of-type(1).lslide,
+    #caa_inner > ul > li:nth-of-type(2).lslide {
+        opacity: 1;
+        animation: lslide 2s;
+    }
+
+    #caa_inner > ul > li:nth-of-type(3).rslide,
+    #caa_inner > ul > li:nth-of-type(4).rslide {
+        opacity: 1;
+        animation: rslide 2s;
+    }
+
     #caa_inner > ul > li:nth-of-type(2){
         margin-bottom: 332px;
     }
