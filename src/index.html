@@ -76,6 +76,14 @@
                 }
 
                 // 추가 
+                $('#about_me, #skills_inner > h2, #skills_left, #skills_right, #projects_inner h2, #projects_boxs_inner, #caa_inner > h2, #caa_inner > i, #caa_inner > ul > li').each(function(){
+                    var box_top = $(this).offset().top;
+                    if(win_top >= box_top - 500){
+                        $(this).addClass('on');
+                    } else {
+                        $(this).removeClass('on');
+                    }
+                })
                 $('#skills').each(function(){
                     var box_top = $(this).offset().top;
                     if(win_top >= box_top - 300){
@@ -83,8 +91,7 @@
                     } else {
                         if(win_top <= box_top - $(this).height()){
                             $(this).removeClass('on');
-                        }
-                        
+                        } 
                         
                     }
                 })
