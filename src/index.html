@@ -67,21 +67,25 @@
             $(window).scroll(function(){
 
                 // header
-                var win_top = $(window).scrollTop()
-                var about_top = $('#about_me').offset().top
+                var win_top = $(window).scrollTop();
+                var about_top = $('#about_me').offset().top;
                 if(win_top >= about_top - 300){
-                    $('header').addClass('on')
+                    $('header').addClass('on');
                 } else {
-                    $('header').removeClass('on')
+                    $('header').removeClass('on');
                 }
 
                 // 추가 
                 $('#skills').each(function(){
-                    var box_top = $(this).offset().top
+                    var box_top = $(this).offset().top;
                     if(win_top >= box_top - 300){
-                        $(this).addClass('on')
+                        $(this).addClass('on');
                     } else {
-                        $(this).removeClass('on')
+                        if(win_top <= box_top - $(this).height()){
+                            $(this).removeClass('on');
+                        }
+                        
+                        
                     }
                 })
 
@@ -257,7 +261,7 @@
                     <div id="skills_right">
                         <div class="grade_inner">
                             <h3>Grade</h3>
-                            <p>컴퓨터학부 전공 ( 학점 3.76 / 4.5 )</p>
+                            <p>컴퓨터학부 전공</p>
                         </div>
                         <div class="award_inner clear">
                             <h3>Award</h3>
