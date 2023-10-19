@@ -78,7 +78,7 @@
                 // animation : fade 
                 $('#about_me, #skills_inner > h2, #skills_left, #skills_right, #projects_inner h2, #projects_boxs_inner, #caa_inner > h2, #caa_inner > i').each(function(){
                     var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 400){
+                    if(win_top >= box_top - 300){
                         $(this).addClass('on');
                     } else {
                         $(this).removeClass('on');
@@ -88,7 +88,7 @@
                 // transition: width (progress bar) 
                 $('#skills').each(function(){
                     var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 300){
+                    if(win_top >= box_top - 400){
                         $(this).addClass('on');
                     } else {
                         if(win_top <= box_top - $(this).height()){
@@ -98,32 +98,13 @@
                     }
                 })
 
-                // animation: slide bottom
-                $('#caa_inner > ul > li').each(function(){
-                    var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 400){
-                        $(this).addClass('bslide');
-                    } else {
-                        $(this).removeClass('bslide');
-                    }
-                })
-
-                // animation: slide left
-                $('#caa_inner > ul > li:nth-of-type(1), #caa_inner > ul > li:nth-of-type(2)').each(function(){
-                    var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 400){
-                        $(this).addClass('lslide');
-                    } else {
-                        $(this).removeClass('lslide');
-                    }
-                })
-                // animation: slide right
-                $('#caa_inner > ul > li:nth-of-type(3), #caa_inner > ul > li:nth-of-type(4)').each(function(){
+                // animation: slide left,right
+                $('#caa_inner > ul > li:nth-of-type(1), #caa_inner > ul > li:nth-of-type(2), #caa_inner > ul > li:nth-of-type(3), #caa_inner > ul > li:nth-of-type(4)').each(function(){
                     var box_top = $(this).offset().top;
                     if(win_top >= box_top - 300){
-                        $(this).addClass('rslide');
+                        $(this).addClass('move');
                     } else {
-                        $(this).removeClass('rslide');
+                        $(this).removeClass('move');
                     }
                 })
 
