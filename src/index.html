@@ -75,6 +75,72 @@
                     $('header').removeClass('on');
                 }
 
+                // header checking
+                var skills_top = $('#skills').offset().top;
+                var projects_top = $('#projects').offset().top;
+                var caa_top = $('#career_and_activities').offset().top;
+                
+                if(win_top >= about_top - 300){
+                    // remove another
+                    $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) span').removeClass('check');
+
+                    $('#header_inner > nav > ul > li:nth-of-type(4) a').addClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) span').addClass('check');
+                } else {
+                    $('#header_inner > nav > ul > li:nth-of-type(4) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) span').removeClass('check');
+                }
+                if(win_top >= skills_top - 300){
+                    // remove another
+                    $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) span').removeClass('check');
+
+                    $('#header_inner > nav > ul > li:nth-of-type(3) a').addClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) span').addClass('check');
+                } else {
+                    $('#header_inner > nav > ul > li:nth-of-type(3) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) span').removeClass('check');
+                }
+                if(win_top >= projects_top - 300){
+                    // remove another
+                    $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) span').removeClass('check');
+
+                    $('#header_inner > nav > ul > li:nth-of-type(2) a').addClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) span').addClass('check');
+                } else {
+                    $('#header_inner > nav > ul > li:nth-of-type(2) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) span').removeClass('check');
+                }
+                if(win_top >= caa_top - 300){
+                    // remove another
+                    $('#header_inner > nav > ul > li:nth-of-type(2) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(2) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(3) span').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(4) span').removeClass('check');
+
+                    $('#header_inner > nav > ul > li:nth-of-type(1) a').addClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(1) span').addClass('check');
+                } else {
+                    $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
+                    $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
+                }
+
                 // animation : fade 
                 $('#about_me, #skills_inner > h2, #skills_left, #skills_right, #projects_inner h2, #projects_boxs_inner, #caa_inner > h2, #caa_inner > i').each(function(){
                     var box_top = $(this).offset().top;
@@ -215,61 +281,61 @@
                         <span></span>
                         <ul>
                             <li class="clear">
-                                <p>HTML5 / CSS3</p>
+                                <a href="#">HTML5 / CSS3</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>jQuery</p>
+                                <a href="#">jQuery</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>JavaScript</p>
+                                <a href="#">JavaScript</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>Photoshop</p>
+                                <a href="#">Photoshop</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>Illustrator</p>
+                                <a href="#">Illustrator</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>Adobe XD</p>
+                                <a href="#">Adobe XD</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>Figma</p>
+                                <a href="#">Figma</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>C / C++</p>
+                                <a href="#">C / C++</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>Java / Python</p>
+                                <a href="#">Java / Python</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>
                             </li>
                             <li class="clear">
-                                <p>Git / Gitlab</p>
+                                <a href="#">Git / Gitlab</a>
                                 <span class="default_p">
                                     <span class="this_p"></span>
                                 </span>

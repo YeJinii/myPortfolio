@@ -260,7 +260,7 @@ header.on {
     height: 50px;
     margin-left: 7.097%; /* 22 / 310 */
     background-color: #ffffff;
-    color: #5f5f5f;
+    color: #1225ff;
 }
 #about_me_inner #about_me_right > a:hover {
     color: #1225ff;
@@ -335,12 +335,16 @@ header.on {
     height: 18px;
     margin-bottom: 12px;
 }
-#skills_left > ul > li > p {
+#skills_left > ul > li > a {
+    color: white;
     display: block;
     float: left;
     font-size: 1.2rem;
     line-height: 18px;
     font-family: 'SBAggroL', sans-serif;
+}
+#skills_left > ul > li > a:hover {
+    color: skyblue;
 }
 #skills_inner > #skills_left > ul > li .default_p {
     display: block;
@@ -1166,7 +1170,7 @@ footer {
         height: 22px;
         margin-bottom: 15px;
     }
-    #skills_inner > #skills_left > ul > li > p {
+    #skills_inner > #skills_left > ul > li > a {
         display: block;
         float: left;
         font-size: 1.5rem;
@@ -1890,7 +1894,7 @@ footer {
         height: 30px;
         margin-bottom: 15px;
     }
-    #skills_inner > #skills_left > ul > li > p {
+    #skills_inner > #skills_left > ul > li > a {
         display: block;
         float: left;
         font-size: 2rem;
@@ -2377,7 +2381,7 @@ footer {
     #header_inner > nav > ul > li {
         display:block;
         float: right;
-        height: 64px;
+        height: 60px;
         margin-top: 40px;
         margin-right: 2.544%; /* 29 / 1140 */
         position: relative;
@@ -2403,6 +2407,7 @@ footer {
         height: 5px;
         background-color: transparent;
     }
+
     #header_inner > nav > ul > li:hover a {
         color: #ffffff;
     }
@@ -2411,6 +2416,44 @@ footer {
         background-color: #ffffff;
         width: 100%;
     }
+
+
+    #header_inner > nav > ul > li:nth-of-type(4) a.check {
+        color: #ffffff;
+    }
+    #header_inner > nav > ul > li:nth-of-type(4) span.check {
+        animation: underline .3s linear;
+        background-color: #ffffff;
+        width: 100%;
+    }
+
+    #header_inner > nav > ul > li:nth-of-type(3) a.check {
+        color: #ffffff;
+    }
+    #header_inner > nav > ul > li:nth-of-type(3) span.check {
+        animation: underline .3s linear;
+        background-color: #ffffff;
+        width: 100%;
+    }
+
+    #header_inner > nav > ul > li:nth-of-type(2) a.check {
+        color: #ffffff;
+    }
+    #header_inner > nav > ul > li:nth-of-type(2) span.check {
+        animation: underline .3s linear;
+        background-color: #ffffff;
+        width: 100%;
+    }
+
+    #header_inner > nav > ul > li:nth-of-type(1) a.check {
+        color: #ffffff;
+    }
+    #header_inner > nav > ul > li:nth-of-type(1) span.check {
+        animation: underline .3s linear;
+        background-color: #ffffff;
+        width: 100%;
+    }
+
     @keyframes underline {
         from { width: 0%; }
         to { width: 100%; }
@@ -2608,7 +2651,7 @@ footer {
         height: 30px;
         margin-bottom: 15px;
     }
-    #skills_inner > #skills_left > ul > li > p {
+    #skills_inner > #skills_left > ul > li > a {
         display: block;
         float: left;
         font-size: 2rem;
@@ -2704,8 +2747,8 @@ footer {
         height: 52px;
     }
     #skills_inner > #skills_right #cert_txt_inner > p {
-        font-size: 1.5rem;
-        line-height: 18px;
+        font-size: 1.8rem;
+        line-height: 21px;
         margin-bottom: 10px;
     }
     #cert_txt_inner > p:last-child {
@@ -3336,7 +3379,7 @@ footer {
         height: 30px;
         margin-bottom: 15px;
     }
-    #skills_inner > #skills_left > ul > li > p {
+    #skills_inner > #skills_left > ul > li > a {
         display: block;
         float: left;
         font-size: 2rem;
