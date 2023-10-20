@@ -47,15 +47,13 @@ html, body {
     width: 100%;
     height: 100vh;
     background: url(../img/375/mainImg_bg.png) #000 top/cover;
-    padding-top: 384px;
-    padding-bottom: 100px; /* 100 / 700 */
+    padding-top: 54.857%; /* 384 / 700 */
     color: white;
 }
 #title_inner {
     width: 82.667%; /* 310 / 375 */
     height: 100%;
     margin: 0 auto;
-    position: relative;
 }
 #title_inner > span {
     height: 116px;
@@ -78,8 +76,7 @@ html, body {
     margin-top: 5px;
 }
 #title_inner > a {
-    position: absolute;
-    bottom: 0;
+    margin-top: 18.714%; /* 131 / 700 */
     display: block;
     width: 100%;
     height: 33px;
@@ -880,14 +877,12 @@ footer {
     #mainImg {
         height: 100vh;
         background: url(../img/768/mainImg_bg.png) #000 top/cover;
-        padding-top: 384px;
-        padding-bottom: 100px;
+        padding-top: 31.894%; /* 384 / 1024 */
     }
     #title_inner {
         width: 85.416%; /* 656 / 768 */
         height: 100%;
         margin: 0 auto;
-        position: relative;
     }
     #title_inner > span {
         font-size: 4.5rem;
@@ -905,8 +900,7 @@ footer {
         margin-top: 5px;
     }
     #title_inner > a {
-        position: absolute;
-        bottom: 0;
+        margin-top: 22.949%; /* 235 / 1024 */
         display: block;
         width: 100%;
         height: 49px;
@@ -1614,14 +1608,12 @@ footer {
     #mainImg {
         height: 100vh;
         background: url(../img/1024/mainImg_bg.png) #000 top/cover;
-        padding-top: 338px; /* 338 / 850 */
-        padding-bottom: 100px; /* 100 / 850 */
+        padding-top: 22%; /* 338 / 850 */
     }
     #title_inner {
         width: 89.063%; /* 912 / 1024 */
         height: 100%;
         margin: 0 auto;
-        position: relative;
     }
     #title_inner > span {
         font-size: 5rem;
@@ -1632,15 +1624,15 @@ footer {
     }
     #title_inner > div {
         font-size: 2rem;
-        margin-top: 30px;
+        margin-top: 3.529%; /* 30 / 850 */
     }
     #title_inner > div > span { /* sub title 개행 */
         display: inline;
         margin: 0px;
     }
     #title_inner > a {
+        margin-top: 22.235%; /* 189 / 850 */
         display: block;
-        position: absolute;
         width: 100%;
         height: 49px;
         text-align: center;
@@ -2291,8 +2283,7 @@ footer {
     #mainImg {
         height: 100vh;
         background: url(../img/1280/mainImg_bg.png) #000 top/cover;
-        padding-top: 324px;
-        padding-bottom: 100px;
+        padding-top: 22%;
     }
     #title_inner {
         width: 89.063%; /* 1140 / 1280 */
@@ -2316,11 +2307,11 @@ footer {
         margin: 0px;
     }
     #title_inner > a {
+        margin-top: 10%; /* 174 / 850 */
         display: block;
         width: 100%;
         height: 49px;
         text-align: center;
-        position: absolute;
     }
     #title_inner > a > p {
         font-size: 2rem;
@@ -3019,14 +3010,12 @@ footer {
     /* 1920 - mainImg */
     #mainImg {
         background: url(../img/1920/mainImg_bg.png) #000 top/cover;
-        padding-top: 324px;
-        padding-bottom: 100px;
+        padding-top: 15%;
     }
     #title_inner {
         width: 1596px;
         height: 100%;
         margin: 0 auto;
-        position: relative;
     }
     #title_inner > span {
         font-size: 8rem;
@@ -3044,11 +3033,11 @@ footer {
         margin: 0px;
     }
     #title_inner > a {
+        margin-top: 10%;
         display: block;
         width: 100%;
         height: 49px;
         text-align: center;
-        position: absolute;
     }
     #title_inner > a > p {
         font-size: 2rem;
