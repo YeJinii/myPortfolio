@@ -47,16 +47,20 @@ html, body {
     width: 100%;
     height: 100vh;
     background: url(../img/375/mainImg_bg.png) #000 top/cover;
-    padding-top: 54.857%; /* 384 / 700 */
+    padding-top: 20%;
+    padding-bottom: 10%; 
     color: white;
 }
 #title_inner {
     width: 82.667%; /* 310 / 375 */
     height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 #title_inner > span {
-    height: 116px;
+    position: absolute;
+    top: 0;
+    left: 0;
     font-size: 3rem;
     line-height: 1.333; /* 40 / 30 */
     font-family: 'SBAggroB', sans-serif;
@@ -66,17 +70,22 @@ html, body {
     display: block;
 }
 #title_inner > div {
+    position: absolute;
+    left: 0;
+    top: 140px;
     font-size: 1.4rem;
     font-family: 'SBAggroL', sans-serif;
     color: #CCCCCC;
-    margin-top: 20px;
 }
 #title_inner > div > span {
     display: block;
     margin-top: 5px;
 }
 #title_inner > a {
-    margin-top: 18.714%; /* 131 / 700 */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
     display: block;
     width: 100%;
     height: 33px;
@@ -881,30 +890,40 @@ footer {
     #mainImg {
         height: 100vh;
         background: url(../img/768/mainImg_bg.png) #000 top/cover;
-        padding-top: 31.894%; /* 384 / 1024 */
+        padding-top: 20%;
+        padding-bottom: 5%;
     }
     #title_inner {
         width: 85.416%; /* 656 / 768 */
         height: 100%;
         margin: 0 auto;
+        position: relative;
     }
     #title_inner > span {
-        font-size: 4.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 4rem;
         line-height: 1.2; /* 54 / 45 */
     }
     #title_inner > span > span {
         display: block;
     }
     #title_inner > div {
-        font-size: 2.4rem;
-        margin-top: 30px;
+        position: absolute;
+        top: 164px;
+        left: 0;
+        font-size: 2rem;
     }
     #title_inner > div > span {
         display: block;
         margin-top: 5px;
     }
     #title_inner > a {
-        margin-top: 22.949%; /* 235 / 1024 */
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
         display: block;
         width: 100%;
         height: 49px;
@@ -912,14 +931,14 @@ footer {
         color: #EBEBEB;
     }
     #title_inner > a > p {
-        font-size: 2rem;
+        font-size: 1.2rem;
         margin-bottom: 10px;
     }
     #title_inner > a > span {
         display: block;
         margin: 0 auto;
-        width: 21px;
-        height: 15px;
+        width: 15px;
+        height: 10px;
         text-indent: -9999px;
         overflow: hidden;
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
@@ -1612,14 +1631,19 @@ footer {
     #mainImg {
         height: 100vh;
         background: url(../img/1024/mainImg_bg.png) #000 top/cover;
-        padding-top: 22%; /* 338 / 850 */
+        padding-top: 20%;
+        padding-bottom: 5%;
     }
     #title_inner {
         width: 89.063%; /* 912 / 1024 */
         height: 100%;
         margin: 0 auto;
+        position: relative;
     }
     #title_inner > span {
+        position: absolute;
+        left: 0;
+        top: 0;
         font-size: 5rem;
         line-height: 1.2; /* 60 / 50 */
     }
@@ -1627,8 +1651,10 @@ footer {
         display: inline;
     }
     #title_inner > div {
+        position: absolute;
+        left: 0;
+        top: 140px;
         font-size: 2rem;
-        margin-top: 3.529%; /* 30 / 850 */
     }
     #title_inner > div > span { /* sub title 개행 */
         display: inline;
@@ -1642,14 +1668,14 @@ footer {
         text-align: center;
     }
     #title_inner > a > p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 10px;
     }
     #title_inner > a > span {
         display: block;
         margin: 0 auto;
-        width: 21px;
-        height: 15px;
+        width: 18px;
+        height: 12px;
         text-indent: -9999px;
         overflow: hidden;
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
@@ -2287,7 +2313,8 @@ footer {
     #mainImg {
         height: 100vh;
         background: url(../img/1280/mainImg_bg.png) #000 top/cover;
-        padding-top: 22%;
+        padding-top: 20%;
+        padding-bottom: 5%;
     }
     #title_inner {
         width: 89.063%; /* 1140 / 1280 */
@@ -2295,7 +2322,10 @@ footer {
         position: relative;
     }
     #title_inner > span {
-        font-size: 6rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 5.5rem;
         line-height: 1.2; /* 72 / 60 */
     }
     #title_inner > span > span { /* main title 개행 */
@@ -2303,29 +2333,30 @@ footer {
     }
     #title_inner > div {
         font-size: 2.4rem;
-        margin-top: 30px;
-        margin-bottom: 0;
     }
     #title_inner > div > span { /* sub title 개행 */
         display: inline;
         margin: 0px;
     }
     #title_inner > a {
-        margin-top: 10%; /* 174 / 850 */
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
         display: block;
         width: 100%;
         height: 49px;
         text-align: center;
     }
     #title_inner > a > p {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
     #title_inner > a > span {
         display: block;
         margin: 0 auto;
-        width: 21px;
-        height: 15px;
+        width: 18px;
+        height: 12px;
         text-indent: -9999px;
         overflow: hidden;
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
@@ -3053,14 +3084,23 @@ footer {
     /* 1920 - mainImg */
     #mainImg {
         background: url(../img/1920/mainImg_bg.png) #000 top/cover;
-        padding-top: 15%;
+        padding-top: 20%;
+        padding-bottom: 5%;
     }
     #title_inner {
         width: 1596px;
         height: 100%;
         margin: 0 auto;
     }
+
+    #dynamic {
+        position: relative;
+        display: inline-block;
+    }
     #title_inner > span {
+        position: absolute;
+        left: 0;
+        top: 0;
         font-size: 8rem;
         line-height: 1.2; /* 96 / 80 */
     }
@@ -3068,8 +3108,10 @@ footer {
         display: inline;
     }
     #title_inner > div {
+        position: absolute;
+        left: 0;
+        top: 212px;
         font-size: 3.2rem;
-        margin-top: 30px;
     }
     #title_inner > div > span { /* sub title 개행 */
         display: inline;
