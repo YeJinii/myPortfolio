@@ -156,7 +156,7 @@ html, body {
     opacity: 1;
     animation: bslide 1.5s backwards;
 }
-#title_inner > div.on {
+#mobile_sub_title.on {
     opacity: 1;
     animation: bslide 1.5s 1s backwards;
 }
@@ -983,6 +983,20 @@ footer {
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
     }
 
+    /* animation  - 768 */
+    #main_title.on {
+        opacity: 1;
+        animation: bslide 1.5s backwards;
+    }
+    #mobile_sub_title.on {
+        opacity: 1;
+        animation: bslide 1.5s 1s backwards;
+    }
+    #title_inner > a.on {
+        opacity: 1;
+        animation: fade 1.5s 2s backwards;
+    }
+
     header {
         /* if you want hide menu bar */
         display: none; 
@@ -1685,26 +1699,10 @@ footer {
     .mobile_newline { /* main title 개행 */
         display: inline;
     }
-
-    #main_title > p.on {
-        opacity: 1;
-        animation: bslide 1.5s backwards;
-    }
-    .newline.on {
-        opacity: 1;
-        animation: bslide 1.5s 1s backwards;
-    }
-    #title_inner > a.on {
-        opacity: 1;
-        animation: fade 1.5s 8s backwards;
+    #mobile_sub_title {
+        display: none;
     }
 
-    #title_inner > div {
-        position: absolute;
-        left: 0;
-        top: 140px;
-        font-size: 2rem;
-    }
     #title_inner > a {
         margin-top: 22.235%; /* 189 / 850 */
         display: block;
@@ -1724,6 +1722,20 @@ footer {
         text-indent: -9999px;
         overflow: hidden;
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
+    }
+
+    /* animation */
+    #main_title > p.on {
+        opacity: 1;
+        animation: bslide 1.5s backwards;
+    }
+    .newline.on {
+        opacity: 1;
+        animation: bslide 1.5s 1s backwards;
+    }
+    #title_inner > a.on {
+        opacity: 1;
+        animation: fade 1.5s 7.5s backwards;
     }
 
     /* typing motion */
@@ -2390,16 +2402,11 @@ footer {
     .mobile_newline { /* main title 개행 */
         display: inline;
     }
-    #main_title > p.on {
-        opacity: 1;
-        animation: bslide 1.5s backwards;
-    }
-    .newline.on {
-        opacity: 1;
-        animation: bslide 1.5s 1s backwards;
-    }
     #title_inner > div {
         font-size: 2.4rem;
+    }
+    #mobile_sub_title {
+        display: none;
     }
     #title_inner > a {
         position: absolute;
@@ -2423,6 +2430,39 @@ footer {
         text-indent: -9999px;
         overflow: hidden;
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
+    }
+
+    /* animation */
+    #main_title > p.on {
+        opacity: 1;
+        animation: bslide 1.5s backwards;
+    }
+    .newline.on {
+        opacity: 1;
+        animation: bslide 1.5s 1s backwards;
+    }
+    #title_inner > a.on {
+        opacity: 1;
+        animation: fade 1.5s 7.5s backwards;
+    }
+
+    /* typing motion */
+    #dynamic {
+        position: relative;
+        display: inline-block;
+    }
+    #dynamic::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -3px;
+        right: -10px;
+        width: 2px;
+        height: 24px;
+        background-color: white;
+    }
+    #dynamic.active::after {
+        display: none;
     }
 
     header {
@@ -3160,21 +3200,17 @@ footer {
         display: inline;
     }
 
-    #main_title > p.on {
-        opacity: 1;
-        animation: bslide 1.5s backwards;
-    }
-    .newline.on {
-        opacity: 1;
-        animation: bslide 1.5s 1s backwards;
-    }
-
     #title_inner > div {
         position: absolute;
         left: 0;
         top: 212px;
         font-size: 3.2rem;
     }
+
+    #mobile_sub_title {
+        display: none;
+    }
+
     #title_inner > a {
         margin-top: 10%;
         display: block;
@@ -3194,6 +3230,39 @@ footer {
         text-indent: -9999px;
         overflow: hidden;
         background: url(../img/768/about_me_arrow.png) no-repeat center/contain;
+    }
+
+    /* animation - 1920 */
+    #main_title > p.on {
+        opacity: 1;
+        animation: bslide 1.5s backwards;
+    }
+    .newline.on {
+        opacity: 1;
+        animation: bslide 1.5s 1s backwards;
+    }
+    #title_inner > a.on {
+        opacity: 1;
+        animation: fade 1.5s 7.5s backwards;
+    }
+
+    /* typing motion */
+    #dynamic {
+        position: relative;
+        display: inline-block;
+    }
+    #dynamic::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -4px;
+        right: -10px;
+        width: 3px;
+        height: 32px;
+        background-color: white;
+    }
+    #dynamic.active::after {
+        display: none;
     }
 
     header {
