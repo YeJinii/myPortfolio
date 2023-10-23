@@ -15,7 +15,8 @@
 
     <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
+
+    <script> // jquery
         $(function(){
             $('#projects_boxs_inner').slick({
                 arrows: false,
@@ -64,10 +65,21 @@
                 ]
             });
 
+            // mainImg animation - mobile & tablet
+            $('#main_title').addClass('on');
+            $('#title_inner > div').addClass('on');
+
+            // mainImg animation - 1024 ~ 1920 
+            $('#main_title > p').addClass('on');
+            $('.newline').addClass('on');
+
+            $('#title_inner > a').addClass('on');
+
             $(window).scroll(function(){
 
-                // header
                 var win_top = $(window).scrollTop();
+
+                // header
                 var about_top = $('#about_me').offset().top;
                 if(win_top >= about_top - 300){
                     $('header').addClass('on');
@@ -80,7 +92,7 @@
                 var projects_top = $('#projects').offset().top;
                 var caa_top = $('#career_and_activities').offset().top;
                 
-                if(win_top >= about_top - 300){
+                if(win_top >= about_top - 500){
                     // remove another
                     $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
@@ -95,7 +107,7 @@
                     $('#header_inner > nav > ul > li:nth-of-type(4) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(4) span').removeClass('check');
                 }
-                if(win_top >= skills_top - 300){
+                if(win_top >= skills_top - 500){
                     // remove another
                     $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
@@ -110,7 +122,7 @@
                     $('#header_inner > nav > ul > li:nth-of-type(3) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(3) span').removeClass('check');
                 }
-                if(win_top >= projects_top - 300){
+                if(win_top >= projects_top - 500){
                     // remove another
                     $('#header_inner > nav > ul > li:nth-of-type(1) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(1) span').removeClass('check');
@@ -125,7 +137,7 @@
                     $('#header_inner > nav > ul > li:nth-of-type(2) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(2) span').removeClass('check');
                 }
-                if(win_top >= caa_top - 300){
+                if(win_top >= caa_top - 400){
                     // remove another
                     $('#header_inner > nav > ul > li:nth-of-type(2) a').removeClass('check');
                     $('#header_inner > nav > ul > li:nth-of-type(2) span').removeClass('check');
@@ -144,7 +156,7 @@
                 // animation : fade 
                 $('#about_me, #skills_inner > h2, #skills_left, #skills_right, #projects_inner h2, #projects_boxs_inner, #caa_inner > h2, #caa_inner > i').each(function(){
                     var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 300){
+                    if(win_top >= box_top - 500){
                         $(this).addClass('on');
                     } else {
                         $(this).removeClass('on');
@@ -154,7 +166,7 @@
                 // transition: width (progress bar) 
                 $('#skills').each(function(){
                     var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 400){
+                    if(win_top >= box_top - 600){
                         $(this).addClass('on');
                     } else {
                         if(win_top <= box_top - $(this).height()){
@@ -167,7 +179,7 @@
                 // animation: slide left,right
                 $('#caa_inner > ul > li:nth-of-type(1), #caa_inner > ul > li:nth-of-type(2), #caa_inner > ul > li:nth-of-type(3), #caa_inner > ul > li:nth-of-type(4)').each(function(){
                     var box_top = $(this).offset().top;
-                    if(win_top >= box_top - 300){
+                    if(win_top >= box_top - 600){
                         $(this).addClass('move');
                     } else {
                         $(this).removeClass('move');
@@ -177,14 +189,53 @@
             })
         }); // document ready
     </script>
-    <script src="main.js"></script>
 </head>
 <body>
+
     <div id="wrap">
         <div id="mainImg">
             <div id="title_inner">
-                <span id="dynamic" class="title-text">Hello,<br>Here is <span class="mobile">YeJin's Portfolio.</span></span>
-                <div>안녕하세요. 어제보다 더 나은 오늘을 위해 달리는<span> 신입 웹 퍼블리셔 박예진입니다.</span></div>
+                <span id="main_title"><p>Hello, </p><span class="newline">Here is <span class="mobile_newline">YeJin's Portfolio.</span></span></span>
+                <div class="mobile">안녕하세요. 어제보다 더 나은 오늘을 위해 달리는<span> 신입 웹 퍼블리셔 박예진입니다.</span></div>
+                <div id="dynamic" class="title-text"></div>
+                <script> // javascript (typing motion)
+                    let target = document.querySelector('#dynamic');
+                    
+                    let myString = "안녕하세요. 어제보다 더 나은 오늘을 위해 달리는 신입 웹 퍼블리셔 박예진 입니다.";
+                    myString = myString.split("");
+
+                    // 타이핑 리셋
+                    function resetTyping(){
+                        target.textContent = "";
+                        dynamic(myString);
+                    }
+
+                    // 한글자씩 텍스트 출력 함수
+                    function dynamic(myStr){
+                        if(myStr.length > 0){
+                            target.textContent += myStr.shift();
+                            setTimeout(function(){
+                                dynamic(myStr);
+                            }, 80);
+                        }else {
+                            setTimeout(function(){
+                                clearInterval(blinkInterval);
+                            }, 3000);
+                        }
+                    }
+
+                    setTimeout(function(){
+                        dynamic(myString);
+                    }, 2500);
+
+                    // 커서 깜빡임 효과
+                    function blink(){
+                        target.classList.toggle("active");
+                    }
+
+                    let blinkInterval = setInterval(blink, 500);
+
+                </script>
                 <a href="#about_me">
                     <p>WELCOME TO MY WEBSITE</p>
                     <span>아래 섹션으로 이동하기</span>
