@@ -1,6 +1,14 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
+/* color */
+:root {
+    --pink-color: #FF5E71;
+    --yellow-color: #FFBF5E;
+    --blue-color: #68ADFF;
+    --green-color: #50974E;
+}
+
 /* font */
 * {
     font-family: 'Noto Sans KR', sans-serif;
@@ -13,6 +21,7 @@
     display:block;
 }
 .blind {
+    display: inline-block;
     text-indent: -9999px;
     overflow: hidden;
 }
@@ -156,4 +165,134 @@ h1.my_logo {
 .my_text_wrap li:nth-of-type(4) i {
     height: 14.61px;
     background: url(../img/my_info_icon_4.png) no-repeat center/contain;
+}
+
+/* my_career */
+#my_car {}
+.section_wrap {
+    width: 320px;
+    margin: 0 auto;
+    text-align: left;
+}
+.section_title {
+    font-size: 3rem;
+    font-family: 'Aclonica', sans-serif;
+    margin-bottom: 20px;
+}
+#my_car .color_point {
+    color: #FF5E71;
+}
+.li_wrap {
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+.li_wrap.last {
+    margin-bottom: 0;
+}
+.company {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 26px;
+}
+.position {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+    opacity: .6;
+}
+.period {
+    display: block;
+    font-size: 1rem;
+    opacity: .3;
+    line-height: 14px;
+    margin-bottom: 10px;
+}
+.field {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.detail_wrap {
+    padding-left: 7px;
+}
+.before_circle {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    vertical-align: 2px;
+    margin-right: 10px;
+}
+.detail {
+    font-size: 1.2rem;
+    line-height: 20px;
+}
+#my_exp .color_point {
+    color: #FFBF5E;
+}
+#my_skill .color_point {
+    color: #68ADFF;
+}
+#my_skill .detail_wrap {
+    margin-bottom: 20px;
+}
+
+#my_work .color_point {
+    color: #50974E;
+}
+.monitor_wrap {
+    position: relative;
+    width: 100%;
+    height: 266px;
+    background: url(../img/monitor.png) no-repeat center/contain;
+    background-size: 320px 266px;
+}
+.screen_wrap {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    width: 300px;
+    height: 170px;
+    background: #000;
+}
+
+/* footer */
+footer {
+    display: block;
+    margin: 100px auto;
+}
+footer p {
+    font-size: 1.2rem;
+    opacity: .5;
+    line-height: 17px;
+    margin-bottom: 25px;
+}
+.sns_wrap {
+    width: 140px;
+    margin: 0 auto;
+}
+.sns_btn {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+.my_git {
+    margin-right: 0;
+}
+.my_email {
+    background: url(../img/sns_email.png) #fff no-repeat center/contain;
+    background-size: 10px 10px;
+}
+.my_notion {
+    background: url(../img/sns_notion.png) #fff no-repeat center/contain;
+    background-size: 12px 12px;
+}
+.my_git {
+    background: url(../img/sns_git.png) #fff no-repeat center/contain;
+    background-size: 12px 12px;
 }
