@@ -7,7 +7,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- slick slider -->
@@ -97,6 +97,39 @@
 
             let deco_line = `   <span class="deco t absolute_center"></span><span class="deco b absolute_center"></span>`;
             $('.card').append(deco_line);
+
+            // scroll 드래그 기능
+            let isDragging = false;
+            let prevX = 0;
+            let prevY = 0;
+
+            $('#scroll-area').mousedown(function(e) {
+                isDragging = true;
+                prevY = e.pageY;
+                prevX = e.pageX;
+                $(this).css('cursor', 'grabbing');
+                return false;
+            });
+
+            $(document).mouseup(function() {
+                isDragging = false;
+                $('#scroll-area').css('cursor', 'grab');
+            });
+
+            $(document).mousemove(function(e) {
+                if (isDragging) {
+                    let deltaY = e.pageY - prevY;
+                    let deltaX = e.pageX - prevX;
+
+                    $('#scroll-area').scrollTop($('#scroll-area').scrollTop() - deltaY);
+                    $('#scroll-area').scrollLeft($('#scroll-area').scrollLeft() - deltaX);
+
+                    prevY = e.pageY;
+                    prevX = e.pageX;
+                }
+            });
+
+
         }); // END: document ready
     </script>
 </head>
@@ -123,7 +156,41 @@
                         <li><i class="my_info_icon"></i>숭실대학교 컴퓨터학부</li>
                     </ul>
                 </div>
-                <div class="card"></div>
+                <div class="card">
+                    <div id="my_car" class="section">
+                        <div class="section_wrap">
+                            <h2 class="section_title">my<span class="color_point">C</span>areer</h2>
+                            <div class="li_wrap">
+                                <span class="company">AIMAX<p class="position">에이아이맥스(주) 개발사업본부 주임</p></span>
+                                
+                                <span class="period">2023.11 - </span>
+                                <span class="field color_point">디자인 및 퍼블리싱</span>
+                                <div id="scroll-area" class="detail_wrap">
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[제53회 전국교수테니스대회] 사이트 디자인 및 퍼블</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[한국전파진흥협회] 1인 미디어 콤플렉스 유지보수</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[한국언론진흥재단] 홍보물 제작</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[드론정보포털] 홈페이지 유지보수</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[에이아이맥스(주)] 홈페이지 리뉴얼 개발</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[한국발명진흥회] 23-24년 아이디어 플랫폼 유지관리</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[국립대전현충원] 홈페이지 구축 및 유지보수</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>[AdobeXD] 제안서 디자인 시안 작업</p>
+                                </div> <!-- e: detail_wrap -->
+                            </div> <!-- e: li_wrap -->
+        
+                            <div class="li_wrap last">
+                                <span class="company">TmaxOS<p class="position">(주)티맥스오에스 OS2-2팀 연구원</p></span>
+                                <span class="period">2022.05 - 2023.01</span>
+                                <span class="field color_point">시스템 프로그래밍</span>
+                                <div id="scroll-area" class="detail_wrap">
+                                    <p class="detail"><span class="before_circle text_delete">*</span>원격 데스크탑 프로그램 (Vds) 고도화</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>제품 고도화를 위한 오픈 소스 분석</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>멀티미디어 프레임워크 분석 및 적용</p>
+                                    <p class="detail"><span class="before_circle text_delete">*</span>코드 설계 및 리팩토링 (C++)</p>
+                                </div> <!-- e: detail_wrap -->
+                            </div> <!-- e: li_wrap -->
+                        </div> <!-- e: section_wrap -->
+                    </div> <!-- e: my_career -->
+                </div>
                 <div class="card"></div>
                 <div class="card"></div>
                 <div class="card"></div>

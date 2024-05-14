@@ -185,6 +185,74 @@ main {
     background: url(../img/card/info/my_info_icon_4.png) no-repeat center/contain;
 }
 
+/* card_2 */
+#my_car {}
+.section_wrap {
+    margin: 40px 0 0 20px;
+    text-align: left;
+}
+.section_title {
+    font-size: 3rem;
+    line-height: 45px;
+    font-family: 'Aclonica', sans-serif;
+    margin-bottom: 15px;
+}
+#my_car .color_point {
+    color: #FF5E71;
+}
+.li_wrap {
+    margin-bottom: 20px;
+}
+.li_wrap.last {
+    margin-bottom: 0;
+}
+.company {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 26px;
+}
+.position {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+    opacity: .6;
+}
+.period {
+    display: block;
+    font-size: 1rem;
+    opacity: .3;
+    line-height: 14px;
+    margin-bottom: 10px;
+}
+.field {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.detail_wrap {
+    cursor: pointer;
+    background-color: #232323;
+    width: 270px;
+    height: 90px;
+    overflow-x: hidden; /* 가로 스크롤을 숨깁니다. */
+    overflow-y: auto; /* 세로 스크롤만 표시합니다. */
+    padding: 5px 0px 5px 5px;
+}
+.before_circle {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    vertical-align: 2px;
+    margin-right: 10px;
+}
+.detail {
+    font-size: 1.1rem;
+    line-height: 20px;
+}
+
 @media (max-width: 768px) {
     .wrap {
         margin-left: 0px;

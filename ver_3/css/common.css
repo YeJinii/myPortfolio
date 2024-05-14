@@ -13,3 +13,17 @@
     text-indent: -9999px;
     overflow: hidden;
 }
+
+  /* 스크롤바를 커스텀하기 위한 스타일 */
+  .detail_wrap::-webkit-scrollbar {
+    width: 5px; /* 스크롤바의 너비 */
+  }
+
+  .detail_wrap::-webkit-scrollbar-thumb {
+    background-color: #646464; /* 스크롤바 썸의 배경색 */
+    border-radius: 6px; /* 스크롤바 썸의 모서리 반경 */
+  }
+
+  .detail_wrap::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* 스크롤바 썸의 배경색 (마우스 오버 시) */
+  }
