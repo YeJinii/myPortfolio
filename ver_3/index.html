@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Ye Jin</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+
+    <!-- jquery -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+    <!-- slick slider-->
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                responsive: [ // 반응형 웹 구현 옵션
+                    { 
+                        breakpoint: 768, //화면 사이즈 768px
+                        settings: {    
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        } 
+                    }
+                ]
+            }); // END: slick
+
+            // 마우스 휠 이벤트
+            $(window).on('wheel', function(e) {
+                if (e.originalEvent.deltaY < 0) {
+                    // 위로 휠하는 경우
+                    $('.slider .slick-prev').click();
+                } else {
+                    // 아래로 휠하는 경우
+                    $('.slider .slick-next').click();
+                }
+            });
+
+            // 터치 이벤트
+            let touchArea = $('main');
+
+            // 터치 시작 지점을 저장할 변수
+            let startX;
+            let startY;
+
+            touchArea.on('touchstart', function(e) {
+                // 터치 시작 시점의 좌표를 저장
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            });
+
+            touchArea.on('touchend', function(e) {
+                // 터치 끝난 시점의 좌표를 저장
+                let endX = e.changedTouches[0].clientX;
+                let endY = e.changedTouches[0].clientY;
+
+                // 터치 이동 거리 계산
+                let deltaX = endX - startX;
+                let deltaY = endY - startY;
+
+                // 좌우 터치인지 위아래 터치인지 확인
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    // 좌우 터치
+                    if (deltaX > 0) {
+                        // 오른쪽으로 스와이프
+                        $('.slider .slick-prev').click();
+                        // 여기에 오른쪽으로 스와이프할 때 실행할 코드 작성
+                    } else {
+                        // 왼쪽으로 스와이프
+                        $('.slider .slick-next').click();
+                        // 여기에 왼쪽으로 스와이프할 때 실행할 코드 작성
+                    }
+                } else {
+                    // 위아래 터치
+                    if (deltaY > 0) {
+                        // 아래로 스와이프
+                        $('.slider .slick-prev').click();
+                        // 여기에 아래로 스와이프할 때 실행할 코드 작성
+                    } else {
+                        // 위로 스와이프
+                        $('.slider .slick-next').click();
+                        // 여기에 위로 스와이프할 때 실행할 코드 작성
+                    }
+                }
+            }); // END: touchArea
+
+            let deco_line = `   <span class="deco t absolute_center"></span><span class="deco b absolute_center"></span>`;
+            $('.card').append(deco_line);
+        }); // END: document ready
+    </script>
+</head>
+<body>
+    <main>
+        <div class="wrap">
+            <div class="slider">
+                <div class="card c_0">
+                    <div class="c_name absolute_center">叡珍</div>
+                    <div class="logo absolute_center text_delete">YJ</div>
+                    <div class="k_name absolute_center">
+                        <span class="bold" style="margin-right: 10px;">박</span><span class="color">빛날 </span><span class="bold" style="margin-right: 10px;">예</span><span class="color">보배 </span><span class="bold">진</span>
+                    </div>
+                    <p class="intro_txt absolute_center">변화를 읽고 섬세함을 추구합니다.</p>
+                    <a href="https://yejindin.mycafe24.com" class="my_link absolute_center">www.yejindin.mycafe24.com</a>
+                    <span class="bg"></span>
+                </div>
+                <div class="card c_1">
+                    <span class="my_photo absolute_center"></span>      
+                    <ul class="my_text_wrap absolute_center">
+                        <li><i class="my_info_icon"></i>박예진 (25)</li>
+                        <li><i class="my_info_icon"></i>서울시 금천구</li>
+                        <li><i class="my_info_icon"></i>에이아이맥스(주)</li>
+                        <li><i class="my_info_icon"></i>숭실대학교 컴퓨터학부</li>
+                    </ul>
+                </div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

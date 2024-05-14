@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.absolute_center {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text_delete {
+    text-indent: -9999px;
+    overflow: hidden;
+}
