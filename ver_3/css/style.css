@@ -94,7 +94,7 @@ main {
     bottom: 0;
     width: 308px;
     height: 395px;
-    background-color: rgba(0,0,0,1);
+    background-color: #121212;
     background-size: 308px 395px;
 }
 .card.c_0 .logo {
@@ -231,8 +231,7 @@ main {
     margin-bottom: 10px;
 }
 .detail_wrap {
-    cursor: pointer;
-    background-color: #232323;
+    background-color: #121212;
     width: 270px;
     height: 90px;
     overflow-x: hidden; /* 가로 스크롤을 숨깁니다. */
@@ -251,6 +250,56 @@ main {
 .detail {
     font-size: 1.1rem;
     line-height: 20px;
+}
+
+#my_exp .color_point {
+    color: #FFBF5E;
+}
+#my_skill .color_point {
+    color: #68ADFF;
+}
+#my_skill .detail_wrap {
+    margin-bottom: 10px;
+}
+
+#my_result .color_point {
+    color: #50974E;
+}
+#my_result .result_wrap {
+    background-color: #121212;
+    width: 270px;
+}
+
+#my_result .result {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    color: #fff;
+    padding: 10px 10px;
+    border: 1px solid rgba(98, 98, 98, .5);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+#my_result .result:hover {
+    background-color: #50974E;
+}
+
+#my_result .result .hosting {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+    padding: 2px 5px;
+    background-color: red;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#my_result .result:hover .hosting {
+    background-color: #191919;
+    color: red;
 }
 
 @media (max-width: 768px) {

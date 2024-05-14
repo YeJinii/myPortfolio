@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+/* color */
+:root {
+  --pink-color: #FF5E71;
+  --yellow-color: #FFBF5E;
+  --blue-color: #68ADFF;
+  --green-color: #50974E;
+}
+
 .absolute_center {
     display: block;
     position: absolute;
