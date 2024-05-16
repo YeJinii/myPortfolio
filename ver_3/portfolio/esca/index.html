@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ESCA !</title>
+    <link rel="icon" href="./img/favicon_io/favicon.ico">
+
+    <!-- css -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- font: Tinos -->
+        <!-- 
+            font using rule
+            
+            // Tinos (Times new romans 대체)
+            font-family: 'Tinos', serif;
+
+            // 나눔 명조
+            font-family: 'Nanum Myeongjo', serif;
+        -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var check = false;
+
+            // menu btn
+            $('.open_menu_btn').click(function(){
+                if(!check){
+                    $('nav').addClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').addClass('trans');
+                    check = true;
+                } else {
+                    $('nav').removeClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').removeClass('trans');
+                    check = false;
+                }
+            });
+        });
+    </script>    
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header_inner" class="clear">
+                <a href="#" class="clear">
+                    <span></span>
+                    <h1>ESCA</h1>
+                    <h2>Embedded Systems & </br>Computer Architecture</h2>
+                </a>
+                <button class="open_menu_btn mb">
+                    <span>메뉴열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="clear">
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <button class="close_menu_btn">메뉴 닫기</button>
+                    <ul class="clear">
+                        <li>
+                            <a href="./index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./members.html">
+                                Members
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Research
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Teaching">
+                                Teaching
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Publication
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- e: header inner -->
+        </header>
+        <main>
+            <div id="Professor">
+                <div class="prof_inner">
+                    <h2 id="mobile_h2">Professor</h2>
+                    <i id="mobile_i"></i>
+                    <span class="prof_pic">
+                        서태원 교수 얼굴 사진
+                    </span>
+                    <div class="txt_inner">
+                        <h3>서태원</h3>
+                        <h4>Taeweon Suh</h4>
+                        <h2>Professor</h2>
+                        <div class="info_inner">
+                            <div class="info">
+                                <span>Office. &nbsp;</span>
+                                <p> 320 Aegineung Cafeteria (애기능 생활관 320)</p>
+                            </div>
+                            <div class="info">
+                                <span>Address. &nbsp;</span>
+                                <p> 145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</p>
+                            </div>
+                            <div class="info">
+                                <span>Phone. &nbsp;</span>
+                                <p> +82-2-3290-2397</p>
+                            </div>
+                            <div class="info">
+                                <span>Email. &nbsp;</span>
+                                <p> suhtw@korea.ac.kr</p>
+                            </div>
+                        </div>
+                        <div class="links_inner">
+                            <a href="">
+                                <span></span>
+                                <p>Computer Science and Engineering</p>
+                            </a>
+                            <a href="">
+                                <span></span>
+                                <p>College of Informatics</p>
+                            </a>
+                            <a href="">
+                                <span></span>
+                                <p>Korea University</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="books_inner">
+                        <a href="https://www.yes24.com/Product/Goods/103614627" target="_blank" class="book_1">원리부터 설계까지 쉽고 명확한 컴퓨터 구조 이미지</a>
+                        <a href="https://www.yes24.com/Product/Goods/91303444" target="_blank" class="book_2">원리부터 실무까지 쉽고 명확한 Arm 프로그래밍 이미지</a>
+                    </div>
+                </div>
+            </div>
+            <div id="Biosketch" class="p_theme">
+                <div class="bio_inner">
+                    <h2>Biosketch</h2>
+                    <i></i>
+                    <p>
+                        Taeweon Suh is a Professor in the Department of 
+                        Computer Science & Engineering at Korea University. 
+                        He received his PhD degree in Electrical and 
+                        Computer Engineering from Georgia Institute of Technology. 
+                        His main research interests include AI accelerators, 
+                        NPUs (Neural Processing Units), IoTs, computer architecture, 
+                        multi- & many-core, parallel programming, hardware security, 
+                        and virtualization. Prior to joining academia, he was a systems engineer 
+                        at Intel Corporation in Hillsboro, Oregon in US.
+                    </p>
+                </div>
+            </div>
+            <div id="ProspectiveGraduateStudents" class="p_theme">
+                <div class="pgs_inner">
+                    <h2>Prospective Graduate Students</h2>
+                    <i></i>
+                    <p>
+                        My lab is open to highly motivational and proactive students.
+                        The minimum requirement to join my lab is to take all of my undergrad courses 
+                        (listed below) with at least A grade, or their equivalents in other good institutions. 
+                        Good practical background on operating systems is required as well. Prospective students 
+                        should also be proficient in English. If you meet all of those requirements 
+                        and are interested in studying Embedded Systems (including IoTs), Computer Architecture, 
+                        and/or HPC (High-Performance Computing), feel free to contact me via either email or phone.
+                    </p>
+                </div>
+            </div>
+            <div id="Teaching">
+                <div class="teaching_inner">
+                    <h2>Teaching</h2>
+                    <i></i>
+                    <div class="txt_inner clear">
+                        <div class="left_txt_inner">
+                            <div class="t_first">
+                                COSE221</br>
+                                COSE222</br>
+                                COSE321</br>
+                                COMP427
+                            </div>
+                            <div class="t_second">
+                                AAA514</br>
+                                AAA515</br>
+                                AAA603</br>
+                                AAA621</br>
+                                AAA623</br>
+                                AAA708</br>
+                                AAA711</br>
+                                AAA718</br>
+                                AAA719
+                            </div>
+                            <div class="t_third">
+                                DFE626
+                            </div>
+                            <div class="t_forth">
+                                COM503</br>
+                                COM506</br>
+                                COM509</br>
+                                COM515</br>
+                                COM609</br>
+                                COM850</br>
+                                COM906
+                            </div>
+                            <div class="t_fifth">
+                                CVO102</br>
+                                CVX403</br>
+                                CVX404</br>
+                                CVX601</br>
+                                SWS109
+                            </div>
+                            <div class="t_sixth">
+                                CVO102</br>
+                                CVX403</br>
+                                CVX404</br>
+                                CVX601</br>
+                                SWS109 
+                            </div>
+                        </div>
+                        <!-- todo : 링크 다는 법 -->
+                        <!-- 링크 걸 텍스트를 <a href=""></a> 태그로 '감싼다'. -->
+                        <!-- href="링크 주소" 기입 -->
+                        <div class="right_txt_inner">
+                            <div class="t_first">
+                                <p><a href="http://esca.korea.ac.kr/teaching/cose221_LD">Digital Logic Design </a>(Spring 2016)</p>
+                                <p><a href="http://esca.korea.ac.kr/teaching/cose222_CA/">Computer Architecture </a>(RISC-V) (Fall 2023)</p> 
+                                <p><a href="http://esca.korea.ac.kr/teaching/cose321_CSD/cose321.htm">Computer Systems Design</a> (Spring 2023)</p>
+                                <p>Embedded Systems (Spring 2015)</p>
+                            </div>
+                            <div class="t_second">
+                                <p>Computer Architecture (RISC-V) (Fall 2020)</p>
+                                <p>Embedded Software (Fall 2023)</p>
+                                <p>Parallel Processing Systems (Fall 2022)</p>
+                                <p>Computer Systems Design (Fall 2017)</p>
+                                <p>Software Security (Fall 2019)</p>
+                                <p>Microprocessor-based Systems Design (Spring 2023) (Spring 2019)</p>
+                                <p>Advanced Embedded Systems (Fall 2021) (Fall 2018)</p>
+                                <p>IIoT Systems Design (Spring 2020)</p>
+                                <p>ICS (Industrial Control System) Design with Security (Spring 2022)</p>
+                            </div>
+                            <div class="t_third">
+                                <p>Clouds & IoT based Financial Systems (Fall 2023)</p>
+                            </div>
+                            <div class="t_forth">
+                                <p>Parallel Computer Architecture & Programming (Fall 2013)</p>
+                                <p>Computer Design (Fall 2012)</p>
+                                <p>Computer Systems (Spring 2014) (Spring 2011)</p>
+                                <p>Advanced Computer Architecture (Fall 2011)</p>
+                                <p>Topics in Embedded Systems (Spring 2013) (Fall 2010)</p>
+                                <p>Computer Hacking and Security (Fall 2014)</p>
+                                <p>Computer Application Seminar (Virtual Platform) (Fall 2008)</p>
+                            </div>
+                            <div class="t_fifth">
+                                <p>Computer Architecture (RISC-V) (Fall 2020)</p>
+                                <p>Embedded Systems (Fall 2018)</p>
+                                <p>Parallel Processing (Spring 2018)</p>
+                                <p>Special Topics in Computer Science Technology I (Spring 2019)</p>
+                                <p>Reverse Engineering (Fall 2023) (Spring 2022)</p> 
+                            </div>
+                            <div class="t_sixth">
+                                <p>Advanced Computer Architecture (Spring 2022)</p>
+                                <p>Special Topics in Computer Science I (Spring 2012)</p>
+                                <p>Special Topics in Computer Systems (Spring 2013)</p>
+                                <p>Special Topics in Computer Design (Spring 2011)</p>
+                                <p>Special Topics in Embedded Systems (Fall 2011)</p>
+                            </div>
+                        </div> <!-- e: right_txt_inner -->
+                    </div> <!-- e: txt_inner -->
+                </div> <!-- e: teaching_inner -->
+            </div> <!-- e: Teaching -->
+        </main>
+        <footer>
+            <div class="footer_inner_mobile">
+                <div class="clear">
+                    <span>고려대학교 로고</span>
+                    <div class="txt_inner">
+                        <span>Address.</span>&nbsp;145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</br>
+                        <span>Office.</span>&nbsp;320 Aegineung Cafeteria (애기능 생활관 320)</br>
+                        <span>Phone.</span>&nbsp;+82-2-3290-2397 &nbsp;&nbsp;&nbsp;
+                        <span>Email.</span> suhtw@korea.ac.kr
+                    </div>
+                </div>
+                <i></i>
+                <span>
+                    Copyright ⓒ 2023 ESCA All Rights Reserved. Designed by YeJin.
+                </span>
+            </div>
+            <div class="footer_inner">
+                <span>고려대학교 로고</span>
+                <div class="txt_inner clear">
+                    <div>
+                        <p>
+                            <span>Address & Office.</span> 145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841 / 320 Aegineung Cafeteria (애기능 생활관 320)
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>Phone.</span> +82-2-3290-2397 &nbsp;&nbsp;&nbsp;<span>Email.</span>&nbsp;suhtw@korea.ac.kr
+                        </p>
+                    </div>
+                    <i></i>
+                    <span>
+                        Copyright ⓒ 2023 ESCA Labs All Rights Reserved. Designed by yejin
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

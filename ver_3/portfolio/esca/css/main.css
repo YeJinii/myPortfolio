@@ -1,0 +1,2135 @@
+@charset "utf-8";
+
+@keyframes fade {
+    from {opacity: .5;}
+}
+
+@keyframes bottom {
+    from {
+        transform: translateY(5%);
+        opacity: .5;
+    }
+}
+
+/* reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+h1,fieldset {margin:0; padding:0;}
+html {font-size:0.625em;}  /* 10px */
+body,h1,h2,h3,h4,h5,h6,button {
+    font-family: 'Tinos', 'Nanum Myeongjo', serif;
+    line-height: 1;
+}
+ul,ol,li {list-style:none;}
+a {text-decoration:none;}
+img,fieldset {border:none; vertical-align:middle;}
+strong,em,b,i,address {font-weight:normal; font-style:normal;}
+table {border-collapse:collapse;}
+button {
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
+}
+
+/* common */
+.blind {position:absolute; left:-9999px;}
+.clear:after {
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.desktop {display: none;}
+.pc {display: none;}
+.mb {}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* mobile */
+#wrap {}
+header {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+}
+#header_inner {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+}
+#header_inner > a {
+    float: left;
+    width: 87.097%; /* 270 / 310 */
+    height: 100%;
+}
+#header_inner > a > span {
+    float: left;
+    width: 5px;
+    height: 30px;
+    margin-top: 25px;
+    margin-right: 10px;
+    background-color: #ED702D;
+}
+#header_inner > a h1 {
+    float: left;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-right: 13px; 
+    color: #000000;
+}
+#header_inner > a h2 {
+    float: left;
+    font-size: 1.4rem;
+    color: #9D9D9D;
+    font-weight: normal;
+    line-height: 16px;
+    margin-top: 24px;
+}
+.open_menu_btn {
+    /* 텍스트 숨기기 */
+    overflow: hidden;
+    text-indent: -9999px;
+    float: right;
+    margin-top: 28px;
+}
+.open_menu_btn span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #ED702D;
+    margin-bottom: 5px;
+    transition: transform .5s;
+}
+.open_menu_btn span:last-child {
+    margin-bottom: 0;
+}
+
+.open_menu_btn span:nth-child(1).trans {
+    transform: translateY(9px) rotate(45deg);
+}
+.open_menu_btn span:nth-child(2).trans {
+    opacity: 0;
+}
+.open_menu_btn span:nth-child(3).trans {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+}
+nav.on {
+    display: block;
+}
+nav h2 {}
+nav button {
+    overflow: hidden;
+    text-indent: -9999px;
+}
+nav ul {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+nav ul li {
+    height: 70px;
+}
+nav ul li:hover {
+    background-color: #efefef;
+}
+nav ul li a {
+    line-height: 70px;
+    font-size: 2.5rem;
+    color: #4D4D4D;
+}
+nav ul li a:hover, 
+nav ul li a:focus {
+    color: #ED702D;
+}
+
+main {}
+#Professor {
+    margin-top: 130px;
+    /* opacity: .5; */
+}
+#Professor.on {
+    animation: fade 2s;
+    opacity: 1;
+}
+.prof_inner {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+    padding: 0 0 50px;
+    background-color: #fefefe;
+}
+.prof_inner #mobile_h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.prof_inner #mobile_i {
+    display: block;
+    width:  100%;
+    height: 1px;
+    background-color: #E6E6E6;
+    margin-bottom: 30px;
+}
+.prof_inner .prof_pic {
+    margin: 0 auto;
+    display: block;
+    width: 162px;
+    height: 204px;
+    background: url(../img/members/people/prof.Suh.jpg) no-repeat center/contain;
+    margin-bottom: 20px;
+
+    overflow: hidden;
+    text-indent: -9999px;
+
+}
+.prof_inner .txt_inner {}
+.prof_inner .txt_inner h2 {
+    display: none;
+}
+.prof_inner .txt_inner h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 29px;
+    font-family: 'Nanum Myeongjo', sans-serif;
+}
+.prof_inner .txt_inner h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 17px;
+    font-weight: normal;
+    color: #747474;
+    margin-bottom: 20px;
+}
+.prof_inner .txt_inner .info_inner {
+    width: 100%;
+    height: 62px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+.prof_inner .txt_inner .info_inner .info {
+    display: block;
+    width: 100%;
+    height: 16px;
+    font-size: 1.2rem;
+    line-height: 16px;
+}
+.prof_inner .txt_inner .info_inner .info span {
+    float: left;
+    font-weight: bold;
+}
+.prof_inner .txt_inner .info_inner .info p {
+    float: left;
+}
+.prof_inner .txt_inner .links_inner {
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+.prof_inner .txt_inner .links_inner a {
+    display: block;
+    width: 197px;
+    height: 18px;
+    margin-bottom: 5px;
+    transition: all .3s;
+}
+.prof_inner .txt_inner .links_inner a:hover {
+    background-color: #efefef;
+    transform: scale(1.05);
+}
+.prof_inner .txt_inner .links_inner a:nth-of-type(2){
+    width: 136px;
+}
+.prof_inner .txt_inner .links_inner a:nth-of-type(3){
+    width: 110px;
+}
+.prof_inner .txt_inner .links_inner a span {
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: url(../img/icon/link_icon.png) no-repeat center/contain;
+    margin: 0 5px;
+}
+.prof_inner .txt_inner .links_inner a p {
+    float: left;
+    font-size: 1.2rem;
+    color: #000000;
+}
+.prof_inner .books_inner {
+    width: 228px;
+    height: 141px;
+    margin: 0 auto;
+}
+.prof_inner .books_inner .book_1 {
+    display: block;
+    float: left;
+    width: 109px;
+    height: 141px;
+    
+    overflow: hidden;
+    text-indent: -9999px;
+
+    background: url(../img/book/b_1.jpeg) no-repeat center/contain;
+    background-size: 109px 141px;
+
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+
+    transition: all .3s;
+}
+.prof_inner .books_inner .book_1:hover {
+    transform: scale(1.02);
+    z-index: 80;
+}
+.prof_inner .books_inner .book_2 {
+    display: block;
+    float: left;
+    width: 109px;
+    height: 141px;
+    margin-left: 10px;
+    
+    overflow: hidden;
+    text-indent: -9999px;
+
+    background: url(../img/book/b_2.jpeg) no-repeat center/contain;
+    background-size: 109px 141px;
+
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    
+    transition: all .3s;
+}
+.prof_inner .books_inner .book_2:hover {
+    transform: scale(1.02);
+    z-index: 80;
+}
+
+/* bio & psg common setting */
+.p_theme {}
+.p_theme div {}
+.p_theme div h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+.p_theme div i {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #E6e6e6;
+    margin-bottom: 30px;
+}
+.p_theme div p {
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    font-size: 1.4rem;
+    line-height: 21px;
+}
+
+#Biosketch {
+    padding: 50px 0;
+    /* opacity: .5; */
+}
+#Biosketch.on {
+    animation: bottom 1s backwards;
+    opacity: 1;
+}
+.bio_inner {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+}
+.bio_inner h2 {}
+.bio_inner i {}
+.bio_inner p {}
+
+#ProspectiveGraduateStudents {
+    /* opacity: .5; */
+}
+#ProspectiveGraduateStudents.on {
+    animation: bottom 1s backwards;
+    opacity: 1;
+}
+.pgs_inner {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+}
+.pgs_inner h2 {}
+.pgs_inner i {}
+.pgs_inner p {}
+
+#Teaching {
+    width: 100%;
+}
+#Teaching.on {
+    transition: bottom 1s backwards;
+    opacity: 1;
+}
+.teaching_inner {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+    padding: 100px 0 80px;
+}
+.teaching_inner h2 {
+    font-size: 2rem;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+.teaching_inner i {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #E6E6E6;
+}
+.teaching_inner .txt_inner {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    line-height: 15px;
+}
+.teaching_inner .txt_inner .left_txt_inner {
+    float: left;
+    font-weight: bold;
+    width: 52px;
+    margin-right: 14px;
+}
+.teaching_inner .txt_inner .left_txt_inner div {
+    /* opacity: .5; */
+    margin-bottom: 30px;
+}
+.teaching_inner .txt_inner .left_txt_inner div.on {
+    opacity: 1;
+    animation: bottom 1s backwards;
+}
+.teaching_inner .txt_inner .left_txt_inner div:last-of-type {
+    margin-bottom: 0;
+}
+
+.teaching_inner .txt_inner .right_txt_inner {
+    float: left;
+    width: 78.71%; /* 244 / 310 */
+}
+.teaching_inner .txt_inner .right_txt_inner div {
+    margin-bottom: 30px;
+    /* opacity: .5; */
+}
+.teaching_inner .txt_inner .right_txt_inner div.on {
+    opacity: 1;
+    animation: bottom 1s backwards;
+}
+.teaching_inner .txt_inner .right_txt_inner div:last-of-type {
+    margin-bottom: 0;
+}
+.teaching_inner .txt_inner .right_txt_inner div p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer {
+    width: 100%;
+    height: 131px;
+    background-color: #EBEBEB;
+    color: #555555;
+}
+.footer_inner_mobile {}
+.footer_inner_mobile > div {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+    padding-top: 17px;
+}
+.footer_inner_mobile > div > span {
+    overflow: hidden;
+    text-indent: -9999px;
+    float: left;
+    display: block;
+    width: 40px;
+    height: 54px;
+    margin-right: 14px;
+    background: url(../img/icon/KU_logo.png) no-repeat center/contain;
+}
+.footer_inner_mobile > div .txt_inner {
+    float: left;
+    margin-top: 7px;
+    font-size: 1rem;
+    line-height: 15px;
+}
+.footer_inner_mobile > div .txt_inner span {
+    font-weight: bold;
+}
+.footer_inner_mobile > i {
+    margin: 15px 0 10px;
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: #D3D3D3;
+}
+.footer_inner_mobile > span {
+    width: 315px; 
+    display: block;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #888888;
+
+    text-align: center;
+}
+
+.footer_inner {
+    display: none;
+}
+
+/* end mobile */
+
+/* start tablet 768 */
+@media all and (min-width: 768px) {
+    #wrap {}
+    header {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    #header_inner {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto;
+    }
+    #header_inner > a {
+        float: left;
+        width: 60%; /* 307 / 614 */
+        height: 100%;
+    }
+    #header_inner > a > span {
+        float: left;
+        width: 8px;
+        height: 52px;
+        margin-top: 24px;
+        margin-right: 6.514%; /* 20 / 307 */
+        background-color: #ED702D;
+    }
+    #header_inner > a h1 {
+        float: left;
+        font-size: 5rem;
+        margin-top: 24px;
+        margin-right: 20px; 
+    }
+    #header_inner > a h2 {
+        float: left;
+        font-size: 1.5rem;
+        color: #9D9D9D;
+        font-weight: normal;
+        line-height: 17px;
+        margin-top: 32px;
+    }
+    .open_menu_btn {
+        /* 텍스트 숨기기 */
+        overflow: hidden;
+        text-indent: -9999px;
+        float: right;
+        margin-top: 25px;
+        transition: all .3s;
+        opacity: 0.95;
+    }
+    .open_menu_btn span {
+        display: block;
+        width: 45px;
+        height: 6px;
+        background-color: #ED702D;
+        margin-bottom: 10px;
+    }
+    .open_menu_btn span:last-child {
+        margin-bottom: 0;
+    }
+    .open_menu_btn:hover {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    
+    .open_menu_btn span:nth-child(1).trans {
+        transform: translateY(16px) rotate(45deg);
+    }
+    .open_menu_btn span:nth-child(2).trans {
+        opacity: 0;
+    }
+    .open_menu_btn span:nth-child(3).trans {
+        transform: translateY(-16px) rotate(-45deg);
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    nav.on {
+        display: block;
+    }
+    nav h2 {}
+    nav button {
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li {
+        height: 80px;
+    }
+    nav ul li:hover {
+        background-color: #efefef;
+    }
+    nav ul li a {
+        line-height: 80px;
+        font-size: 2.6rem;
+        color: #4D4D4D;
+    }
+    nav ul li a:hover, 
+    nav ul li a:focus {
+        color: #ED702D;
+    }
+    
+    main {}
+    #Professor {
+        margin-top: 180px;
+        height: 496px;
+    }
+    .prof_inner {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .prof_inner #mobile_h2 {
+        display: none;
+    }
+    .prof_inner #mobile_i {
+        display: none;
+    }
+    .prof_inner .prof_pic {
+        margin: 0;
+        display: block;
+        float: left;
+        width: 33.876%; /* 208 / 614 */
+        height: 258px;
+        border: 4px solid #dedede;
+        background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;
+
+        overflow: hidden;
+        text-indent: -9999px;
+    
+    }
+    .prof_inner .txt_inner {
+        display: block;
+        float: right;
+        width: 62.237%; /* 100 - 33.876 - 4.886 */
+    }
+    .prof_inner .txt_inner h3 {
+        text-align: left;
+        font-size: 3rem;
+        line-height: 35px;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        margin-top: 20px;
+    }
+    .prof_inner .txt_inner h4 {
+        text-align: left;
+        font-size: 2rem;
+        line-height: 23px;
+        font-weight: normal;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        color: #747474;
+        margin-bottom: 12px;
+    }
+    .prof_inner .txt_inner h2 {
+        display: block;
+        font-family: 'Tinos', serif;
+        margin-left: 2px;
+        font-size: 2.5rem;
+        line-height: 28px;
+        font-weight: bold;
+        color: #ED702D;
+        margin-bottom: 30px;
+    }
+    .prof_inner .txt_inner .info_inner {
+        position: absolute;
+        left: 0;
+        top: 298px;
+        width: 100%;
+        height: 118px;
+        padding-left: 0px;
+        margin-bottom: 0;
+    }
+    .prof_inner .txt_inner .info_inner .info {
+        display: block;
+        width: 100%;
+        height: 32px;
+        font-family: 'Tinos', 'Nanum Myeongjo', serif;
+        font-size: 2rem;
+        line-height: 32px;
+    }
+    .prof_inner .txt_inner .info_inner .info span {
+        float: left;
+        font-weight: bold;
+    }
+    .prof_inner .txt_inner .info_inner .info p {
+        float: left;
+    }
+    .prof_inner .txt_inner .links_inner {
+        margin: 0;
+    }
+    .prof_inner .txt_inner .links_inner a {
+        display: block;
+        width: 258px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(2){
+        width: 181px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(3){
+        width: 149px;
+    }
+    .prof_inner .txt_inner .links_inner a span {
+        display: block;
+        float: left;
+        width: 15px;
+        height: 15px;
+        background: url(../img/icon/link_icon.png) no-repeat center/contain;
+        margin: 8px 10px;
+    }
+    .prof_inner .txt_inner .links_inner a p {
+        float: left;
+        font-size: 1.5rem;
+        line-height: 30px;
+        color: #000000;
+    }
+    .prof_inner .books_inner {
+        position: absolute;
+        width: 170px;
+        height: 195px;
+        margin: 0 auto;
+        right: 0;
+        top: 0;
+    }
+    .prof_inner .books_inner .book_1 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 109px;
+        height: 141px;
+        
+        left: 0;
+        top: 0;
+
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_1.jpeg) no-repeat center/contain;
+        background-size: 109px 141px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    .prof_inner .books_inner .book_2 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 111px;
+        height: 140x;
+        margin: 0;
+
+        right: 0;
+        bottom: 0;
+        
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_2.jpeg) no-repeat center/contain;
+        background-size: 111px 140px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    
+    /* bio & psg common setting */
+    .p_theme {}
+    .p_theme div {}
+    .p_theme div h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+    .p_theme div i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6e6e6;
+        margin-bottom: 30px;
+    }
+    .p_theme div p {
+        margin: 0 20px;
+        width: calc(100% - 40px);
+        font-size: 1.8rem;
+        line-height: 27px;
+    }
+    
+    #Biosketch {
+        padding: 0;
+        padding-bottom: 80px;
+    }
+    .bio_inner {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto;
+    }
+    .bio_inner h2 {}
+    .bio_inner i {}
+    .bio_inner p {}
+    
+    #ProspectiveGraduateStudents {}
+    .pgs_inner {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto;
+    }
+    .pgs_inner h2 {}
+    .pgs_inner i {}
+    .pgs_inner p {}
+    
+    #Teaching {
+        width: 100%;
+    }
+    .teaching_inner {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+    .teaching_inner h2 {
+        font-size: 3rem;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+    .teaching_inner i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6E6E6;
+    }
+    .teaching_inner .txt_inner {
+        margin-top: 30px;
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner {
+        float: left;
+        font-weight: bold;
+        width: 11.89%; /* 78 / 614 */
+
+        margin-left: 20px;
+        margin-right: 7.317%; /* 48 / 614 */
+    }
+    .teaching_inner .txt_inner .left_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .teaching_inner .txt_inner .right_txt_inner {
+        float: left;
+        width: calc(77.744% - 20px); /* 100 - 7.317 - 11.89 */
+    }
+    .teaching_inner .txt_inner .right_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    footer {
+        width: 100%;
+        height: 200px;
+        background-color: #EBEBEB;
+    }
+    .footer_inner_mobile {}
+    .footer_inner_mobile > div {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .footer_inner_mobile > div > span {
+        overflow: hidden;
+        text-indent: -9999px;
+        float: left;
+        display: block;
+        width: 85px;
+        height: 100px;
+        margin-left: 9.604%; /* 63 / 656 */
+        margin-right: 1.524%; /* 10 / 656*/
+        background: url(../img/icon/KU_logo.png) no-repeat center/cover;
+    }
+    .footer_inner_mobile > div .txt_inner {
+        float: left;
+        margin-top: 7px;
+        font-size: 1.8rem;
+        line-height: 28px;
+    }
+    .footer_inner_mobile > div .txt_inner span {
+        font-weight: bold;
+    }
+    .footer_inner_mobile > i {
+        margin: 15px 0;
+        display: block;
+        width: 100%;
+        height: 0.5px;
+        background-color: #D3D3D3;
+    }
+    .footer_inner_mobile > span {
+        width: 567px; 
+        display: block;
+        margin: 0 auto;
+        font-size: 1.8rem;
+        color: #888888;
+    }
+    
+    .footer_inner {
+        display: none;
+    }
+
+} /* end 768 */
+
+/* start tablet 1024 */
+@media all and (min-width: 1024px) {
+
+    #wrap {}
+    header {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    #header_inner {
+        width: 80.078%; /* 820 / 1024 */
+        margin: 0 auto;
+    }
+    #header_inner > a {
+        float: left;
+        width: 40%; /* 299 / 820 */
+        height: 100%;
+    }
+    #header_inner > a > span {
+        float: left;
+        width: 8px;
+        height: 52px;
+        margin-top: 24px;
+        margin-right: 6.689%; /* 20 / 299 */
+        background-color: #ED702D;
+    }
+    #header_inner > a h1 {
+        float: left;
+        font-size: 5rem;
+        margin-top: 24px;
+        margin-right: 20px; 
+    }
+    #header_inner > a h2 {
+        float: left;
+        font-size: 1.5rem;
+        color: #9D9D9D;
+        font-weight: normal;
+        line-height: 17px;
+        margin-top: 32px;
+    }
+    .open_menu_btn {
+        /* 텍스트 숨기기 */
+        overflow: hidden;
+        text-indent: -9999px;
+        float: right;
+        margin-top: 30px;
+    }
+    .open_menu_btn span {
+        display: block;
+        width: 48px;
+        height: 7px;
+        background-color: #ED702D;
+        margin-bottom: 10px;
+    }
+    .open_menu_btn span:last-child {
+        margin-bottom: 0;
+    }
+    .open_menu_btn:hover {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+
+    .open_menu_btn span:nth-child(1).trans {
+        transform: translateY(17px) rotate(45deg);
+    }
+    .open_menu_btn span:nth-child(2).trans {
+        opacity: 0;
+    }
+    .open_menu_btn span:nth-child(3).trans {
+        transform: translateY(-17px) rotate(-45deg);
+    }
+    
+    nav {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    nav.on {
+        display: block;
+    }
+    nav h2 {}
+    nav button {
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li {
+        height: 80px;
+    }
+    nav ul li:hover {
+        background-color: #efefef;
+    }
+    nav ul li a {
+        line-height: 80px;
+        font-size: 2.5rem;
+        color: #4D4D4D;
+    }
+    nav ul li a:hover, 
+    nav ul li a:focus {
+        color: #ED702D;
+    }
+    
+    main {}
+    #Professor {
+        margin-top: 180px;
+        height: 514px;
+    }
+    .prof_inner {
+        width: 80.078%; /* 820 / 1024 */
+        margin: 0 auto;
+        padding-left: 20px;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .prof_inner #mobile_h2 {
+        display: none;
+    }
+    .prof_inner #mobile_i {
+        display: none;
+    }
+    .prof_inner .prof_pic {
+        display: block;
+        float: left;
+        width: 28.171%; /* 231 / 820 */
+        height: 286px;
+        border: 4px solid #dedede;
+        background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;
+    
+        overflow: hidden;
+        text-indent: -9999px;
+        transition: all .3s;
+    }
+    .prof_inner .prof_pic:hover {
+        transform: scale(1.01);
+    }
+    .prof_inner .txt_inner {
+        display: block;
+        float: right;
+        width: 65.732%; /* 539 / 820 */
+    }
+    .prof_inner .txt_inner h3 {
+        text-align: left;
+        font-size: 4rem;
+        line-height: 46px;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        margin-top: 14px;
+    }
+    .prof_inner .txt_inner h4 {
+        text-align: left;
+        font-size: 3rem;
+        line-height: 35px;
+        font-weight: normal;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        color: #747474;
+        margin-bottom: 20px;
+    }
+    .prof_inner .txt_inner h2 {
+        display: block;
+        font-family: 'Tinos', serif;
+        margin-left: 2px;
+        font-size: 2.5rem;
+        line-height: 28px;
+        font-weight: bold;
+        color: #ED702D;
+        margin-bottom: 20px;
+    }
+    .prof_inner .txt_inner .info_inner {
+        position: absolute;
+        left: 20px;
+        top: 316px;
+        width: 100%;
+        height: 118px;
+        padding-left: 0px;
+        margin-bottom: 0;
+    }
+    .prof_inner .txt_inner .info_inner .info {
+        display: block;
+        width: 100%;
+        height: 32px;
+        font-family: 'Tinos', 'Nanum Myeongjo', serif;
+        font-size: 2rem;
+        line-height: 32px;
+    }
+    .prof_inner .txt_inner .info_inner .info span {
+        float: left;
+        font-weight: bold;
+    }
+    .prof_inner .txt_inner .info_inner .info p {
+        float: left;
+    }
+    .prof_inner .txt_inner .links_inner {
+        margin: 0;
+    }
+    .prof_inner .txt_inner .links_inner a {
+        display: block;
+        width: 258px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(2){
+        width: 181px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(3){
+        width: 149px;
+    }
+    .prof_inner .txt_inner .links_inner a span {
+        display: block;
+        float: left;
+        width: 15px;
+        height: 15px;
+        background: url(../img/icon/link_icon.png) no-repeat center/contain;
+        margin: 8px 10px;
+    }
+    .prof_inner .txt_inner .links_inner a p {
+        float: left;
+        font-size: 1.5rem;
+        line-height: 30px;
+        color: #000000;
+    }
+    .prof_inner .books_inner {
+        position: absolute;
+        width: 235px;
+        height: 270px;
+        margin: 0 auto;
+        right: 20px;
+        top: 0;
+    }
+    .prof_inner .books_inner .book_1 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 151px;
+        height: 195px;
+        
+        left: 0;
+        top: 0;
+
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_1.jpeg) no-repeat center/contain;
+        background-size: 151px 195px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    .prof_inner .books_inner .book_2 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 154px;
+        height: 194px;
+        margin: 0;
+
+        right: 0;
+        bottom: 0;
+        
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_2.jpeg) no-repeat center/contain;
+        background-size: 154px 194px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    
+    /* bio & psg common setting */
+    .p_theme {}
+    .p_theme div {}
+    .p_theme div h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+    .p_theme div i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6e6e6;
+        margin-bottom: 30px;
+    }
+    .p_theme div p {
+        margin: 0 20px;
+        width: calc(100% - 40px);
+        font-size: 1.8rem;
+        line-height: 27px;
+    }
+    
+    #Biosketch {
+        padding: 0;
+        padding-bottom: 80px;
+    }
+    .bio_inner {
+        width: 80.078%; /* 820 / 1024 */
+        margin: 0 auto;
+    }
+    .bio_inner h2 {}
+    .bio_inner i {}
+    .bio_inner p {}
+    
+    #ProspectiveGraduateStudents {}
+    .pgs_inner {
+        width: 80.078%; /* 820 / 1024 */
+        margin: 0 auto;
+    }
+    .pgs_inner h2 {}
+    .pgs_inner i {}
+    .pgs_inner p {}
+    
+    #Teaching {
+        width: 100%;
+    }
+    .teaching_inner {
+        width: 80.078%; /* 820 / 1024 */
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+    .teaching_inner h2 {
+        font-size: 3rem;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+    .teaching_inner i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6E6E6;
+    }
+    .teaching_inner .txt_inner {
+        margin-top: 30px;
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner {
+        float: left;
+        font-weight: bold;
+        width: 11.89%; /* 78 / 614 */
+
+        margin-left: 20px;
+        margin-right: 7.317%; /* 48 / 614 */
+    }
+    .teaching_inner .txt_inner .left_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .teaching_inner .txt_inner .right_txt_inner {
+        float: left;
+        width: calc(77.744% - 20px); /* 100 - 7.317 - 11.89 */
+    }
+    .teaching_inner .txt_inner .right_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    footer {
+        width: 100%;
+        height: 200px;
+        background-color: #EBEBEB;
+    }
+    .footer_inner_mobile {
+        display: none;
+    }
+    
+    .footer_inner {
+        display: block;
+        width: 80.078%; /* 820 / 1024 */
+        margin: 0 auto;
+    }
+    .footer_inner > span {
+        overflow: hidden;
+        text-indent: -9999px;
+        float: left;
+        display: block;
+        width: 90px;
+        height: 106px;
+        margin-top: 47px;
+        background: url(../img/icon/KU_logo.png) no-repeat center/cover;
+    }
+    .footer_inner .txt_inner {
+        float: right;
+        padding-top: 53px;
+    }
+    .footer_inner .txt_inner div {
+        height: 23px;
+    }
+    .footer_inner .txt_inner div p {
+        font-size: 1.5rem;
+        line-height: 23px;
+
+        color: #555555;
+    }
+    .footer_inner .txt_inner div p span {
+        font-weight: bold;
+    }
+    .footer_inner .txt_inner i {
+        display: block;
+        width: 651px;
+        height: 1px;
+        background-color: #B9B9B9;
+        margin: 10px 0;
+    }
+    .footer_inner .txt_inner > span {
+        font-size: 1.5rem;
+        line-height: 23px;
+        color: #888888;
+    }
+} /* end 1024 */
+
+/* start tablet 1280 */
+@media all and (min-width: 1280px) {
+    
+    .mb {display: none;}
+    .pc {display: block;}
+
+    #wrap {}
+    header {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    #header_inner {
+        width: 80%; /* 1024 / 1280 */
+        margin: 0 auto;
+    }
+    #header_inner > a {
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+    #header_inner > a > span {
+        float: left;
+        width: 8px;
+        height: 52px;
+        margin-top: 24px;
+        margin-right: 6.689%; /* 20 / 299 */
+        background-color: #ED702D;
+    }
+    #header_inner > a h1 {
+        float: left;
+        font-size: 5rem;
+        margin-top: 24px;
+        margin-right: 6.689%; 
+    }
+    #header_inner > a h2 {
+        float: left;
+        font-size: 1.5rem;
+        color: #9D9D9D;
+        font-weight: normal;
+        line-height: 17px;
+        margin-top: 32px;
+    }
+    .open_menu_btn {
+        display: none;
+    }
+    
+    /* hi nav */
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+    }
+    nav h2 {}
+    nav button {
+        display: none;
+    }
+    nav ul {
+        float: right;
+        width: auto;
+    }
+    nav ul li {
+        float: left;
+        font-size: 1.8rem;
+        line-height: 100px;
+        margin-left: 30px;
+        opacity: 0.9;
+        transition: all .3s;
+
+        height: auto;
+    }
+    nav ul li:hover {
+        transform: scale(1.05);
+        opacity: 1;
+        background-color: transparent;
+    }
+    nav ul li a {
+        color: #4d4d4d;
+        opacity: .9;
+        transition: all .2s;
+    }
+    nav ul li a:hover {
+        opacity: 1;
+        color: #ED702D;
+    }
+    
+    main {}
+    #Professor {
+        margin-top: 180px;
+        height: 514px;
+    }
+    .prof_inner {
+        width: 80%; /* 1024 / 1280 */
+        margin: 0 auto;
+        padding-left: 20px;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .prof_inner .prof_pic {
+        display: block;
+        float: left;
+        width: 22.559%; /* 231 / 1024 */
+        height: 286px;
+        border: 4px solid #dedede;
+        background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;
+    
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    .prof_inner .txt_inner {
+        display: block;
+        float: right;
+        width: 71.582%; /* 733 / 1024 */
+    }
+    .prof_inner .txt_inner h3 {
+        text-align: left;
+        font-size: 4rem;
+        line-height: 46px;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        margin-top: 20px;
+    }
+    .prof_inner .txt_inner h4 {
+        text-align: left;
+        font-size: 3rem;
+        line-height: 35px;
+        font-weight: normal;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        color: #747474;
+        margin-bottom: 20px;
+    }
+    .prof_inner .txt_inner h2 {
+        display: block;
+        font-family: 'Tinos', serif;
+        margin-left: 2px;
+        font-size: 2.5rem;
+        line-height: 28px;
+        font-weight: bold;
+        color: #ED702D;
+        margin-bottom: 20px;
+    }
+    .prof_inner .txt_inner .info_inner {
+        position: absolute;
+        left: 20px;
+        top: 316px;
+        width: 100%;
+        height: 118px;
+    }
+    .prof_inner .txt_inner .info_inner .info {
+        display: block;
+        width: 100%;
+        height: 32px;
+        font-family: 'Tinos', 'Nanum Myeongjo', serif;
+        font-size: 2rem;
+        line-height: 32px;
+    }
+    .prof_inner .txt_inner .info_inner .info span {
+        float: left;
+        font-weight: bold;
+    }
+    .prof_inner .txt_inner .info_inner .info p {
+        float: left;
+    }
+    .prof_inner .txt_inner .links_inner {
+        margin: 0;
+    }
+    .prof_inner .txt_inner .links_inner a {
+        display: block;
+        width: 258px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(2){
+        width: 181px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(3){
+        width: 149px;
+    }
+    .prof_inner .txt_inner .links_inner a span {
+        display: block;
+        float: left;
+        width: 15px;
+        height: 15px;
+        background: url(../img/icon/link_icon.png) no-repeat center/contain;
+        margin: 8px 10px;
+    }
+    .prof_inner .txt_inner .links_inner a p {
+        float: left;
+        font-size: 1.5rem;
+        line-height: 30px;
+        color: #000000;
+    }
+    .prof_inner .books_inner {
+        position: absolute;
+        width: 404px;
+        height: 250px;
+        margin: 0 auto;
+        right: 20px;
+        top: 0;
+    }
+    .prof_inner .books_inner .book_1 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 196px;
+        height: 250px;
+        
+        left: 0;
+        top: 0;
+
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_1.jpeg) no-repeat center/contain;
+        background-size: 196px 250px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    .prof_inner .books_inner .book_2 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 198px;
+        height: 250px;
+        margin: 0;
+
+        right: 0;
+        bottom: 0;
+        
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_2.jpeg) no-repeat center/contain;
+        background-size: 198px 250px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    
+    /* bio & psg common setting */
+    .p_theme {}
+    .p_theme div {}
+    .p_theme div h2 {
+        font-size: 3.2rem;
+        font-weight: bold;
+        line-height: 37px;
+        margin-bottom: 10px;
+    }
+    .p_theme div i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6e6e6;
+        margin-bottom: 30px;
+    }
+    .p_theme div p {
+        margin: 0 20px;
+        width: calc(100% - 40px);
+        font-size: 2rem;
+        line-height: 30px;
+    }
+    
+    #Biosketch {
+        padding: 0;
+        padding-bottom: 80px;
+    }
+    .bio_inner {
+        width: 80%; /* 1024 / 1280 */
+        margin: 0 auto;
+    }
+    .bio_inner h2 {}
+    .bio_inner i {}
+    .bio_inner p {}
+    
+    #ProspectiveGraduateStudents {}
+    .pgs_inner {
+        width: 80%; /* 1024 / 1280 */
+        margin: 0 auto;
+    }
+    .pgs_inner h2 {}
+    .pgs_inner i {}
+    .pgs_inner p {}
+    
+    #Teaching {
+        width: 100%;
+    }
+    .teaching_inner {
+        width: 80%; /* 1024 / 1280 */
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+    .teaching_inner h2 {
+        font-size: 3.2rem;
+        line-height: 37px;
+        margin-bottom: 10px;
+    }
+    .teaching_inner i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6E6E6;
+    }
+    .teaching_inner .txt_inner {
+        margin-top: 30px;
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner {
+        float: left;
+        font-weight: bold;
+        width: 7.618%; /* 78 / 1024 */
+
+        margin-left: 20px;
+        margin-right: 4.688%; /* 48 / 1024 */
+    }
+    .teaching_inner .txt_inner .left_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .teaching_inner .txt_inner .right_txt_inner {
+        float: left;
+        width: calc(87.694% - 20px); /* 100 - 7.618 - 4.688 */
+    }
+    .teaching_inner .txt_inner .right_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    footer {
+        width: 100%;
+        height: 200px;
+        background-color: #EBEBEB;
+    }
+    .footer_inner_mobile {
+        display: none;
+    }
+    
+    .footer_inner {
+        display: block;
+        width: 80%; /* 1024 / 1280 */
+        margin: 0 auto;
+    }
+    .footer_inner > span {
+        overflow: hidden;
+        text-indent: -9999px;
+        float: left;
+        display: block;
+        width: 111px;
+        height: 130px;
+        margin-top: 28px;
+        background: url(../img/icon/KU_logo.png) no-repeat center/cover;
+    }
+    .footer_inner .txt_inner {
+        float: left;
+        margin-left: 2.344%; /* 24 / 1024 */
+        padding-top: 40px;
+    }
+    .footer_inner .txt_inner div {
+        height: 27px;
+    }
+    .footer_inner .txt_inner div p {
+        font-size: 1.8rem;
+        line-height: 27px;
+    }
+    .footer_inner .txt_inner div p span {
+        font-weight: bold;
+    }
+    .footer_inner .txt_inner i {
+        display: block;
+        width: 651px;
+        height: 1px;
+        background-color: #B9B9B9;
+        margin: 12px 0;
+    }
+    .footer_inner .txt_inner > span {
+        font-size: 1.5rem;
+        line-height: 23px;
+        color: #888888;
+    }
+
+} /* end 1280 */
+
+/* start tablet 1920 */
+@media all and (min-width: 1700px) {
+    .mb {display: none;}
+    .pc {display: block;}
+
+    #wrap {}
+    header {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    #header_inner {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    #header_inner > a {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    #header_inner > a > span {
+        float: left;
+        width: 8px;
+        height: 52px;
+        margin-top: 24px;
+        margin-right: 6.689%; /* 20 / 299 */
+        background-color: #ED702D;
+    }
+    #header_inner > a h1 {
+        float: left;
+        font-size: 5rem;
+        margin-top: 24px;
+        margin-right: 6.689%; 
+    }
+    #header_inner > a h2 {
+        float: left;
+        font-size: 1.5rem;
+        color: #9D9D9D;
+        font-weight: normal;
+        line-height: 17px;
+        margin-top: 32px;
+    }
+    .open_menu_btn {
+        display: none;
+    }
+    
+    /* hi nav */
+    nav {
+        display: block;
+    }
+    nav h2 {}
+    nav button {
+        display: none;
+    }
+    nav ul {
+        float: right;
+        width: auto;
+    }
+    nav ul li {
+        float: left;
+        font-size: 2.5rem;
+        line-height: 100px;
+        margin-left: 30px;
+    }
+    nav ul li a {
+        color: #4d4d4d;
+        opacity: .9;
+        transition: all .2s;
+    }
+    nav ul li a:hover {
+        opacity: 1;
+        color: #ED702D;
+    }
+    
+    main {}
+    #Professor {
+        margin-top: 200px;
+        height: 621px;
+    }
+    .prof_inner {
+        width: 1140px;
+        margin: 0 auto;
+        padding-left: 30px;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .prof_inner .prof_pic {
+        display: block;
+        float: left;
+        width: 34.649%; /* 395 / 1140 */
+        height: 521px;
+        border: 8px solid #dedede;
+        background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;
+    
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    .prof_inner .txt_inner {
+        display: block;
+        float: right;
+        width: 59.561%; /* 679 / 1140 */
+    }
+    .prof_inner .txt_inner h3 {
+        text-align: left;
+        font-size: 4rem;
+        line-height: 46px;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        margin-top: 40px;
+    }
+    .prof_inner .txt_inner h4 {
+        text-align: left;
+        font-size: 3rem;
+        line-height: 35px;
+        font-weight: normal;
+        font-family: 'Nanum Myeongjo', sans-serif;
+        color: #747474;
+        margin-top: 5px;
+        margin-bottom: 42px;
+    }
+    .prof_inner .txt_inner h2 {
+        display: block;
+        font-family: 'Tinos', serif;
+        margin-left: 2px;
+        font-size: 3.5rem;
+        line-height: 4px;
+        font-weight: bold;
+        color: #ED702D;
+        margin-bottom: 34px;
+    }
+    .prof_inner .txt_inner .info_inner {
+        position: absolute;
+        left: 41%; /* 100 - 59.561 */
+        top: 370px;
+        width: 100%;
+        height: 118px;
+    }
+    .prof_inner .txt_inner .info_inner .info {
+        display: block;
+        width: 100%;
+        height: 32px;
+        font-family: 'Tinos', 'Nanum Myeongjo', serif;
+        font-size: 2rem;
+        line-height: 32px;
+    }
+    .prof_inner .txt_inner .info_inner .info span {
+        float: left;
+        font-weight: bold;
+    }
+    .prof_inner .txt_inner .info_inner .info p {
+        float: left;
+    }
+    .prof_inner .txt_inner .links_inner {
+        margin: 0;
+    }
+    .prof_inner .txt_inner .links_inner a {
+        display: block;
+        width: 334px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(2){
+        width: 231px;
+    }
+    .prof_inner .txt_inner .links_inner a:nth-of-type(3){
+        width: 188px;
+    }
+    .prof_inner .txt_inner .links_inner a span {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icon/link_icon.png) no-repeat center/contain;
+        margin: 5px 10px;
+    }
+    .prof_inner .txt_inner .links_inner a p {
+        float: left;
+        font-size: 2rem;
+        line-height: 30px;
+        color: #000000;
+    }
+    .prof_inner .books_inner {
+        position: absolute;
+        width: 317px;
+        height: 327px;
+        margin: 0 auto;
+        right: 0;
+        top: 0;
+    }
+    .prof_inner .books_inner .book_1 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 193px;
+        height: 246px;
+        
+        left: 0;
+        top: 0;
+
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_1.jpeg) no-repeat center/contain;
+        background-size: 193px 246px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    .prof_inner .books_inner .book_2 {
+        position: absolute;
+        display: block;
+        float: left;
+        width: 190px;
+        height: 241px;
+        margin: 0;
+
+        right: 0;
+        bottom: 0;
+        
+        overflow: hidden;
+        text-indent: -9999px;
+    
+        background: url(../img/book/b_2.jpeg) no-repeat center/contain;
+        background-size: 190px 241px;
+    
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    }
+    
+    /* bio & psg common setting */
+    .p_theme {}
+    .p_theme div {}
+    .p_theme div h2 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    .p_theme div i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6e6e6;
+        margin-bottom: 35px;
+    }
+    .p_theme div p {
+        margin: 0 30px;
+        width: calc(100% - 60px);
+        font-size: 2.2rem;
+        line-height: 33px;
+    }
+    
+    #Biosketch {
+        padding: 0;
+        padding-bottom: 100px;
+    }
+    .bio_inner {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .bio_inner h2 {}
+    .bio_inner i {}
+    .bio_inner p {}
+    
+    #ProspectiveGraduateStudents {}
+    .pgs_inner {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .pgs_inner h2 {}
+    .pgs_inner i {}
+    .pgs_inner p {}
+    
+    #Teaching {
+        width: 100%;
+    }
+    .teaching_inner {
+        width: 1140px;
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    .teaching_inner h2 {
+        font-size: 3.5rem;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+    .teaching_inner i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #E6E6E6;
+    }
+    .teaching_inner .txt_inner {
+        margin-top: 35px;
+        font-size: 2.2rem;
+        line-height: 33px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner {
+        float: left;
+        font-weight: bold;
+        width: 8.334%; /* 95 / 1140 */
+
+        margin-left: 30px;
+        margin-right: 5.263%; /* 60 / 1140 */
+    }
+    .teaching_inner .txt_inner .left_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .left_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .teaching_inner .txt_inner .right_txt_inner {
+        float: left;
+        width: 80%; /* 100 - 8.334 - 5.263 */
+    }
+    .teaching_inner .txt_inner .right_txt_inner div {
+        margin-bottom: 50px;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div:last-of-type {
+        margin-bottom: 0;
+    }
+    .teaching_inner .txt_inner .right_txt_inner div p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    footer {
+        width: 100%;
+        height: 200px;
+        background-color: #EBEBEB;
+    }
+    .footer_inner_mobile {
+        display: none;
+    }
+    
+    .footer_inner {
+        display: block;
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .footer_inner > span {
+        overflow: hidden;
+        text-indent: -9999px;
+        float: left;
+        display: block;
+        width: 111px;
+        height: 130px;
+        margin-top: 28px;
+        background: url(../img/icon/KU_logo.png) no-repeat center/cover;
+    }
+    .footer_inner .txt_inner {
+        float: left;
+        margin-left: 2.105%; /* 24 / 1140 */
+        padding-top: 35px;
+    }
+    .footer_inner .txt_inner div {
+        height: 27px;
+    }
+    .footer_inner .txt_inner div p {
+        font-size: 2rem;
+        line-height: 32px;
+    }
+    .footer_inner .txt_inner div p span {
+        font-weight: bold;
+    }
+    .footer_inner .txt_inner i {
+        display: block;
+        width: 651px;
+        height: 1px;
+        background-color: #B9B9B9;
+        margin: 10px 0;
+    }
+    .footer_inner .txt_inner > span {
+        font-size: 2rem;
+        line-height: 32px;
+        color: #888888;
+    }
+
+} /* end 1920 */

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Park Ye Jin</title>
 
     <!-- css -->
@@ -21,6 +21,14 @@
 
     <script>
         $(document).ready(function(){
+
+            setWindowZoom(getScreenWidth());
+
+            $(window).resize(function() {
+                // 화면 크기가 변경되었을 때 실행할 코드 작성
+                setWindowZoom(getScreenWidth());
+            });
+
             $('.slider').slick({
                 infinite: true,
                 slidesToShow: 2,
@@ -72,28 +80,15 @@
                 // 좌우 터치인지 위아래 터치인지 확인
                 if (Math.abs(deltaX) > Math.abs(deltaY)) {
                     // 좌우 터치
-                    if (deltaX > 0) {
-                        // 오른쪽으로 스와이프
-                        $('.slider .slick-prev').click();
-                        // 여기에 오른쪽으로 스와이프할 때 실행할 코드 작성
-                    } else {
-                        // 왼쪽으로 스와이프
-                        $('.slider .slick-next').click();
-                        // 여기에 왼쪽으로 스와이프할 때 실행할 코드 작성
-                    }
-                } else {
-                    // 위아래 터치
-                    if (deltaY > 0) {
-                        // 아래로 스와이프
-                        $('.slider .slick-prev').click();
-                        // 여기에 아래로 스와이프할 때 실행할 코드 작성
-                    } else {
-                        // 위로 스와이프
-                        $('.slider .slick-next').click();
-                        // 여기에 위로 스와이프할 때 실행할 코드 작성
+                    if (deltaX > 50) {
+                        // 오른쪽으로 스와이프 (터치 이동 거리가 충분히 클 때)
+                        $('.slider').slick('slickPrev');
+                    } else if (deltaX < -50) {
+                        // 왼쪽으로 스와이프 (터치 이동 거리가 충분히 클 때)
+                        $('.slider').slick('slickNext');
                     }
                 }
-            }); // END: touchArea
+            });
 
             let deco_line = `   <span class="deco t absolute_center"></span><span class="deco b absolute_center"></span>`;
             $('.card').append(deco_line);
@@ -160,11 +155,50 @@
                 }
             });
 
+            let curNum = 0;
+
+            $('.result').on('click', function(event) {
+
+                let classNum = $(this).attr('class');
+                let splitClassNames = classNum.split('_');
+
+                classNum = splitClassNames.slice(1).join('_');
+                curNum = classNum;
+
+                $('.pop_up_wrap').css('display','block');
+                $(`.pu_${classNum}`).css('display','block');
+                
+            });
+
+            $('.close_btn').on('click', function(event) {
+                $('.pop_up_wrap').css('display','none');
+                $(`.pu_${curNum}`).css('display','none');
+
+            });
+
+
 
         }); // END: document ready
+
+        function getScreenWidth() {
+            let width = window.innerWidth;
+            return width;
+        }
+
+        function setWindowZoom(width) {
+
+            let element = document.getElementById('myScreen');
+
+            if(1100 < width){
+                element.style.transform = 'scale(' + 1.25 + ')';
+            } else {
+                element.style.transform = 'scale(' + 1 + ')';
+            }
+        }
+
     </script>
 </head>
-<body>
+<body id="myScreen">
     <main>
         <div class="wrap">
             <div class="slider">
@@ -291,16 +325,81 @@
                         <div class="section_wrap">
                             <h2 class="section_title">my<span class="color_point">R</span>esult</h2>
                             <p>클릭 시, 해당 페이지로 이동합니다.</p>
-                            <div class="result_wrap">
-                                <a class="result" href="http://ai-max.co.kr/" target="_blank" style="margin-top: 20px;">에이아이맥스(주) 리뉴얼 기획/디자인/개발<span class="hosting">운영중</span></a>
-                                <a class="result" href="http://kftt.kr/index_tst.jsp" target="_blank">전국교수테니스대회 디자인 및 퍼블리싱<span class="hosting">운영중</span></a>
-                                <a class="result" href="http://kftt.kr/index_tst.jsp" target="_blank">파크랜드 리뉴얼 디자인 및 퍼블리싱</a>
+                            <div class="result_wrap" style="background-color: transparent;">
+                                <a class="result r_1" style="margin-top: 20px;">에이아이맥스(주) 리뉴얼 기획/디자인/개발<span class="state host">운영중</span></a>
+                                <a class="result r_2">전국교수테니스대회 디자인 및 퍼블리싱<span class="state host">운영중</span></a>
+                                <a class="result r_3">(주)인터벤션메디컬 사이트 구축<span class="state dev">개발중</span></a>
+                                <a class="result r_4">ver_2023 포트폴리오<span class="state pf">개인</span></a>
+                                <a class="result r_5">파크랜드 리뉴얼 디자인 및 퍼블리싱<span class="state pf">개인</span></a>
+                                <a class="result r_6" href="https://xd.adobe.com/view/bc980d61-908f-45e2-a5a9-189fe118cd26-e9cb/screen/c922cc42-0208-4ee8-a8ec-c22f168ccd20" target="_blank">파리바게트 리뉴얼 디자인<span class="state pf">개인</span></a>
+                                <a class="result r_7" href="https://www.notion.so/YeJin-s-Portfolio-95618954defa411abdec82d8972cfdea" target="_blank">노션 포트폴리오<span class="state pf">개인</span></a>
+                                <a class="result r_8" href="https://github.com/YeJinii" target="_blank">Git Profile<span class="state pf">개인</span></a>
                             </div>
                         </div> <!-- e: section_wrap -->
-                    </div> <!-- e: my_work -->
+                    </div> <!-- e: my_result -->
                 </div> <!-- e: card_5 -->
+            </div> <!-- e: slider -->
+            <div class="pop_up_wrap">
+                <div class="pop_up pu_1">
+                    <button class="close_btn text_delete">닫기</button>
+                    <span class="pf_info">
+                        <div class="pf_title">에이아이맥스(주) 리뉴얼 기획/디자인/개발</div>
+                        <div class="pf_state">진행상태 : <span class="state host">운영중</span></div>
+                        <div class="pf_state">기여도 : <span class="state percent">100%</span></div>
+                        <div class="pf_state">개발기간 : <span class="state dev_period">2024.01 - 2024.02</span></div>
+                    </span>
+                    <div class="wrap_btn">
+                        <a href="https://www.figma.com/design/6zsoqcE0neblbNshN3YhMV/%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%86%E1%85%A2%E1%86%A8%E1%84%89%E1%85%B3(%E1%84%8C%E1%85%AE)-%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB-%E1%84%89%E1%85%B5%E1%84%8B%E1%85%A1%E1%86%AB?node-id=0%3A1&t=5Iiq31S0HT3Ls86l-1" target="_blank">디자인 시안 바로보기</a>
+                        <i></i>
+                        <a href="http://ai-max.co.kr/" target="_blank">웹사이트 바로가기</a>
+                    </div>
+                </div> <!-- e: pu_1 -->
+                
+                <div class="pop_up pu_2">
+                    <button class="close_btn text_delete">닫기</button>
+                    <span class="pf_info">
+                        <div class="pf_title">전국교수테니스대회 디자인 및 퍼블리싱</div>
+                        <div class="pf_state">진행상태 : <span class="state host">운영중</span></div>
+                        <div class="pf_state">기여도 : <span class="state percent">40% (기획자/BackEnd 개발자와 협업)</span></div>
+                        <div class="pf_state">개발기간 : <span class="state dev_period">2024.04</span></div>
+                    </span>
+                    <div class="wrap_btn">
+                        <a href="https://www.figma.com/design/3J3vH8iv348UxIKuSXmDxY/%EC%9D%B8%EC%B2%9C%EB%8C%80-%EA%B5%90%EC%88%98%ED%85%8C%EB%8B%88%EC%8A%A4%EB%8C%80%ED%9A%8C?node-id=0%3A1&t=4Rh60PC3dUxdQSYN-1" target="_blank">디자인 시안 바로보기</a>
+                        <i></i>
+                        <a href="http://kftt.kr/" target="_blank">웹사이트 바로가기</a>
+                    </div>
+                </div> <!-- e: pu_2 -->
+
+                <div class="pop_up pu_3">
+                    <button class="close_btn text_delete">닫기</button>
+                    <span class="pf_info">
+                        <div class="pf_title">(주)인터벤션메디컬 사이트 구축</div>
+                        <div class="pf_state">진행상태 : <span class="state dev">개발중</span></div>
+                        <div class="pf_state">기여도 : <span class="state percent">100%</span></div>
+                        <div class="pf_state">개발기간 : <span class="state dev_period">2024.05</span></div>
+                    </span>
+                    <div class="wrap_btn">
+                        <a class="btn_o" href="./portfolio/ivm" target="_blank">웹사이트 바로가기</a>
+                    </div>
+                </div> <!-- e: pu_3 -->
+
+                <div class="pop_up pu_4">
+                    <button class="close_btn text_delete">닫기</button>
+                    <span class="pf_info">
+                        <div class="pf_title">ver_2023 포트폴리오</div>
+                        <div class="pf_state">진행상태 : <span class="state pf">개인 포트폴리오 (완료)</span></div>
+                        <div class="pf_state">기여도 : <span class="state percent">100%</span></div>
+                        <div class="pf_state">개발기간 : <span class="state dev_period">2024.01 - 2024.02</span></div>
+                    </span>
+                    <div class="wrap_btn">
+                        <a href="https://www.figma.com/design/6zsoqcE0neblbNshN3YhMV/%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%86%E1%85%A2%E1%86%A8%E1%84%89%E1%85%B3(%E1%84%8C%E1%85%AE)-%E1%84%83%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AB-%E1%84%89%E1%85%B5%E1%84%8B%E1%85%A1%E1%86%AB?node-id=0%3A1&t=5Iiq31S0HT3Ls86l-1" target="_blank">디자인 시안 바로보기</a>
+                        <i></i>
+                        <a href="http://ai-max.co.kr/" target="_blank">웹사이트 바로가기</a>
+                    </div>
+                </div> <!-- e: pu_4 -->
             </div>
-        </div>
+        </div> <!-- e: wrap -->
     </main>
+    
 </body>
 </html>

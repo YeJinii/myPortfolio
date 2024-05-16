@@ -1,0 +1,1417 @@
+@charset "utf-8";
+
+#members_wrap {}
+.members_banner {
+    margin-top: 80px;
+    width: 100%;
+    height: 363px;
+    background: url(../img/members/members_bg.jpg) no-repeat center/cover;
+
+    text-align: center;
+}
+.banner_filter {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    padding-top: 115px;
+}
+.banner_filter h3 {
+    font-size: 4.5rem;
+    line-height: 52px;
+    color: #fff;
+
+    margin-bottom: 10px;
+}
+.banner_filter span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 26px;
+    color: rgba(255, 255, 255, .7);
+
+    margin-bottom: 103px;
+}
+.banner_filter i {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .2);
+}
+.banner_filter ul {
+    width: 82.667%; /* 310 / 375 */
+    height: 56px;
+    margin: 0 auto;
+}
+.banner_filter ul li {
+    float: left;
+    width: auto;
+    height: 56px;
+
+    margin-right: calc((100% - 268px)/3);
+    padding-top: 20px;
+
+    position: relative;
+    text-align: center;
+}
+.banner_filter ul li:nth-child(1){
+    width: 108px;
+}
+.banner_filter ul li:nth-child(2){
+    width: 58px;
+}
+.banner_filter ul li:nth-child(3){
+    width: 70px;
+}
+.banner_filter ul li:nth-child(4){
+    width: 32px;
+}
+.banner_filter ul li:last-child {
+    margin: 0;
+}
+.banner_filter ul li a {
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0.8;
+
+    transition: opacity .5s;
+}
+.banner_filter ul li span {
+    position: absolute;
+    top: 48px;
+
+    display: block;
+    width: 100%;
+    height: 8px;
+
+    background: url(../img/members/tri_p.png) no-repeat center/contain;
+    background-size: 10px 8px;
+
+    opacity: 0;
+
+    transition: opacity .5s;
+}
+
+.banner_filter ul li:hover a {
+    opacity: 1;
+}
+.banner_filter ul li:hover span {
+    opacity: 1;
+}
+
+.section_title {
+    width: 100%;
+    height: 60px;
+    background-color: #f8f8f8;
+    padding: 33px 8.6665% 0;
+}
+.section_title > span {
+    display: block;
+    float: left;
+    width: 5px;
+    height: 27px;
+    background-color: #ED702D;
+
+    margin-right: 10px;
+}
+.section_title > h4 {
+    float: left;
+    font-size: 2.5rem;
+}
+
+.sub_title {
+    background-color: transparent;
+    padding: 33px 8.6665% 0;
+}
+.sub_title > span {
+    display: block;
+    float: left;
+    width: 3px;
+    height: 20px;
+    background-color: #dddddd;
+
+    margin-right: 10px;
+}
+.sub_title > h4 {
+    float: left;
+    font-size: 1.8rem;
+    color: #555555;
+}
+
+#d_professor {
+    display: none;
+}
+
+#m_professor {}
+#m_professor .section_title {
+    width: 100%;
+    height: 60px;
+    background-color: #f8f8f8;
+    padding: 33px 8.6665% 0;
+}
+#m_professor .section_title > span {
+    display: block;
+    float: left;
+    width: 5px;
+    height: 27px;
+    background-color: #ED702D;
+
+    margin-right: 10px;
+}
+#m_professor .section_title > h4 {
+    float: left;
+    font-size: 2.5rem;
+}
+
+#m_professor .img {
+    display: block;
+    margin: 50px auto 10px;
+    width: 150px;
+    height: 180px;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+
+    text-indent: -9999px;
+    overflow: hidden;
+
+    background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;
+}
+#m_professor > h5 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 40px;
+}
+#m_professor > span {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #B9B9B9;
+}
+
+#d_professor {}
+
+.prof_info {
+    width: 82.667%; /* 310 / 375 */
+    margin: 20px auto 0;
+
+    color: #333333;
+}
+.prof_info > div {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.prof_info > div:last-of-type {
+    margin-bottom: 0px;
+}
+.prof_info > div p {
+    font-size: 1.2rem;
+}
+.prof_info > div p span {
+    font-weight: bold;
+}
+
+.title {
+    height: 27px;
+    margin-bottom: 20px;  
+}
+.title > span {
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+
+    margin-top: 9px;
+    margin-right: 10px;
+    background-color: #ED702D;
+}
+.title > h5 {
+    display: block;
+    float: left;
+    font-size: 2.5rem;
+    line-height: 27px;
+}
+
+#m_professor .biosketch {
+    width: 82.667%; /* 310 / 375 */
+    margin: 50px auto;
+
+    text-align: left;
+}
+#m_professor .biosketch p {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    color: #333333;
+}
+
+.education {
+    display: none;
+}
+.education_mobile {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto 50px;
+}
+.education_mobile > .education_txt {
+    padding: 0 10px;
+}
+.education_mobile > .education_txt > span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 20px;
+    color: #4d4d4d;
+}
+.education_mobile > .education_txt > span > span {
+    color: #b9b9b9;
+    font-size: .7rem;
+    line-height: 12px;
+}
+.education_mobile > .education_txt > p {
+    margin: 2px 0px 20px 14px;
+}
+
+.experience {
+    display: none;
+}
+.experience_mobile {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto 50px;
+}
+.experience_mobile .exp_txt {
+    padding: 0 10px;
+}
+.experience_mobile .exp_txt > span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 20px;
+    color: #4d4d4d;
+}
+.experience_mobile .exp_txt > span > span {
+    color: #b9b9b9;
+    font-size: .7rem;
+    line-height: 12px;
+}
+.experience_mobile .exp_txt > p {
+    margin: 2px 0px 20px 14px;
+}
+
+.ps {
+    display: none;
+}
+.ps_mobile {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto 50px; 
+}
+.ps_txt {
+    padding: 0 10px;
+}
+.ps_txt > span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 20px;
+    color: #4d4d4d;
+
+    margin-bottom: 10px;
+}
+.ps_txt > p {
+    margin-bottom: 5px;
+}
+.ps_txt > p > span {
+    color: #b9b9b9;
+    font-size: .7rem;
+    line-height: 12px;
+}
+.ps_txt .add_margin_top {
+    margin-top: 20px;
+}
+
+.others {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto 50px;
+}
+.others_txt {
+    padding: 0 10px;
+}
+.others_txt > span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 20px;
+    color: #4d4d4d;
+}
+.others_txt > span > span {
+    color: #b9b9b9;
+    font-size: .7rem;
+    line-height: 12px;
+}
+.others_txt > p {
+    margin: 2px 0px 20px 14px;
+    font-size: 1
+}
+
+.members_picture {
+    display: block;
+    margin: 50px auto 20px;
+    width: 120px;
+    height: 150px;
+    border: 3px solid #ffffff;
+
+    background: url(../img/default_bg.png) no-repeat center/contain;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+}
+.members_name {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+    line-height: 33px;
+
+    color: #222222;
+}
+.email_icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+
+    vertical-align: -2px;
+    margin-right: 5px;
+    background: url(../img/icon/email_icon.png) no-repeat center/contain;
+}
+.members_email {
+    font-size: 1rem;
+    color: #4d4d4d;
+    line-height: 15px;
+}
+.members_info_m {
+    width: 82.667%; /* 310 / 375 */
+    font-size: 1.2rem;
+    color: #555555;
+    line-height: 18px;
+    margin: 15px auto 0;
+}
+.members_info_d {
+    display: none;
+}
+.members_info {
+    width: 82.667%; /* 310 / 375 */
+    font-size: 1.2rem;
+    color: #555555;
+    line-height: 18px;
+    margin: 15px auto 0;
+}
+.members_kr_name {
+    display: inline-block;
+    font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial';
+    font-size: 2rem;
+
+    /* vertical-align: 1px; */
+    margin-left: 5px;
+    color: #555555;
+}
+
+.desk_v { display: none; }
+
+/* link href로 이동시 fixed 때매 가려지는 issue */
+#m_pr::before, #m_phd::before, #m_m::before, #m_a::before {
+    content: "";
+    display: block;
+    margin: -80px 0 0;
+    height: 80px;
+}
+
+/* Postdoctoral Researcher */
+#m_pr {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#m_pr .members_picture {
+    background-image: url(../img/members/people/Pham\ son.jpg);
+}
+
+/* PhD Student */
+#m_phd {
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* 신상원 */
+#m_phd .members_picture {
+    background-image: url(../img/members/people/Sangwon\ Shin.jpg);
+}
+
+.add_margin_bottom {
+    padding-bottom: 30px;
+}
+.add_border_bottom {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Master Students */
+#m_m {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 권준엽 */
+#m_m div:nth-of-type(2) .members_picture {
+    background-image: url(../img/members/people/Joonyup\ Kwon.jpg);
+}
+/* 박주희 */
+#m_m div:nth-of-type(3) .members_picture {
+    background-image: url(../img/members/people/juhee\ park.jpg);
+}
+/* 유종상 */
+#m_m div:nth-of-type(4) .members_picture {
+    background-image: url(../img/members/people/Jongsang\ Yoo.jpeg);
+}
+/* 조상운 */
+#m_m div:nth-of-type(5) .members_picture {
+    /* todo: 사진 추가 */
+}
+/* 서상현 */
+#m_m div:nth-of-type(6) .members_picture {
+    background-image: url(../img/members/people/Sanghyeon\ Seo.jpg);
+}
+
+.members_char {
+    color: #ED702D;
+    font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial';
+    font-weight: bold;
+}
+
+
+/* Alumni */
+#m_a {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 김한이 */
+#m_a div:nth-of-type(2) .members_picture {
+    background-image: url(../img/members/people/picture_hanyee.JPG);
+}
+
+/* 이준연 */
+#m_a div:nth-of-type(3) .members_picture {
+    /* todo: 사진 추가 */
+}
+
+/* 김채영 */
+#m_a div:nth-of-type(4) .members_picture {
+    background-image: url(../img/members/people/Chaeyoung\ Kim.jpg);
+}
+
+/* 박상현 */
+#m_a div:nth-of-type(5) .members_picture {
+    background-image: url(../img/members/people/Sanghyun\ Park.jpg);
+}
+
+/* 홍보의 */
+#m_a div:nth-of-type(6) .members_picture {
+    background-image: url(../img/members/people/boyhong.jpg);
+}
+
+/* 김민수 */
+#m_a div:nth-of-type(7) .members_picture {
+    background-image: url(../img/members/people/minsu.jpg);
+}
+
+/* 최병준 */
+#m_a div:nth-of-type(8) .members_picture {
+    /* todo: 사진 추가 */
+}
+
+/* 공선희 */
+#m_a div:nth-of-type(9) .members_picture {
+    background-image: url(../img/members/people/picture_sunhee.jpg);
+}
+
+/* 이보선 */
+#m_a div:nth-of-type(10) .members_picture {
+    background-image: url(../img/members/people/picture_boseon.jpg);
+}
+
+/* 김민철 */
+#m_a div:nth-of-type(11) .members_picture {
+    background-image: url(../img/members/people/MinCheol.jpg);
+}
+
+/* 박상우 */
+#m_a div:nth-of-type(12) .members_picture {
+    background-image: url(../img/members/people/sangwoo.jpg);
+}
+
+/* 백진욱 */
+#m_a div:nth-of-type(13) .members_picture {
+    background-image: url(../img/members/people/Jinwook.jpg);
+}
+
+/* 정주혜 */
+#m_a div:nth-of-type(14) .members_picture {
+    background-image: url(../img/members/people/Juhye\ Jeong.jpg);
+}
+
+/* 장선경 */
+#m_a div:nth-of-type(15) .members_picture {
+    background-image: url(../img/members/people/Sungyeong\ Jang.jpg);
+}
+
+/* 이희민 */
+#m_a div:nth-of-type(16) .members_picture {
+    background-image: url(../img/members/people/Heemin\ Lee.jpg);
+}
+
+/* 권구윤 */
+#m_a div:nth-of-type(17) .members_picture {
+    background-image: url(../img/members/people/Kwon\ Guyun.jpg);
+}
+
+/* 송민규 */
+#m_a div:nth-of-type(18) .members_picture {
+    /* todo: 사진 추가 */
+}
+
+/* 수료생 ------------------------------------------------------ */
+
+/* 이상욱 */
+#m_a div:nth-of-type(20) .members_picture {
+    background-image: url(../img/members/people/picture_sangwook.jpg);
+}
+
+/* 신주훈 */
+#m_a div:nth-of-type(21) .members_picture {
+    /* todo: 사진 추가 */
+}
+
+/* start tablet 768 */
+@media all and (min-width: 768px) {
+
+    /* link href로 이동시 fixed 때매 가려지는 issue */
+    #m_pr::before, #m_phd::before, #m_m::before, #m_a::before {
+        content: "";
+        display: block;
+        margin: -100px 0 0;
+        height: 100px;
+    }
+
+    #members_wrap {}
+    .members_banner {
+        margin-top: 100px;
+        width: 100%;
+        height: 400px;
+        background: url(../img/members/members_bg.jpg) no-repeat center/cover;
+    
+        text-align: center;
+    }
+    .banner_filter {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    
+        padding-top: 120px;
+    }
+    .banner_filter h3 {
+        font-size: 5rem;
+        line-height: 58px;
+        color: #fff;
+    
+        margin-bottom: 10px;
+    }
+    .banner_filter span {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 28px;
+        color: rgba(255, 255, 255, .7);
+    
+        margin-bottom: 90px;
+    }
+    .banner_filter i {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, .2);
+    }
+    .banner_filter ul {
+        width: 79.948%; /* 614 / 768 */
+        height: 97px;
+        margin: 0 auto;
+    }
+    .banner_filter ul li {
+        float: left;
+        width: auto;
+        height: 97px;
+    
+        margin-right: calc((100% - 538px)/3);
+        padding-top: 37px;
+    
+        position: relative;
+        text-align: center;
+    }
+    .banner_filter ul li:nth-child(1){
+        width: 217px;
+    }
+    .banner_filter ul li:nth-child(2){
+        width: 117px;
+    }
+    .banner_filter ul li:nth-child(3){
+        width: 140px;
+    }
+    .banner_filter ul li:nth-child(4){
+        width: 64px;
+    }
+    .banner_filter ul li:last-child {
+        margin: 0;
+    }
+    .banner_filter ul li a {
+        color: #fff;
+        font-size: 2rem;
+        opacity: 0.8;
+    
+        transition: opacity .5s;
+    }
+    .banner_filter ul li span {
+        position: absolute;
+        top: 79px;
+    
+        display: block;
+        width: 100%;
+        height: 16px;
+    
+        background: url(../img/members/tri_p.png) no-repeat center/contain;
+        background-size: 16px 11px;
+    
+        opacity: 0;
+    
+        transition: opacity .5s;
+    }
+    
+    .banner_filter ul li:hover a {
+        opacity: 1;
+    }
+    .banner_filter ul li:hover span {
+        opacity: 1;
+    }
+    
+    .section_title {
+        width: 100%;
+        height: 80px;
+        background-color: #f8f8f8;
+        padding: 54px 10.026% 0;
+    }
+    .section_title > span {
+        display: block;
+        float: left;
+        width: 5px;
+        height: 27px;
+        background-color: #ED702D;
+    
+        margin-right: 10px;
+    }
+    .section_title > h4 {
+        float: left;
+        font-size: 2.5rem;
+    }
+    
+    .sub_title {
+        background-color: transparent;
+        padding: 54px 10.026% 0;
+    }
+    .sub_title > span {
+        display: block;
+        float: left;
+        width: 3px;
+        height: 20px;
+        background-color: #dddddd;
+    
+        margin-right: 10px;
+    }
+    .sub_title > h4 {
+        float: left;
+        font-size: 1.8rem;
+        color: #555555;
+    }
+    
+    #m_professor {
+        display: none;
+    }
+
+    #d_professor {
+        display: block;
+        width: 100%;
+    }
+    #d_professor .section_title {
+        width: 100%;
+        height: 80px;
+        background-color: #f8f8f8;
+        padding: 54px 10.026% 0;
+    }
+    #d_professor .section_title > span {
+        display: block;
+        float: left;
+        width: 5px;
+        height: 27px;
+        background-color: #ED702D;
+    
+        margin-right: 10px;
+    }
+    #d_professor .section_title > h4 {
+        float: left;
+        font-size: 2.5rem;
+    }
+    
+    .about_prof {
+        width: 79.948%; /* 614 / 768 */
+        height: 240px;
+        margin: 50px auto;
+    }
+    .about_prof .img {
+        display: block;
+        float: left;
+
+        width: 180px;
+        height: 240px;
+
+        border: 4px solid #fff;
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+    
+        text-indent: -9999px;
+        overflow: hidden;
+    
+        background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;  
+    }
+    .prof_txt_inner {
+        float: right;
+
+        height: 240px;
+        width: calc(100% - 180px);
+
+        padding-left: 40px;
+    }
+    .prof_txt_inner > h5 {
+        margin-top: 7px;
+        font-size: 3.5rem;
+        line-height: 40px;
+    }
+    .prof_txt_inner > span {
+        display: block;
+        margin-top: 12px;
+        margin-left: 2px;
+
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 23px;
+
+        margin-bottom: 40px;
+        color: #B9B9B9;
+    }
+    .prof_txt_inner .prof_info {
+        width: auto;
+        margin: 0;
+    }
+    .prof_txt_inner .prof_info > div {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .prof_txt_inner .prof_info > div > p {
+        font-size: 1.5rem;
+    }
+    .prof_txt_inner .prof_info > div > p .info_bold {
+        font-size: 1.3rem;
+    }
+
+    .nanum_gothic {
+        font-size: 1.3rem;
+    }
+    
+    .title {
+        height: 27px;
+        margin-bottom: 20px;  
+    }
+    .title > span {
+        display: block;
+        float: left;
+        width: 8px;
+        height: 8px;
+    
+        margin-top: 9px;
+        margin-right: 10px;
+        background-color: #ED702D;
+    }
+    .title > h5 {
+        display: block;
+        float: left;
+        font-size: 2.5rem;
+        line-height: 27px;
+    }
+    
+    #d_professor .biosketch {
+        width: 79.948%; /* 614 / 768 */
+        margin: 50px auto;
+    
+        text-align: left;
+    }
+    #d_professor .biosketch p {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+        font-size: 1.5rem;
+        line-height: 20px;
+    
+        color: #333333;
+    }
+    
+    .education_mobile {
+        display: none;
+    }
+
+    .education {
+        display: none;
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto 50px;
+    }
+    .education_txt {
+        padding: 0 20px;
+    }
+    .education_txt .left {
+        float: left;
+        margin-right: 40px;
+    }
+    .education_txt .left > span {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 25px;
+        color: #4d4d4d;
+    }
+    .education_txt .left > span > span {
+        color: #b9b9b9;
+        font-size: 0.8rem;
+        line-height: 25px;
+
+        vertical-align: 2px;
+    }
+    .education_txt .right {
+        float: left;
+    }
+    .education_txt .right > p {
+        font-size: 1.5rem;
+        line-height: 25px;
+        color: #5c5c5c;
+    }
+    
+    .experience_mobile {
+        display: none;
+    }
+
+    .experience {
+        display: block;
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto 50px;
+    }
+    .experience .exp_txt {}
+    .experience .exp_txt .left {
+        float: left;
+        width: 166px;
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+    .experience .exp_txt .left > span {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 25px;
+        color: #4d4d4d;
+    }
+    .experience .exp_txt .left > span > span {
+        color: #b9b9b9;
+        font-size: 0.8rem;
+        line-height: 25px;
+
+        vertical-align: 2px;
+    }
+    .experience .exp_txt .right {
+        float: left;
+
+        width: calc(100% - 246px);
+    }
+    .experience .exp_txt .right > p {
+        font-size: 1.5rem;
+        line-height: 25px;
+        color: #5c5c5c;
+
+        width: 100%;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    .ps_mobile {
+        display: none;
+    }
+
+    .ps {
+        display: block;
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto 50px;
+    }
+    .ps .ps_txt {
+        width: 100%;
+
+    }
+    .ps .ps_txt .left {
+        display: block;
+        float: left;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 25px;
+        color: #4D4D4D
+    }
+    .ps .ps_txt .right {
+        float: left;
+        font-size: 1.5rem;
+        line-height: 25px;
+        color: #5C5C5C;
+    }
+    .ps .ps_txt .right > p {}
+    .ps .ps_txt .right > p > span {
+        font-size: .8rem;
+        color: #b9b9b9;
+
+        vertical-align: 2px;
+    }
+    .ps .ps_txt .top {
+        width: calc(100% - 40px);
+        height: 102px;
+        margin: 0 0 20px 20px;
+    }
+    .ps .ps_txt .top .left {
+        float: left;
+        width: 115px;
+        margin-right: 40px;
+    }
+    .ps .ps_txt .top .right {
+        float: left;
+        width: calc(100% - 175px);
+    }
+    .ps .ps_txt .bottom {
+        width: calc(100% - 40px);
+        height: 25px;
+        margin: 0 0 0 20px;
+
+    }
+    .ps .ps_txt .bottom .left {
+        float: left;
+        width: 115px;
+        margin-right: 40px;
+    }
+    .ps .ps_txt .bottom .right {
+        float: left;
+        width: calc(100% - 165px);
+    }
+    
+    .others {
+        width: 79.948%; /* 614 / 768 */
+        margin: 0 auto 50px;
+    }
+    .others_txt {
+        padding: 0 20px;
+    }
+    .others_txt > span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 25px;
+        color: #4d4d4d;
+    }
+    .others_txt > span > span {
+        color: #b9b9b9;
+        font-size: .8rem;
+        line-height: 25px;
+
+        vertical-align: 1px;
+    }
+    .others_txt > p {
+        margin: 2px 0px 20px 18px;
+        font-size: 1.5rem;  
+    }
+    
+    .mobile { display: none; }
+    .desk_v { display: block; }
+
+    /* link href로 이동시 fixed 때매 가려지는 issue */
+    #d_pr::before, #d_phd::before, #d_m::before, #d_a::before {
+        content: "";
+        display: block;
+        margin: -100px 0 0;
+        height: 100px;
+    }
+
+    .desk_v .person {
+        width: 79.948%; /* 614 / 768 */
+        height: 250px;
+        margin: 0 auto;
+    }
+    .desk_v .members_picture {
+        display: block;
+        float: left;
+        text-align: left;
+        margin: 50px 40px 50px 0;
+        width: 120px;
+        height: 150px;
+    }
+    .desk_v .members_txt {
+        display: block;
+        float: left;
+        width: calc(100% - 200px);
+        height: 150px;
+        margin-top: 70px;
+    }
+    .desk_v .members_name {
+        font-size: 2.3rem;
+        margin-bottom: 5px;
+        line-height: 33px;
+    
+        color: #222222;
+    }
+    .desk_v .email_icon {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+    
+        vertical-align: -2px;
+        margin-right: 5px;
+        background: url(../img/icon/email_icon.png) no-repeat center/contain;
+    }
+    .desk_v .members_email {
+        font-size: 1.5rem;
+        color: #4d4d4d;
+        line-height: 18px;
+    }
+    .desk_v .members_info_m {
+        display: none;
+    }
+    .desk_v .members_info_d {
+        display: block;
+        width: auto;
+        font-size: 1.8rem;
+        color: #555555;
+        line-height: 18px;
+        margin: 15px 0 0;
+    }
+    .desk_v .members_info {
+        width: auto;
+        font-size: 1.8rem;
+        color: #555555;
+        line-height: 18px;
+        margin: 15px 0 0;
+    }
+    .desk_v .members_kr_name {
+        display: inline-block;
+        font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial';
+        font-size: 2rem;
+    
+        /* vertical-align: 1px; */
+        margin-left: 5px;
+        color: #555555;
+    }
+    
+    /* Postdoctoral Researcher */
+    #d_pr {
+        margin-bottom: 0px;
+    }
+    #d_pr .members_picture {
+        background-image: url(../img/members/people/Pham\ son.jpg);
+    }
+
+    /* PhD Student */
+    #d_phd {
+        margin-bottom: 0px;
+    }
+    /* 신상원 */
+    #d_phd .members_picture {
+        background-image: url(../img/members/people/Sangwon\ Shin.jpg);
+    }
+
+    .add_margin_bottom {
+        padding-bottom: 30px;
+    }
+    .add_border_bottom {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Master Students */
+    #d_m {
+        margin-bottom: 0px;
+    }
+
+    /* 권준엽 */
+    #d_m div:nth-of-type(2) .members_picture {
+        background-image: url(../img/members/people/Joonyup\ Kwon.jpg);
+    }
+    /* 박주희 */
+    #d_m div:nth-of-type(3) .members_picture {
+        background-image: url(../img/members/people/juhee\ park.jpg);
+    }
+    /* 유종상 */
+    #d_m div:nth-of-type(4) .members_picture {
+        background-image: url(../img/members/people/Jongsang\ Yoo.jpeg);
+    }
+    /* 조상운 */
+    #d_m div:nth-of-type(5) .members_picture {
+        /* todo: 사진 추가 */
+    }
+    /* 서상현 */
+    #d_m div:nth-of-type(6) .members_picture {
+        background-image: url(../img/members/people/Sanghyeon\ Seo.jpg);
+    }
+
+    .members_char {
+        color: #ED702D;
+        font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial';
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+
+    /* Alumni */
+    #d_a {
+        margin-bottom: 0px;
+    }
+
+    /* 김한이 */
+    #d_a div:nth-of-type(2) .members_picture {
+        background-image: url(../img/members/people/picture_hanyee.JPG);
+    }
+
+    /* 이준연 */
+    #d_a div:nth-of-type(3) .members_picture {
+        /* todo: 사진 추가 */
+    }
+
+    /* 김채영 */
+    #d_a div:nth-of-type(4) .members_picture {
+        background-image: url(../img/members/people/Chaeyoung\ Kim.jpg);
+    }
+
+    /* 박상현 */
+    #d_a div:nth-of-type(5) .members_picture {
+        background-image: url(../img/members/people/Sanghyun\ Park.jpg);
+    }
+
+    /* 홍보의 */
+    #d_a div:nth-of-type(6) .members_picture {
+        background-image: url(../img/members/people/boyhong.jpg);
+    }
+
+    /* 김민수 */
+    #d_a div:nth-of-type(7) .members_picture {
+        background-image: url(../img/members/people/minsu.jpg);
+    }
+
+    /* 최병준 */
+    #d_a div:nth-of-type(8) .members_picture {
+        /* todo: 사진 추가 */
+    }
+
+    /* 공선희 */
+    #d_a div:nth-of-type(9) .members_picture {
+        background-image: url(../img/members/people/picture_sunhee.jpg);
+    }
+
+    /* 이보선 */
+    #d_a div:nth-of-type(10) .members_picture {
+        background-image: url(../img/members/people/picture_boseon.jpg);
+    }
+
+    /* 김민철 */
+    #d_a div:nth-of-type(11) .members_picture {
+        background-image: url(../img/members/people/MinCheol.jpg);
+    }
+
+    /* 박상우 */
+    #d_a div:nth-of-type(12) .members_picture {
+        background-image: url(../img/members/people/sangwoo.jpg);
+    }
+
+    /* 백진욱 */
+    #d_a div:nth-of-type(13) .members_picture {
+        background-image: url(../img/members/people/Jinwook.jpg);
+    }
+
+    /* 정주혜 */
+    #d_a div:nth-of-type(14) .members_picture {
+        background-image: url(../img/members/people/Juhye\ Jeong.jpg);
+    }
+
+    /* 장선경 */
+    #d_a div:nth-of-type(15) .members_picture {
+        background-image: url(../img/members/people/Sungyeong\ Jang.jpg);
+    }
+
+    /* 이희민 */
+    #d_a div:nth-of-type(16) .members_picture {
+        background-image: url(../img/members/people/Heemin\ Lee.jpg);
+    }
+
+    /* 권구윤 */
+    #d_a div:nth-of-type(17) .members_picture {
+        background-image: url(../img/members/people/Kwon\ Guyun.jpg);
+    }
+
+    /* 송민규 */
+    #d_a div:nth-of-type(18) .members_picture {
+        /* todo: 사진 추가 */
+    }
+
+    /* 수료생 ------------------------------------------------------ */
+
+    /* 이상욱 */
+    #d_a div:nth-of-type(20) .members_picture {
+        background-image: url(../img/members/people/picture_sangwook.jpg);
+    }
+
+    /* 신주훈 */
+    #d_a div:nth-of-type(21) .members_picture {
+        /* todo: 사진 추가 */
+    }
+
+    .desk_v .person.add_margin_left {
+        padding-left: 16px;
+    }
+}
+
+/* start tablet 1024 */
+@media all and (min-width: 1024px) {
+
+
+    .banner_filter ul {
+        /* toset: */
+        width: 80.078%; /* 820 / 1024 */
+    }
+    .section_title {
+        padding: 54px 9.961% 0; /* toset (100% - 80.078%)/2; */
+    }
+    .sub_title {
+        background-color: transparent;
+        padding: 54px 9.961% 0; /* toset */
+    }
+    #d_professor .section_title {
+        padding: 54px 9.961% 0; /* toset */
+    }
+    .about_prof {
+        /* toset */
+        width: 80.078%; /* 820 / 1024 */
+    }
+    #d_professor .biosketch {
+        /* toset */
+        width: 80.078%; /* 820 / 1024 */
+    }
+    .education {
+        /* toset */
+        width: 80.078%; /* 820 / 1024 */
+    }
+    .experience {
+        /* toset */
+        width: 80.078%; /* 820 / 1024 */
+    }
+    .ps {
+        /* toset */
+        width: 80.078%; /* 820 / 1024 */
+    }
+    .desk_v .person {
+        /* toset */
+        width: 80.078%; /* 820 / 1024 */
+    }
+}
+
+/* start tablet 1280 */
+@media all and (min-width: 1280px) {
+    .banner_filter ul {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    .section_title {
+        padding: 54px 10% 0; /* toset (100% - 80%)/2; */
+    }
+    .sub_title {
+        background-color: transparent;
+        padding: 54px 10% 0; /* toset */
+    }
+    #d_professor .section_title {
+        padding: 54px 10% 0; /* toset */
+    }
+    .about_prof {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    #d_professor .biosketch {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    .education {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    .experience {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    .ps {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    .others {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+    .desk_v .person {
+        /* toset */
+        width: 80%; /* 1024 / 1280 */
+    }
+}
+
+/* start tablet 1920 */
+@media all and (min-width: 1920px) {
+    .banner_filter ul {
+        width: 1140px;
+    }
+    .section_title {
+        padding: 54px 20.3125% 0; 
+    }
+    .sub_title {
+        background-color: transparent;
+        padding: 54px 20.3125% 0; /* toset */
+    }
+    #d_professor .section_title {
+        padding: 54px 20.3125% 0; /* toset */
+    }
+    .about_prof {
+        /* toset */
+        width: 1140px;
+    }
+    #d_professor .biosketch {
+        /* toset */
+        width: 1140px;
+    }
+    .education {
+        /* toset */
+        width: 1140px;
+    }
+    .experience {
+        /* toset */
+        width: 1140px;
+    }
+    .ps {
+        /* toset */
+        width: 1140px;
+    }
+    .others {
+        /* toset */
+        width: 1140px;
+    }
+    .desk_v .person {
+        /* toset */
+        width: 1140px;
+    }
+}

@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCA의 멤버를 소개합니다</title>
+    <link rel="icon" href="./img/favicon_io/favicon.ico">
+
+    <!-- css -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/members.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var check = false;
+
+            // menu btn
+            $('.open_menu_btn').click(function(){
+                if(!check){
+                    $('nav').addClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').addClass('trans');
+                    check = true;
+                } else {
+                    $('nav').removeClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').removeClass('trans');
+                    check = false;
+                }
+            });
+        });
+    </script> 
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header_inner" class="clear">
+                <a href="./members.html" class="clear">
+                    <span></span>
+                    <h1>ESCA</h1>
+                    <h2>Embedded Systems & </br> Computer Architecture</h2>
+                </a>
+                <button class="open_menu_btn mb">
+                    <span>메뉴열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="clear">
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <button class="close_menu_btn">메뉴 닫기</button>
+                    <ul class="clear">
+                        <li>
+                            <a href="./index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./members.html">
+                                Members
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Research
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Teaching">
+                                Teaching
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Publication
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- e: header inner -->
+        </header>
+        <div id="members_wrap">
+            <div class="members_banner">
+                <span class="banner_filter">
+                    <h3>Members</h3>
+                    <span>ESCA Labs</span>
+                    <i></i>
+                    <ul class="mobile">
+                        <li>
+                            <a href="#m_pr">Postdoctoral Researcher</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#m_phd">PhD Students</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#m_m">Master Students</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#m_a">Alumni</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                    <ul class="desk_v">
+                        <li>
+                            <a href="#d_pr">Postdoctoral Researcher</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#d_phd">PhD Students</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#d_m">Master Students</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#d_a">Alumni</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                </span>
+            </div> <!-- e: members_banner -->
+
+
+            <div id="m_professor">
+                <div class="section_title">
+                    <span></span>
+                    <h4>Professor</h4>
+                </div>
+                <span class="img">서태원 교수 사진</span>
+                <h5>Taeweon Suh</h5>
+                <span>Professor</span>
+
+                <div class="prof_info">
+                    <div>
+                        <p><span>Office. </span>320 Aegineung Cafeteria (애기능 생활관 320)</p>
+                    </div>
+                    <div>
+                        <p><span>Address. </span>145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</p>
+                    </div>
+                    <div>
+                        <p><span>Phone. </span>+82-2-3290-2397</p>
+                    </div>
+                    <div>
+                        <p><span>Email. </span>suhtw at korea . ac . kr</p>
+                    </div>
+                </div>
+
+                <div class="biosketch">
+                    <div class="title">
+                        <span></span>
+                        <h5>Bioscketch</h5>
+                    </div>
+                    <p> Taeweon Suh is a Professor in the Department of Computer Science & Engineering at Korea University. He received his PhD degree in Electrical and Computer Engineering from Georgia Institute of Technology. His main research interests include embedded systems (including IoTs), computer architecture, multi- & many-core, parallel programming, hardware security, and virtualization. Prior to joining academia, he was a systems engineer at Intel Corporation in Hillsboro, Oregon in US.</p>
+                </div> 
+        
+                <div class="education_mobile">
+                    <div class="title">
+                        <span></span>
+                        <h5>Education</h5>
+                    </div>
+                    <div class="education_txt">
+                        <span><span>■ </span>&nbsp;&nbsp;Aug. 2001 ~ Dec. 2006</span>
+                        <p>Ph.D. Computer Engineering, Georgia Institute of Technology</p>
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 1993 ~ Feb. 1995</span>
+                        <p>M.S. Electronics Engineering, Seoul National University</p>
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 1989 ~ Feb. 1993</span>
+                        <p>B.S, Electrical Engineering, Korea University</p>
+                    </div>
+                </div>
+            </div> <!-- m_professor -->
+            <div id="d_professor" class="clear">
+                <div class="section_title">
+                    <span></span>
+                    <h4>Professor</h4>
+                </div>
+                <div class="about_prof">
+                    <span class="img">서태원 교수 사진</span>
+                    <div class="prof_txt_inner">
+                        <h5>Taeweon Suh</h5>
+                        <span>Professor</span>
+        
+                        <div class="prof_info">
+                            <div>
+                                <p><span class="info_bold">Office. </span>320 Aegineung Cafeteria <span class="nanum_gothic" style="font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial'; color: #888888">(애기능 생활관 320)</span></p>
+                            </div>
+                            <div>
+                                <p><span class="info_bold">Address. </span>145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</p>
+                            </div>
+                            <div>
+                                <p><span class="info_bold">Phone. </span>+82-2-3290-2397</p>
+                            </div>
+                            <div>
+                                <p><span class="info_bold">Email. </span>suhtw at korea . ac . kr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- e: about_prof -->
+                <div class="biosketch">
+                    <div class="title">
+                        <span></span>
+                        <h5>Bioscketch</h5>
+                    </div>
+                    <p> Taeweon Suh is a Professor in the Department of Computer Science & Engineering at Korea University. He received his PhD degree in Electrical and Computer Engineering from Georgia Institute of Technology. His main research interests include embedded systems (including IoTs), computer architecture, multi- & many-core, parallel programming, hardware security, and virtualization. Prior to joining academia, he was a systems engineer at Intel Corporation in Hillsboro, Oregon in US.</p>
+                </div> 
+        
+                <div class="education_mobile">
+                    <div class="title">
+                        <span></span>
+                        <h5>Education</h5>
+                    </div>
+                    <div class="education_txt">
+                        <span><span>■ </span>&nbsp;&nbsp;Aug. 2001 ~ Dec. 2006</span>
+                        <p>Ph.D. Computer Engineering, Georgia Institute of Technology</p>
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 1993 ~ Feb. 1995</span>
+                        <p>M.S. Electronics Engineering, Seoul National University</p>
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 1989 ~ Feb. 1993</span>
+                        <p>B.S, Electrical Engineering, Korea University</p>
+                    </div>
+                </div> <!-- education_mobile -->
+
+                <div class="education">
+                    <div class="title">
+                        <span></span>
+                        <h5>Education</h5>
+                    </div>
+                    <div class="education_txt clear">
+                        <div class="left">
+                            <span><span>■ </span>&nbsp;&nbsp;Aug. 2001 ~ Dec. 2006</span>
+                            <span><span>■ </span>&nbsp;&nbsp;Mar. 1993 ~ Feb. 1995</span>
+                            <span><span>■ </span>&nbsp;&nbsp;Mar. 1989 ~ Feb. 1993</span>
+                        </div> <!-- left -->
+                        <div class="right">
+                            <p>Ph.D. Computer Engineering, Georgia Institute of Technology</p>  
+                            <p>M.S. Electronics Engineering, Seoul National University</p>
+                            <p>B.S, Electrical Engineering, Korea University</p>
+                        </div> <!-- right -->
+                    </div> <!-- education_txt-->
+                </div> <!-- education -->
+
+            </div> <!-- d_professor -->
+
+
+            <div class="experience_mobile">
+                <div class="title">
+                    <span></span>
+                    <h5>Experience</h5>
+                </div>
+                <div class="exp_txt">
+                    <span><span>■ </span>&nbsp;&nbsp;Mar. 2016 ~ Present</span>
+                    <p>Professor, Computer Science and Engineering, College of Informatics, Korea Univ.</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Mar. 2014 ~ Feb. 2016</span>
+                    <p>Associate Professor, Computer Science and Engineering & Graduate School of Information Security, Korea Univ.</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Mar. 2011 ~ Feb. 2014</span>
+                    <p>Associate Professor, Computer Science Education, Korea Univ.</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Sep. 2008 ~ Feb. 2011</span>
+                    <p>Assistant Professor, Computer Science Education, Korea Univ., Seoul, Korea</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Feb. 2007 ~ Aug. 2008</span>
+                    <p>Systems Engineer, Intel Corp., Hillsboro, OR, USA</p>
+                    <span><span>■ </span>&nbsp;&nbsp;May 2005 ~ Aug. 2006</span>
+                    <p>Graduate Research Intern, Intel Corp., Hillsboro, OR, USA</p>
+                    <span><span>■ </span>&nbsp;&nbsp;May 2004 ~ Aug. 2004</span>
+                    <p>Graduate Research Intern, Intel Corp., Santa Clara, CA, USA</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Feb. 1998 ~ Aug. 2001</span>
+                    <p>Senior Research Engineer, Hynix Semiconductor, Seoul, Korea</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Feb. 1995 ~ Jan. 1998</span>
+                    <p>Research Engineer, LG Advanced Institute of Technology, Seoul, Korea</p>
+                </div>
+            </div> <!-- e: experience_mobile -->
+            <div class="experience">
+                <div class="title">
+                    <span></span>
+                    <h5>Experience</h5>
+                </div>
+                <div class="exp_txt clear">
+                    <div class="left">
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 2016 ~ Present</span>
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 2014 ~ Feb. 2016</span>
+                        <span><span>■ </span>&nbsp;&nbsp;Mar. 2011 ~ Feb. 2014</span>
+                        <span><span>■ </span>&nbsp;&nbsp;Sep. 2008 ~ Feb. 2011</span>
+                        <span><span>■ </span>&nbsp;&nbsp;Feb. 2007 ~ Aug. 2008</span>
+                        <span><span>■ </span>&nbsp;&nbsp;May 2005 ~ Aug. 2006</span>
+                        <span><span>■ </span>&nbsp;&nbsp;May 2004 ~ Aug. 2004</span>
+                        <span><span>■ </span>&nbsp;&nbsp;Feb. 1998 ~ Aug. 2001</span>
+                        <span><span>■ </span>&nbsp;&nbsp;Feb. 1995 ~ Jan. 1998</span>
+                    </div>
+                    <div class="right">
+                        <p>Professor, Computer Science and Engineering, College of Informatics, Korea Univ.</p>
+                        <p>Associate Professor, Computer Science and Engineering & Graduate School of Information Security, Korea Univ.</p>
+                        <p>Associate Professor, Computer Science Education, Korea Univ.</p>
+                        <p>Assistant Professor, Computer Science Education, Korea Univ., Seoul, Korea</p>
+                        <p>Systems Engineer, Intel Corp., Hillsboro, OR, USA</p>
+                        <p>Graduate Research Intern, Intel Corp., Hillsboro, OR, USA</p>
+                        <p>Graduate Research Intern, Intel Corp., Santa Clara, CA, USA</p>
+                        <p>Senior Research Engineer, Hynix Semiconductor, Seoul, Korea</p>
+                        <p>Research Engineer, LG Advanced Institute of Technology, Seoul, Korea</p>
+                    </div>
+                </div>
+            </div> <!-- e: experience_mobile -->
+
+
+            <div class="ps_mobile">
+
+                <div class="title">
+                    <span></span>
+                    <h5>Professional Services</h5>
+                </div>
+
+                <div class="ps_txt">
+                    <span>Program Committee</span>
+                    <p><span>■ </span>&nbsp;&nbsp;HASP 2013, 2016, 2017 (Workshop on Hardware and Architectural Support for Security and Privacy)</p>
+                    <p><span>■ </span>&nbsp;&nbsp;IEEE VLSI-SoC 2010, 2011</p>
+                    <p><span>■ </span>&nbsp;&nbsp;IEEE ISPA 2011</p>
+
+                    <span class="add_margin_top">Associate Editor</span>
+                    <p><span>■ </span>&nbsp;&nbsp;JCSC (Journal of Circuit, Systems, and Computers) 2014</p>
+                </div>  
+            </div> <!-- e: ps_mobile -->
+            <div class="ps">
+                <div class="title">
+                    <span></span>
+                    <h5>Professional Services</h5>
+                </div>
+
+                <div class="ps_txt">
+                    <div class="top">
+                        <span class="left">Program Committee</span>
+                        <div class="right">
+                            <p><span>■ </span>&nbsp;&nbsp;HASP 2013, 2016, 2017 (Workshop on Hardware and Architectural Support for Security and Privacy)</p>
+                            <p><span>■ </span>&nbsp;&nbsp;IEEE VLSI-SoC 2010, 2011</p>
+                            <p><span>■ </span>&nbsp;&nbsp;IEEE ISPA 2011</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <span class="left">Associate Editor</span>
+                        <div class="right">
+                            <p><span>■ </span>&nbsp;&nbsp;JCSC (Journal of Circuit, Systems, and Computers) 2014</p>
+                        </div>
+                    </div>
+                </div>  
+            </div> <!-- e: ps_mobile -->
+
+            <div class="others">
+
+                <div class="title">
+                    <span></span>
+                    <h5>Others</h5>
+                </div>
+
+                <div class="others_txt">
+                    <span><span>■ </span>&nbsp;&nbsp;May 2005 ~ Aug. 2006</span>
+                    <p>32-bit RISC-V Processor Design, Samsung Electronics (Suwon)</p>
+                    <span><span>■ </span>&nbsp;&nbsp;June 2023</span>
+                    <p>32-bit RISC-V Processor Design, Samsung Research</p>
+                    <span><span>■ </span>&nbsp;&nbsp;November 26. 2015</span>
+                    <p>Security-enhanced Big Data Processing for Defense Applications [ppt], NATO (North Atlantic Treaty Organization) SPS (Science for Peace and Security) Info Day, Seoul, Korea</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Feb. 2015</span>
+                    <p>반도체설계 입문 교육 (디지털) - ETRI SW-SoC 융합 R&D 센터</p>
+                    <span><span>■ </span>&nbsp;&nbsp;Sep. 30 ~ Oct. 4, 2013</span>
+                    <p>ARM Processor in SCSA (Samsung Convergence Software Academy)</p>
+                    <span><span>■ </span>&nbsp;&nbsp;July 27, 2011 / July 29, 2010 / August 11, 2009</span>
+                    <p>컴퓨터교과 연구회 교사연수 Computer Architecture & Operating Systems [ppt]</p>
+                    <span><span>■ </span>&nbsp;&nbsp;January 26, 2010</span>
+                    <p>한국정보과학회 컴퓨터시스템 연구회 Hybrid System Emulation (New Comers' Session Talk) [ppt]</p>
+                </div>
+            </div> <!-- e: others -->
+        </div> <!-- e: members_wrap -->
+
+        <div id="m_pr" class="mobile">
+            <div class="section_title">
+                <span></span>
+                <h4>Postdoctoral Researcher</h4>
+            </div>
+            <div class="person clear">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Pham Ngoc Son</h5>
+                    <span class="members_email"><i class="email_icon"></i>phamngocson1408 at gmail com</span>
+                    <p class="members_info_m">AI Accelerator, Deep Learning,<br>Microprocessor Architecture(ARM, RISC-V),<br>Zero Knowledge Proof(ZKP)</p>
+                    <p class="members_info_d">AI Accelerator, Deep Learning, Microprocessor Architecture(ARM, RISC-V), Zero Knowledge Proof(ZKP)</p>
+                </div>  
+            </div>
+        </div> <!-- e: mobile_postdoctoral researcher -->
+
+        <div id="m_phd" class="mobile">
+            <div class="section_title">
+                <span></span>
+                <h4>PhD Student</h4>
+            </div>
+            <!-- 신상원 -->
+            <div class="person clear">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Sangwon Shin<span class="members_kr_name">신상원</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>husask11 at korea ac kr</span>
+                    <p class="members_info">Computer Architecture (x86-64), Hardware Security</p>
+                </div>
+            </div>
+        </div> <!-- e: mobile_PhD student -->
+
+        <div id="m_m" class="mobile">
+            <div class="section_title">
+                <span></span>
+                <h4>Master Students</h4>
+            </div>
+
+            <!-- 권준엽 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Joonyup Kwon<span class="members_kr_name">권준엽</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>junyub0804 at korea ac kr</span>
+                    <p class="members_info">Microprocessor Architecture(RISC-V, ARM), AI Accelerator, Deep Learning</p>
+                </div>
+            </div>
+
+            <!-- 박주희 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Juhee Park<span class="members_kr_name">박주희</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>jjjhpark121 at korea ac kr</span>
+                    <p class="members_info">Computer Architecture(x86-64),<br>Microprocessor(ARM, RISC-V), Neural Processing Unit</p>
+                </div>
+            </div>
+
+            <!-- 유종상 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Jongsang Yoo<span class="members_kr_name">유종상</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>jamin0513 at korea ac kr</span>
+                    <p class="members_info">NTT-based HW Accelerator(target for ZKP, FHE, PQC,,,),<br>SoC Architecture</p>
+                </div>
+            </div>
+
+            <!-- 조상운 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">SangunJo<span class="members_kr_name">조상운</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>sangun56 at korea ac kr</span>
+                    <p class="members_info">Computer Architecture, NPU, NPU Security</p>
+                </div>
+            </div>
+
+            <!-- 서상현 -->
+            <div class="person clear">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Sanghyeon Seo<span class="members_kr_name">서상현</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>tjtkdgus45 at korea ac kr</span>
+                    <p class="members_info">Microprocessor Architecture(RISC-V, ARM),<br>Hardware Accelerator</p>
+                </div>
+            </div>
+        </div> <!-- e: mobile_Master Students -->
+
+        <div id="m_a" class="mobile">
+            <div class="section_title">
+                <span></span>
+                <h4>Alumni</h4>
+            </div>
+
+            <!-- 김한이 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. 2021</span>
+                    <h5 class="members_name">Han-Yee Kim<span class="members_kr_name">김한이</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>hanyeemy at korea ac kr</span>
+                    <p class="members_info">Affiliation : SK Hynix</p>
+                </div>
+            </div>
+
+            <!-- 이준연 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2021</span>
+                    <h5 class="members_name">Jun-yeon Lee<span class="members_kr_name">이준연</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>dlwnsdus2 at naver com</span>
+                    <p class="members_info">Affiliation: Samsung Electronics</p>
+                </div>
+            </div>
+
+            <!-- 김채영 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2020</span>
+                    <h5 class="members_name">Chaeyoung Kim<span class="members_kr_name">김채영</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>chaeyuiop at gmail com</span>
+                    <p class="members_info">Affiliation: SK Hynix</p>
+                </div>
+            </div>            
+
+            <!-- 박상현 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2018</span>
+                    <h5 class="members_name">Sanghyun Park<span class="members_kr_name">박상현</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>seanpark at hanwha com</span>
+                    <p class="members_info">Affiliation: Hanwha Systems (Principal Research Engineer)</p>
+                </div>
+            </div>       
+                 
+            <!-- 홍보의 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2018</span>
+                    <h5 class="members_name">Boeui Hong<span class="members_kr_name">홍보의</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>boyhong at korea ac kr</span>
+                    <p class="members_info">Affiliation: Samsung Electronics</p>
+                </div>
+            </div>       
+
+            <!-- 김민수 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2018</span>
+                    <h5 class="members_name">Minsu Kim<span class="members_kr_name">김민수</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>alxrks at gmail com</span>
+                    <p class="members_info">Affiliation : LG Electronics</p>
+                </div>
+            </div>
+
+            <!-- 최병준 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2017</span>
+                    <h5 class="members_name">Byungjun Choi<span class="members_kr_name">최병준</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>cjb5210 at nate com</span>
+                    <p class="members_info">Affiliation : NAVER</p>
+                </div>
+            </div>
+
+            <!-- 공선희 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2017</span>
+                    <h5 class="members_name">Sunhee Kong<span class="members_kr_name">공선희</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>nickong at korea ac kr</span>
+                    <p class="members_info">Affiliation : Sunrin Internet High School 
+                </div>
+                    <span style="font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial'; font-size: 1rem; color: #888888; vertical-align: 1px;">(선린인터넷고등학교)</span>
+                </p>
+            </div>            
+
+            <!-- 이보선 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2015</span>
+                    <h5 class="members_name">Boseon Lee<span class="members_kr_name">이보선</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>l2bs at korea ac kr</span>
+                    <p class="members_info">Affiliation :</p>
+                </div>
+            </div>       
+                 
+            <!-- 김민철 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. 2022</span>
+                    <h5 class="members_name">Minchul Kim<span class="members_kr_name">김민철</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>betamc at korea ac kr</span>
+                    <p class="members_info">Affiliation : Penta Security</p>
+                </div>       
+                </div>
+
+            <!-- 박상우 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. 2023</span>
+                    <h5 class="members_name">Sangwoo Park<span class="members_kr_name">박상우</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>psw0113 at korea ac kr</span>
+                    <p class="members_info">Affiliation : Samsung Electronics</p>
+                </div>    
+            </div>       
+                 
+            <!-- 백진욱 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D.</span>
+                    <h5 class="members_name">Jinwook Baek<span class="members_kr_name">백진욱</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>backy3 at naver.com</span>
+                    <p class="members_info">Affiliation :</p>
+                </div>
+            </div>       
+
+            <!-- 정주혜 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2022</span>
+                    <h5 class="members_name">Juhye Jeong<span class="members_kr_name">정주혜</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>88juc at hanmail net</span>
+                    <p class="members_info">Affiliation : SK Hynix</p>
+                </div>
+                </div>
+
+            <!-- 장선경 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2022</span>
+                    <h5 class="members_name">Sungyeong Jang<span class="members_kr_name">장선경</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>itcos294 at korea ac kr</span>
+                    <p class="members_info">Affiliation : Samsung Electronics</p>
+                </div>
+                </div>
+
+            <!-- 이희민 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2023</span>
+                    <h5 class="members_name">Heeming Lee<span class="members_kr_name">이희민</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>dun02170 at gmail com</span>
+                    <p class="members_info">Affiliation :</p>
+                </div>            
+                </div>
+
+            <!-- 권구윤 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2023</span>
+                    <h5 class="members_name">Guyun Kwon<span class="members_kr_name">권구윤</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>1216kg at naver com</span>
+                    <p class="members_info">Affiliation : SK Hynix</p>
+                </div>       
+                </div>
+                 
+            <!-- 송민규 -->
+            <div class="person clear add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2023</span>
+                    <h5 class="members_name">Minkyu Song<span class="members_kr_name">송민규</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>mikssong at gmail com</span>
+                    <p class="members_info">Affiliation : Samsung Electronics</p>
+                </div>       
+                </div>
+
+            <div class="section_title sub_title">
+                <span></span>
+                <h4>graduate student</h4>
+            </div>
+
+            <!-- 수료생 -->
+
+            <!-- 이상욱 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. candidate</span>
+                    <h5 class="members_name">Sangwook Lee<span class="members_kr_name">이상욱</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>lesa at korea ac kr</span>
+                    <p class="members_info">Computer Architecture, Computer Science Education</p>
+                </div>
+            </div>
+
+            <!-- 신주훈 -->
+            <div class="person clear">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Master candidate</span>
+                    <h5 class="members_name">Juhun Shin<span class="members_kr_name">신주훈</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>mogiangel at naver com</span>
+                    <p class="members_info">Computer Architecture, Computer Science Education</p>
+                </div>
+            </div>
+        </div> <!-- e: mobile_Alumni -->
+
+        <div id="d_pr" class="desk_v">
+            <div class="section_title">
+                <span></span>
+                <h4>Postdoctoral Researcher</h4>
+            </div>
+            <div class="person clear">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Pham Ngoc Son</h5>
+                    <span class="members_email"><i class="email_icon"></i>phamngocson1408 at gmail com</span>
+                    <p class="members_info_m">AI Accelerator, Deep Learning,<br>Microprocessor Architecture(ARM, RISC-V),<br>Zero Knowledge Proof(ZKP)</p>
+                    <p class="members_info_d">AI Accelerator, Deep Learning, Microprocessor Architecture(ARM, RISC-V), Zero Knowledge Proof(ZKP)</p>
+                </div>  
+            </div>
+        </div> <!-- e: mobile_postdoctoral researcher -->
+
+        <div id="d_phd" class="desk_v">
+            <div class="section_title">
+                <span></span>
+                <h4>PhD Student</h4>
+            </div>
+            <!-- 신상원 -->
+            <div class="person clear">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Sangwon Shin<span class="members_kr_name">신상원</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>husask11 at korea ac kr</span>
+                    <p class="members_info">Computer Architecture (x86-64), Hardware Security</p>
+                </div>
+            </div>
+        </div> <!-- e: mobile_PhD student -->
+
+        <div id="d_m" class="desk_v">
+            <div class="section_title">
+                <span></span>
+                <h4>Master Students</h4>
+            </div>
+
+            <!-- 권준엽 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Joonyup Kwon<span class="members_kr_name">권준엽</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>junyub0804 at korea ac kr</span>
+                    <p class="members_info">Microprocessor Architecture(RISC-V, ARM), AI Accelerator, Deep Learning</p>
+                </div>
+            </div>
+
+            <!-- 박주희 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Juhee Park<span class="members_kr_name">박주희</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>jjjhpark121 at korea ac kr</span>
+                    <p class="members_info_m">Computer Architecture(x86-64),<br>Microprocessor(ARM, RISC-V), Neural Processing Unit</p>
+                    <p class="members_info_d">Computer Architecture(x86-64), Microprocessor(ARM, RISC-V), Neural Processing Unit</p>
+                </div>
+            </div>
+
+            <!-- 유종상 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Jongsang Yoo<span class="members_kr_name">유종상</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>jamin0513 at korea ac kr</span>
+                    <p class="members_info_m">NTT-based HW Accelerator(target for ZKP, FHE, PQC,,,),<br>SoC Architecture</p>
+                    <p class="members_info_d">NTT-based HW Accelerator(target for ZKP, FHE, PQC,,,), SoC Architecture</p>
+                </div>
+            </div>
+
+            <!-- 조상운 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Sangun Jo<span class="members_kr_name">조상운</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>sangun56 at korea ac kr</span>
+                    <p class="members_info">Computer Architecture, NPU, NPU Security</p>
+                </div>
+            </div>
+
+            <!-- 서상현 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Sanghyeon Seo<span class="members_kr_name">서상현</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>tjtkdgus45 at korea ac kr</span>
+                    <p class="members_info_m">Microprocessor Architecture(RISC-V, ARM),<br>Hardware Accelerator</p>
+                    <p class="members_info_d">Microprocessor Architecture(RISC-V, ARM),<br>Hardware Accelerator</p>
+                </div>
+            </div>
+
+            <!-- 장 민 -->
+            <div class="person clear add_border_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <h5 class="members_name">Min Jang<span class="members_kr_name">장 민</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>rose323 at korea ac kr</span>
+                    <p class="members_info">Embedded System,<br>Hardware Security</p>
+                </div>
+            </div>
+
+        </div> <!-- e: mobile_Master Students -->
+
+        <div id="d_a" class="desk_v">
+            <div class="section_title">
+                <span></span>
+                <h4>Alumni</h4>
+            </div>
+
+            <!-- 김한이 -->
+            <div class="person clear add_border_bottom add_margin_bottom">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. 2021</span>
+                    <h5 class="members_name">Han-Yee Kim<span class="members_kr_name">김한이</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>hanyeemy at korea ac kr</span>
+                    <p class="members_info">Affiliation : SK Hynix</p>
+                </div>
+            </div>
+
+            <!-- 이준연 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2021</span>
+                    <h5 class="members_name">Jun-yeon Lee<span class="members_kr_name">이준연</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>dlwnsdus2 at naver com</span>
+                    <p class="members_info">Affiliation: Samsung Electronics</p>
+                </div>
+            </div>
+
+            <!-- 김채영 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2020</span>
+                    <h5 class="members_name">Chaeyoung Kim<span class="members_kr_name">김채영</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>chaeyuiop at gmail com</span>
+                    <p class="members_info">Affiliation: SK Hynix</p>
+                </div>
+            </div>            
+
+            <!-- 박상현 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2018</span>
+                    <h5 class="members_name">Sanghyun Park<span class="members_kr_name">박상현</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>seanpark at hanwha com</span>
+                    <p class="members_info">Affiliation: Hanwha Systems (Principal Research Engineer)</p>
+                </div>
+            </div>       
+                 
+            <!-- 홍보의 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2018</span>
+                    <h5 class="members_name">Boeui Hong<span class="members_kr_name">홍보의</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>boyhong at korea ac kr</span>
+                    <p class="members_info">Affiliation: Samsung Electronics</p>
+                </div>
+            </div>       
+
+            <!-- 김민수 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2018</span>
+                    <h5 class="members_name">Minsu Kim<span class="members_kr_name">김민수</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>alxrks at gmail com</span>
+                    <p class="members_info">Affiliation : LG Electronics</p>
+                </div>
+            </div>
+
+            <!-- 최병준 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S.2017</span>
+                    <h5 class="members_name">Byungjun Choi<span class="members_kr_name">최병준</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>cjb5210 at nate com</span>
+                    <p class="members_info">Affiliation : NAVER</p>
+                </div>
+            </div>
+
+            <!-- 공선희 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2017</span>
+                    <h5 class="members_name">Sunhee Kong<span class="members_kr_name">공선희</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>nickong at korea ac kr</span>
+                    <p class="members_info">Affiliation : Sunrin Internet High School 
+                        <span style="font-family: 'Nanum Gothic', 'Malgun Gothic', 'Arial'; font-size: 1rem; color: #888888; vertical-align: 1px;">(선린인터넷고등학교)</span>
+                    </p>
+                </div>
+            </div>            
+
+            <!-- 이보선 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2015</span>
+                    <h5 class="members_name">Boseon Lee<span class="members_kr_name">이보선</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>l2bs at korea ac kr</span>
+                    <p class="members_info">Affiliation :</p>
+                </div>
+            </div>       
+                 
+            <!-- 김민철 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. 2022</span>
+                    <h5 class="members_name">Minchul Kim<span class="members_kr_name">김민철</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>betamc at korea ac kr</span>
+                    <p class="members_info">Affiliation : Penta Security</p>
+                </div>       
+                </div>
+
+            <!-- 박상우 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. 2023</span>
+                    <h5 class="members_name">Sangwoo Park<span class="members_kr_name">박상우</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>psw0113 at korea ac kr</span>
+                    <p class="members_info">Affiliation : Samsung Electronics</p>
+                </div>
+            </div>       
+                 
+            <!-- 백진욱 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D.</span>
+                    <h5 class="members_name">Jinwook Baek<span class="members_kr_name">백진욱</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>backy3 at naver.com</span>
+                    <p class="members_info">Affiliation :</p>
+                </div>
+            </div>       
+
+            <!-- 정주혜 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2022</span>
+                    <h5 class="members_name">Juhye Jeong<span class="members_kr_name">정주혜</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>88juc at hanmail net</span>
+                    <p class="members_info">Affiliation : SK Hynix</p>
+                </div>
+                </div>
+
+            <!-- 장선경 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2022</span>
+                    <h5 class="members_name">Sungyeong Jang<span class="members_kr_name">장선경</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>itcos294 at korea ac kr</span>
+                    <p class="members_info">Affiliation : Samsung Electronics</p>
+                </div>
+                </div>
+
+            <!-- 이희민 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2023</span>
+                    <h5 class="members_name">Heeming Lee<span class="members_kr_name">이희민</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>dun02170 at gmail com</span>
+                    <p class="members_info">Affiliation :</p>
+                </div>            
+                </div>
+
+            <!-- 권구윤 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2023</span>
+                    <h5 class="members_name">Guyun Kwon<span class="members_kr_name">권구윤</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>1216kg at naver com</span>
+                    <p class="members_info">Affiliation : SK Hynix</p>
+                </div>       
+                </div>
+                 
+            <!-- 송민규 -->
+            <div class="person clear add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">M.S. 2023</span>
+                    <h5 class="members_name">Minkyu Song<span class="members_kr_name">송민규</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>mikssong at gmail com</span>
+                    <p class="members_info">Affiliation : Samsung Electronics</p>
+                </div>       
+                </div>
+
+            <div class="section_title sub_title">
+                <span></span>
+                <h4>graduate student</h4>
+            </div>
+
+            <!-- 수료생 -->
+
+            <!-- 이상욱 -->
+            <div class="person clear add_border_bottom add_margin_bottom add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Ph.D. candidate</span>
+                    <h5 class="members_name">Sangwook Lee<span class="members_kr_name">이상욱</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>lesa at korea ac kr</span>
+                    <p class="members_info">Computer Architecture, Computer Science Education</p>
+                </div>
+            </div>
+
+            <!-- 신주훈 -->
+            <div class="person clear add_margin_left">
+                <span class="members_picture"></span>
+                <div class="members_txt">
+                    <span class="members_char">Master candidate</span>
+                    <h5 class="members_name">Juhun Shin<span class="members_kr_name">신주훈</span></h5>
+                    <span class="members_email"><i class="email_icon"></i>mogiangel at naver com</span>
+                    <p class="members_info">Computer Architecture, Computer Science Education</p>
+                </div>
+            </div>
+        </div> <!-- e: mobile_Alumni -->
+
+        <footer>
+            <div class="footer_inner_mobile">
+                <div class="clear">
+                    <span>고려대학교 로고</span>
+                    <div class="txt_inner">
+                        <span>Address.</span>&nbsp;145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</br>
+                        <span>Office.</span>&nbsp;320 Aegineung Cafeteria (애기능 생활관 320)</br>
+                        <span>Phone.</span>&nbsp;+82-2-3290-2397 &nbsp;&nbsp;&nbsp;
+                        <span>Email.</span> suhtw@korea.ac.kr
+                    </div>
+                </div>
+                <i></i>
+                <span>
+                    Copyright ⓒ 2023 ESCA All Rights Reserved. Designed by YeJin.
+                </span>
+            </div>
+            <div class="footer_inner">
+                <span>고려대학교 로고</span>
+                <div class="txt_inner clear">
+                    <div>
+                        <p>
+                            <span>Address & Office.</span> 145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841 / 320 Aegineung Cafeteria (애기능 생활관 320)
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>Phone.</span> +82-2-3290-2397 &nbsp;&nbsp;&nbsp;<span>Email.</span>&nbsp;suhtw@korea.ac.kr
+                        </p>
+                    </div>
+                    <i></i>
+                    <span>
+                        Copyright ⓒ 2023 ESCA Labs All Rights Reserved. Designed by yejin
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- e: wrap -->
+</body>
+</html>
