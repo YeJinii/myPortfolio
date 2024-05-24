@@ -37,15 +37,22 @@
     <!-- 카카오 지도 script -->
     <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
     <script>
-
-        let check_1 = true;
-        let check_2 = true;
-        let check_3 = true;
-        let check_4 = true;
         let is_mb = true;
 
         
         $(document).ready(function(){ 
+
+            let w_width = $(window).width();
+
+            let map_w = calc_map_width(w_width);
+            let map_h = calc_map_height(w_width);
+
+            let roughmap = new daum.roughmap.Lander({
+                "timestamp" : "1714569731949",
+                "key" : "2j7yx",
+                "mapWidth" : map_w,
+                "mapHeight" : map_h
+            }).render();
 
             // header hover event -> white mode on
             $('header').hover(function(){
@@ -92,19 +99,42 @@
                 }
             });
 
- 
+
             $(window).scroll(function() {
                 let scrollPosition = $(this).scrollTop();
                 let triggerPosition = 100; // 300px 아래로 스크롤 되었을 때 알림이 나타남
+
+                let mb_height = 500;
 
                 if (scrollPosition > triggerPosition) {
                     $('header').addClass('on');
                 } else {
                     $('header').removeClass('on');
                 }
+
+                if(scrollPosition > 100){
+                    // 스크롤이 메인베너 영역에 있으면
+                    is_mb = false;
+                }else {
+                    is_mb = true;
+                }
             });
 
+            // 언어 전환 btn
+            $('.lang_btn a.e').click(function(){
+                $('.eng').css("display","block");
+                $('.ko').css("display","none");
+                $('.lang_btn a.e').addClass("on");
+                $('.lang_btn a.k').removeClass("on");
 
+
+            });
+            $('.lang_btn a.k').click(function(){
+                $('.eng').css("display","none");
+                $('.ko').css("display","block");
+                $('.lang_btn a.k').addClass("on");
+                $('.lang_btn a.e').removeClass("on");
+            });
 
             // when menu list click -> move to target section
             $('.menu_btn').click(function(){
@@ -126,21 +156,47 @@
                 autoplaySpeed: 5000
             });
 
+            // products slider 
+            $('.pd_slider').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                arrows: true,
+                variableWidth: true,
+                responsive: [
+                    {
+                    breakpoint: 767,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '12px',
+                        slidesToShow: 1
+                    }
+                    }
+                ]
+            });
+
+
             // partners_logo slider 
             $('.p_logo_slider').slick({
-                slidesToShow: 7,
+                slidesToShow: 5,
                 infinite: true,
                 dots: false,
                 arrows: false,
                 autoplay: true,
+                centerMode: true,
+                variableWidth:  true,
                 autoplaySpeed : 2000,
                 responsive: [
-                    {
-                        breakpoint: 1920,
-                        settings: {
-                            slidesToShow: 6
-                        }
-                    },
                     {
                         breakpoint: 1280,
                         settings: {
@@ -162,34 +218,20 @@
                 ]
             });
 
-            let w_width = $(window).width();
-
-            let map_w = calc_map_width(w_width);
-            let map_h = calc_map_height(w_width);
-
-            new daum.roughmap.Lander({
-                "timestamp" : "1714569731949",
-                "key" : "2j7yx",
-                "mapWidth" : map_w,
-                "mapHeight" : map_h
-            }).render();
 
             $(window).resize(function(){
                 w_width = $(window).width();
-                map_w = calc_map_width(w_width);
-                map_h = calc_map_height(w_width); 
 
-                // 기존 지도 삭제
-                let roughmap_container = document.getElementById('daumRoughmapContainer1714569731949');
-                roughmap_container.innerHTML = '';
+                // Calculate new map width and height
+                let new_map_w = calc_map_width(w_width);
+                let new_map_h = calc_map_height(w_width);
 
-                // 새로운 카카오 지도 렌더링
-                new daum.roughmap.Lander({
-                    "timestamp" : "1714569731949",
-                    "key" : "2j7yx",
-                    "mapWidth" : map_w,
-                    "mapHeight" : map_h
-                }).render();
+                // Update the map container size
+                $('#daumRoughmapContainer1714569731949').css({
+                    width: new_map_w + 'px',
+                    height: new_map_h + 'px'
+                });
+
             });
 
         });
@@ -204,19 +246,19 @@
                 return 932;
             }else if((1024>w)&&(w>=768)){
                 return 676;
-            }else return 330;
+            }else return 350;
         }
 
         function calc_map_height(w){
             if(w >= 1920){
-                return 600;
+                return 500;
             }else if((1920>w)&&(w>=1280)){
                 return 500;
             }else if((1280>w)&&(w>=1024)){
                 return 450;
             }else if((1024>w)&&(w>=768)){
                 return 330;
-            }else return 250;
+            }else return 220;
         }
 
     </script>
@@ -234,27 +276,43 @@
                 
                 <div id="menu" class="mobile">
                     <ul>
-                        <li>
-                            <a href="#" class="menu_btn">Products</a>
+                        <li class="m">
+                            <a href="#products" class="menu_btn eng">Products</a>
+                            <a href="#products" class="menu_btn ko">제품소개</a>
                         </li>
-                        <li>
-                            <a href="#" class="menu_btn">Partners</a>
+                        <li class="m">
+                            <a href="#partners" class="menu_btn eng">Partners</a>
+                            <a href="#partners" class="menu_btn ko">파트너</a>
                         </li>
-                        <li>
-                            <a href="#" class="menu_btn">Contact</a>
+                        <li class="m">
+                            <a href="#contact" class="menu_btn eng">Contact</a>
+                            <a href="#contact" class="menu_btn ko">찾아오시는 길</a>
+                        </li>
+                        <li class="lang_btn">
+                            <a class="k on">KOR</a>
+                            <i></i>
+                            <a class="e">ENG</a>
                         </li>
                     </ul>
                 </div>
                 <nav class="desktop">
                     <ul>
-                        <li>
-                            <a href="#">Contact</a>
+                        <li class="lang_btn">
+                            <a class="k on">KOR</a>
+                            <i></i>
+                            <a class="e">ENG</a>
                         </li>
-                        <li>
-                            <a href="#">Partners</a>
+                        <li class="m">
+                            <a class="ko" href="#contact">찾아오시는 길</a>
+                            <a class="eng" href="#contact">Contact</a>
                         </li>
-                        <li>
-                            <a href="#">Product</a>
+                        <li class="m">
+                            <a class="ko" href="#partners">파트너</a>
+                            <a class="eng" href="#partners">Partners</a>
+                        </li>
+                        <li class="m">
+                            <a class="ko" href="#products">제품소개</a>
+                            <a class="eng" href="#products">Products</a>
                         </li>
                     </ul>
                 </nav>
@@ -267,54 +325,128 @@
                         <div class="content_wrap">
                             <h2>Intervention Medical</h2>
                             <span>(주)인터벤션메디칼</span>
-                            <div><a href="#">Contact Us<span></span></a></div>
+                            <div><a href="#contact">Contact Us<span></span></a></div>
                         </div> <!-- e: content_wrap -->
                     </div> <!-- e: slide banner_1 -->
                     <div class="slide banner_2 mb_height" >
                         <div class="content_wrap">
                             <h2>Intervention Medical</h2>
                             <span>(주)인터벤션메디칼</span>
-                            <div><a href="#">Contact Us<span></span></a></div>
+                            <div><a href="#contact">Contact Us<span></span></a></div>
                         </div> <!-- e: content_wrap -->
                     </div>
                     <div class="slide banner_3 mb_height" >
                         <div class="content_wrap">
                             <h2>Intervention Medical</h2>
                             <span>(주)인터벤션메디칼</span>
-                            <div><a href="#">Contact Us<span></span></a></div>
+                            <div><a href="#contact">Contact Us<span></span></a></div>
                         </div> <!-- e: content_wrap -->
                     </div>
                 </div>
                 <a href="#products" class="scroll_down_btn desktop"></a>
             </div> <!-- e: main_banner -->
             <div id="products">
-
+                <div class="products_wrap">
+                    <h2 class="section_title">Products</h2>
+                    <div class="pd_slider">
+                        <div class="product_wrap pw_1">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Sirabe</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_2">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Drainage Cathter</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_3">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Rescue Balloon</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_4">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">OPTIMO</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_5">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Carnelian</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_1">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Sirabe</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_2">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Drainage Cathter</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_3">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Rescue Balloon</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_4">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">OPTIMO</p>
+                            </div>
+                        </div>
+                        <div class="product_wrap pw_5">
+                            <div class="product">
+                                <span class="pd_img"></span>
+                                <p class="pd_name">Carnelian</p>
+                            </div>
+                        </div>
+                    </div> <!-- e: pd_slider -->
+                </div> <!-- e: products_wrap -->
             </div>
             <div id="partners">
                 <div class="partners_wrap">
                     <h2 class="section_title">Partners</h2>
                     <div class="p_logo_slider">
-                        <div class="p_logo p_logo_7">
-                            <span class="p_logo_img">포스코DX</span>
-                        </div>
-                        <div class="p_logo p_logo_6">
-                            <span class="p_logo_img">포스코이앤씨</span>
-                        </div>
-                        <div class="p_logo p_logo_5">
-                            <span class="p_logo_img">포스코</span>
-                        </div>
-                        <div class="p_logo p_logo_4">
-                            <span class="p_logo_img">SK하이닉스</span>
-                        </div>
-                        <div class="p_logo p_logo_3">
-                            <span class="p_logo_img">삼성생명</span>
+                        <div class="p_logo p_logo_1">
+                            <span class="p_logo_img">Tokai Medical Products</span>
                         </div>
                         <div class="p_logo p_logo_2">
-                            <span class="p_logo_img">삼성SDS</span>
+                            <span class="p_logo_img">Piolax Medical Devices</span>
+                        </div>
+                        <div class="p_logo p_logo_3">
+                            <span class="p_logo_img">AngioDynamics</span>
+                        </div>
+                        <div class="p_logo p_logo_4">
+                            <span class="p_logo_img">그린메디칼서플라이</span>
+                        </div>
+                        <div class="p_logo p_logo_5">
+                            <span class="p_logo_img">바스플렉스(vasflex)</span>
                         </div>
                         <div class="p_logo p_logo_1">
-                            <span class="p_logo_img">삼성전자</span>
+                            <span class="p_logo_img">Tokai Medical Products</span>
                         </div>
+                        <div class="p_logo p_logo_2">
+                            <span class="p_logo_img">Piolax Medical Devices</span>
+                        </div>
+                        <div class="p_logo p_logo_3">
+                            <span class="p_logo_img">AngioDynamics</span>
+                        </div>
+                        <div class="p_logo p_logo_4">
+                            <span class="p_logo_img">그린메디칼서플라이</span>
+                        </div>
+                        <div class="p_logo p_logo_5">
+                            <span class="p_logo_img">바스플렉스(vasflex)</span>
+                        </div>
+                        
                     </div> <!-- e: p_logo_slider -->
                 </div> <!-- e: partners_wrap -->
             </div> <!-- e: partners -->
