@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <title>(주)인터벤션메디칼</title>
 
     <!-- favicon -->
@@ -34,25 +39,44 @@
     <!-- slick slider -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <!-- 카카오 지도 script -->
-    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <!-- kakao map api -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b455470d277263ad4708ed0a4cd8af1"></script>
+    
     <script>
         let is_mb = true;
-
+        let open_menu_btn = true;
         
         $(document).ready(function(){ 
 
-            let w_width = $(window).width();
+            let mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = { 
+                    center: new kakao.maps.LatLng(37.5281078, 127.1218182), // 지도의 중심좌표
+                    level: 4 // 지도의 확대 레벨
+                };
 
-            let map_w = calc_map_width(w_width);
-            let map_h = calc_map_height(w_width);
+            let map = new kakao.maps.Map(mapContainer, mapOption);
 
-            let roughmap = new daum.roughmap.Lander({
-                "timestamp" : "1714569731949",
-                "key" : "2j7yx",
-                "mapWidth" : map_w,
-                "mapHeight" : map_h
-            }).render();
+            // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+            
+            let markerPosition = new kakao.maps.LatLng(37.5281078, 127.1218182);  // 마커가 표시될 위치입니다 
+
+            // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            let content = '<div class="customoverlay">' +
+                '  <a href="https://kko.to/JqCCk7SXzi" target="_blank">' +
+                '    <span class="marker">(주)인터벤션메디칼</span>' +
+                '  </a>' +
+                '</div>';
+
+            // 커스텀 오버레이가 표시될 위치입니다 
+            let position = new kakao.maps.LatLng(37.5281078, 127.1218182);  
+
+            // 커스텀 오버레이를 생성합니다
+            let customOverlay = new kakao.maps.CustomOverlay({
+                map: map,
+                position: position,
+                content: content,
+                yAnchor: 1 
+            });
 
             // header hover event -> white mode on
             $('header').hover(function(){
@@ -69,7 +93,7 @@
             });
 
             // menu btn
-            let open_menu_btn = true;
+            
             $('.open_menu_btn').click(function(){
                 if(open_menu_btn){
 
@@ -99,25 +123,8 @@
                 }
             });
 
-
             $(window).scroll(function() {
-                let scrollPosition = $(this).scrollTop();
-                let triggerPosition = 100; // 300px 아래로 스크롤 되었을 때 알림이 나타남
-
-                let mb_height = 500;
-
-                if (scrollPosition > triggerPosition) {
-                    $('header').addClass('on');
-                } else {
-                    $('header').removeClass('on');
-                }
-
-                if(scrollPosition > 100){
-                    // 스크롤이 메인베너 영역에 있으면
-                    is_mb = false;
-                }else {
-                    is_mb = true;
-                }
+                setting_header();
             });
 
             // 언어 전환 btn
@@ -185,7 +192,6 @@
                 ]
             });
 
-
             // partners_logo slider 
             $('.p_logo_slider').slick({
                 slidesToShow: 5,
@@ -218,47 +224,26 @@
                 ]
             });
 
-
-            $(window).resize(function(){
-                w_width = $(window).width();
-
-                // Calculate new map width and height
-                let new_map_w = calc_map_width(w_width);
-                let new_map_h = calc_map_height(w_width);
-
-                // Update the map container size
-                $('#daumRoughmapContainer1714569731949').css({
-                    width: new_map_w + 'px',
-                    height: new_map_h + 'px'
-                });
-
-            });
-
         });
 
-        function calc_map_width(w){
-            console.log(w);
-            if(w >= 1920){
-                return 1269;
-            }else if((1920>w)&&(w>=1280)){
-                return 1024;
-            }else if((1280>w)&&(w>=1024)){
-                return 932;
-            }else if((1024>w)&&(w>=768)){
-                return 676;
-            }else return 350;
-        }
+        function setting_header(){
+            let scrollPosition = $(this).scrollTop();
+            let triggerPosition = 100; // 300px 아래로 스크롤 되었을 때 알림이 나타남
 
-        function calc_map_height(w){
-            if(w >= 1920){
-                return 500;
-            }else if((1920>w)&&(w>=1280)){
-                return 500;
-            }else if((1280>w)&&(w>=1024)){
-                return 450;
-            }else if((1024>w)&&(w>=768)){
-                return 330;
-            }else return 220;
+            let mb_height = 500;
+
+            if (scrollPosition > triggerPosition) {
+                $('header').addClass('on');
+            } else {
+                $('header').removeClass('on');
+            }
+
+            if(scrollPosition > 100){
+                // 스크롤이 메인베너 영역에 있으면
+                is_mb = false;
+            }else {
+                is_mb = true;
+            }
         }
 
     </script>
@@ -278,7 +263,7 @@
                     <ul>
                         <li class="m">
                             <a href="#products" class="menu_btn eng">Products</a>
-                            <a href="#products" class="menu_btn ko">제품소개</a>
+                            <a href="#products" class="menu_btn ko">제품 소개</a>
                         </li>
                         <li class="m">
                             <a href="#partners" class="menu_btn eng">Partners</a>
@@ -289,9 +274,9 @@
                             <a href="#contact" class="menu_btn ko">찾아오시는 길</a>
                         </li>
                         <li class="lang_btn">
-                            <a class="k on">KOR</a>
+                            <a class="k on menu_btn">KOR</a>
                             <i></i>
-                            <a class="e">ENG</a>
+                            <a class="e menu_btn">ENG</a>
                         </li>
                     </ul>
                 </div>
@@ -311,7 +296,7 @@
                             <a class="eng" href="#partners">Partners</a>
                         </li>
                         <li class="m">
-                            <a class="ko" href="#products">제품소개</a>
+                            <a class="ko" href="#products">제품 소개</a>
                             <a class="eng" href="#products">Products</a>
                         </li>
                     </ul>
@@ -325,21 +310,21 @@
                         <div class="content_wrap">
                             <h2>Intervention Medical</h2>
                             <span>(주)인터벤션메디칼</span>
-                            <div><a href="#contact">Contact Us<span></span></a></div>
+                            <div><a class="cu_btn" href="#contact">Contact Us<span></span></a></div>
                         </div> <!-- e: content_wrap -->
                     </div> <!-- e: slide banner_1 -->
                     <div class="slide banner_2 mb_height" >
                         <div class="content_wrap">
                             <h2>Intervention Medical</h2>
                             <span>(주)인터벤션메디칼</span>
-                            <div><a href="#contact">Contact Us<span></span></a></div>
+                            <div><a class="cu_btn" href="#contact">Contact Us<span></span></a></div>
                         </div> <!-- e: content_wrap -->
                     </div>
                     <div class="slide banner_3 mb_height" >
                         <div class="content_wrap">
                             <h2>Intervention Medical</h2>
                             <span>(주)인터벤션메디칼</span>
-                            <div><a href="#contact">Contact Us<span></span></a></div>
+                            <div><a class="cu_btn" href="#contact">Contact Us<span></span></a></div>
                         </div> <!-- e: content_wrap -->
                     </div>
                 </div>
@@ -347,7 +332,9 @@
             </div> <!-- e: main_banner -->
             <div id="products">
                 <div class="products_wrap">
-                    <h2 class="section_title">Products</h2>
+                    <h2 class="section_title eng">Products</h2>
+                    <h2 class="section_title ko">제품 소개</h2>
+                    <span class="deco_title"></span>
                     <div class="pd_slider">
                         <div class="product_wrap pw_1">
                             <div class="product">
@@ -414,7 +401,9 @@
             </div>
             <div id="partners">
                 <div class="partners_wrap">
-                    <h2 class="section_title">Partners</h2>
+                    <h2 class="section_title eng">Partners</h2>
+                    <h2 class="section_title ko">파트너</h2>
+                    <span class="deco_title"></span>
                     <div class="p_logo_slider">
                         <div class="p_logo p_logo_1">
                             <span class="p_logo_img">Tokai Medical Products</span>
@@ -452,8 +441,31 @@
             </div> <!-- e: partners -->
             <div id="contact">
                 <div class="contact_wrap clear">
-                    <h2 class="section_title">Contact</h2>
-                    <div id="daumRoughmapContainer1714569731949" class="root_daum_roughmap root_daum_roughmap_landing ivm_map" style="margin: 0 auto;"></div>
+                    <h2 class="section_title eng">Contact</h2>
+                    <h2 class="section_title ko">찾아오시는 길</h2>
+                    <span class="deco_title"></span>
+                    <div class="infos">
+                        <div class="info_wrap">
+                            <span class="tel_wrap clear eng">
+                                <span class="tel icon">Tel. </span>
+                                070-8891-3300
+                            </span>
+                            <span class="tel_wrap clear ko">
+                                <span class="tel icon">전화. </span>
+                                070-8891-3300
+                            </span>
+    
+                            <span class="address_wrap clear eng">
+                                <span class="address icon">Address. </span>
+                                42 Seongnae-ro 6-gil, Gangdong-gu, Seoul (Seongnae-dong, Jungang Building 2nd floor, Room 202)
+                            </span>
+                            <span class="address_wrap clear ko">
+                                <span class="address icon">주소. </span>
+                                <span style="float: left;">서울특별시 강동구 성내로6길 42</span><span class="desktop" style="float: left;">(성내동, 중앙빌딩 2층 202호)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="map_wrap"><div id="map" style="width:100%;height:350px;"></div></div>
                 </div>
             </div> <!-- e: contact -->
         </main>
@@ -464,9 +476,9 @@
                 <p class="phone"><span>대표.</span> 이치영</p>
                 <p class="not_phone"><span>사업자명.</span> (주)인터벤션메디칼&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span>대표.</span> 오병율</p>
                 <p><span>주소.</span> 서울특별시 강동구 성내로6길 42(성내동, 중앙빌딩 2층 202호)</p>
-                <p class="phone"><span>사업자등록번호.</span> 000-00-00000</p>
+                <p class="phone"><span>사업자등록번호.</span> 217-81-17700</p>
                 <p class="phone"><span>TEL.</span> 070-8891-3300</p>
-                <p class="not_phone"><span>사업자등록번호.</span> 000-00-00000&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span>TEL.</span> 070-8891-3300</p>
+                <p class="not_phone"><span>사업자등록번호.</span> 217-81-17700&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span>TEL.</span> 070-8891-3300</p>
                 <p>Copyright ©Intervention Medical. All rights reserved.</p>
             </div>
             <div class="f_wrap f_ver_2 clear">
@@ -474,7 +486,7 @@
                 <div class="p_wrap">
                     <p><span>사업자명.</span> (주)인터벤션메디칼&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span>대표.</span> 이치영</p>
                     <p><span>주소.</span> 서울특별시 강동구 성내로6길 42(성내동, 중앙빌딩 2층 202호)</p>
-                    <p><span>사업자등록번호.</span> 000-00-00000&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span>TEL.</span> 070-8891-3300</p>
+                    <p><span>사업자등록번호.</span> 217-81-17700&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<span>TEL.</span> 070-8891-3300</p>
                     <p>Copyright ©Intervention Medical. All rights reserved.</p>
                 </div>
                 
