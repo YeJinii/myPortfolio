@@ -54,6 +54,11 @@ main {
     padding: 20px 0px;
 }
 
+/* .slider .slick-prev.disabled {
+    opacity: 0;
+    pointer-events: none;
+} */
+
 .slider .slick-next {
     right: 40px;
     background-image: url(../img/common/btn/next_btn.png);
@@ -133,7 +138,7 @@ main {
     color: #fff;
     opacity: .5;
     font-size: 1.2rem;
-    bottom: 32px;
+    bottom: 40px;
     line-height: 17px;
     z-index: 20;
     transition: all 1s;

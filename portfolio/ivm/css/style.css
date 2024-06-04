@@ -168,18 +168,18 @@ header.menu_on .open_menu_btn > span {
 }
 #menu > ul > li {
     width: 100%;
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
 }
 #menu > ul > li > a {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: rgba(255, 255, 255, 0.8);
 
     transition: font-size .3s;
     cursor: pointer;
 }
 #menu > ul > li.lang_btn > a {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
 }
 
 #menu > ul > li > a.on {
@@ -500,8 +500,14 @@ main {
 .p_logo_2 .p_logo_img {
     background-image: url(../img/logo/p_logo_2.png);
 }
+
+.p_logo_3 {
+    width: 166px;
+}
 .p_logo_3 .p_logo_img {
+    width: 166px;
     background-image: url(../img/logo/p_logo_3.png);
+    background-size: 166px 40px;
 }
 .p_logo_4 .p_logo_img {
     background-image: url(../img/logo/p_logo_4.png);
@@ -534,7 +540,7 @@ main {
     margin: 40px auto 10px;
 }
 .infos {
-    background: linear-gradient(#103862, #002854);
+    background: #fff;
     padding: 1.5px;
     margin-bottom: 10px;
     box-shadow: 0 2px 4px -4px rgba(0, 0, 0, .8);
@@ -578,6 +584,8 @@ main {
 .map_wrap {
     border-radius: 2px;
     box-shadow: 0 2px 4px -4px rgba(0, 0, 0, .8);
+    padding: 1.5px;
+    background-color: #fff;
 }
 
 /* footer 375 */

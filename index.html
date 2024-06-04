@@ -30,19 +30,42 @@
             });
 
             $('.slider').slick({
-                infinite: true,
+                infinite: false,
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 responsive: [ // 반응형 웹 구현 옵션
-                    { 
-                        breakpoint: 768, //화면 사이즈 768px
+                    {
+                        breakpoint: 769, //화면 사이즈 768px
                         settings: {    
+                            infinite: false,
                             slidesToShow: 1,
                             slidesToScroll: 1
                         } 
                     }
                 ]
             }); // END: slick
+
+            // 맨 첫번째 슬라이드일 때 역으로 이동하지 않도록 예외처리
+            $('.slider .slick-prev').css("display", "none");
+            $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                if(currentSlide === 0 && nextSlide === slick.$slides.length - 1) {
+                    event.preventDefault();
+                    // Move to the first slide instead of the last
+                    $slider.slick('slickGoTo', 0);
+                    $('.slider .slick-prev').css('display', 'none');
+                } else{
+                    console.log(currentSlide);
+                }
+            });
+
+            $('.slider').on('afterChange', function(event, slick, currentSlide) {
+                // 변경된 슬라이드의 인덱스(currentSlide)를 가져옵니다.
+                if(currentSlide !== 0){
+                    $('.slider .slick-prev').css('display', 'block');
+                }else {
+                    $('.slider .slick-prev').css('display', 'none');
+                }
+            });
 
             // 마우스 휠 이벤트
             $(window).on('wheel', function(e) {
@@ -256,6 +279,13 @@
             else {
                 $('.pop_up_wrap').css('display','none');
             }
+        }
+
+        function is_mobile(){
+            let width = getScreenWidth();
+            if(width<=768){
+                return true;
+            } else return false;
         }
 
     </script>
