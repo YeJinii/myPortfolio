@@ -53,8 +53,10 @@
                     // Move to the first slide instead of the last
                     $slider.slick('slickGoTo', 0);
                     $('.slider .slick-prev').css('display', 'none');
-                } else{
-                    console.log(currentSlide);
+                } else if(is_mobile() && currentSlide === 4){
+                    $('.slider .slick-next').css('display', 'none');
+                } else if(!is_mobile() && currentSlide === 2) {
+                    $('.slider .slick-next').css('display', 'none');
                 }
             });
 
@@ -62,8 +64,20 @@
                 // 변경된 슬라이드의 인덱스(currentSlide)를 가져옵니다.
                 if(currentSlide !== 0){
                     $('.slider .slick-prev').css('display', 'block');
-                }else {
+                } else {
                     $('.slider .slick-prev').css('display', 'none');
+                }
+
+                if(currentSlide === 2 && !is_mobile()){
+                    $('.slider .slick-next').css('display', 'none');
+                } else {
+                    $('.slider .slick-next').css('display', 'block');
+                }
+
+                if(currentSlide === 4 && is_mobile()){
+                    $('.slider .slick-next').css('display', 'none');
+                } else {
+                    $('.slider .slick-next').css('display', 'block');
                 }
             });
 
